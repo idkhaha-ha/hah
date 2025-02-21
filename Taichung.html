@@ -1,0 +1,630 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charest="utf-8"/>
+    <title>在宅急症資訊網</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="Taichung.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButton = document.querySelector(".dropdown-button");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+    
+        // 新增 touch 事件支援
+        function toggleDropdown(event) {
+            event.stopPropagation(); // 防止事件冒泡
+            if (dropdownMenu.style.display === "block") {
+                dropdownMenu.style.display = "none";
+            } else {
+                dropdownMenu.style.display = "block";
+            }
+        }
+    
+        // 綁定事件，確保手機點擊有效
+        dropdownButton.addEventListener("click", toggleDropdown);
+        dropdownButton.addEventListener("touchstart", toggleDropdown);
+    
+        // 點擊外部時關閉選單
+        document.addEventListener("click", function (event) {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    
+        document.addEventListener("touchstart", function (event) {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    
+        // 顯示對應內容
+        function showContent(contentId) {
+            document.querySelectorAll(".content").forEach(content => {
+                content.style.display = "none";
+            });
+    
+            const content = document.getElementById(contentId);
+            if (content) {
+                content.style.display = "block";
+            }
+        }
+    
+        window.showContent = showContent; // 讓 showContent() 在 HTML 中可用
+    });
+    
+    </script> 
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="menu">
+            <li class="menu-item item-1"><a href="page3.html">最新消息</a></li>
+            <li class="menu-item item-2"><a href="page4.html">政策介紹</a></li>
+            <div class="menu-item">
+                <div class="arrow-container">
+                <a href="page2.html">
+                    <img class="arrow" src="arrow.png" alt="Arrow">
+                </a>
+                </div>
+            </div>
+            <li class="menu-item item-4">參考文獻</li>
+            <li class="menu-item item-5">表單調查</li>
+            <li class="menu-item item-6">關於我們</li>
+        </ul>
+        </div>
+        <nav>
+            <div class="menu2-toggle" id="menu2-toggle">
+                ☰
+            </div>
+        <ul class="menu2" id="menu2">
+            <li class="menu2-item item-1"><a href="page2.html">首頁</a></li>
+            <li class="menu2-item item-2"><a href="page3.html">最新資訊</a></li>
+            <li class="menu2-item item-3"><a href="page5.html">服務據點</a></li>
+            <li class="menu2-item item-4"><a href="page6.html">參考文獻</a></li>
+            <li class="menu2-item item-5"><a href="page7.html">表單調查</a></li>
+            <li class="menu2-item item-6"><a href="page8.html">關於我們</a></li>
+        </ul>
+    </nav> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu2-toggle");
+    const menu = document.getElementById("menu2");
+    
+    // 點擊漢堡按鈕時，切換選單顯示/隱藏
+    menuToggle.addEventListener("click", function (event) {
+        menu.classList.toggle("active");
+        event.stopPropagation(); // 阻止事件冒泡，避免點擊漢堡按鈕時馬上關閉
+    });
+    
+    // 點擊選單內部時，不關閉選單
+    menu.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+    
+    // 點擊畫面其他地方時，關閉選單
+    document.addEventListener("click", function () {
+        menu.classList.remove("active");
+    });
+    });
+    </script>
+        <img class="img1" src="y-block.png">
+        <img class="img2" src="p-block.png">
+        <img class="img4" src="y-block.png">
+        <img class="img5" src="p-block.png">
+        <img class="img6" src="b-block.png">
+        <img class="icon1" src="icon1.png">
+        <img class="icon2" src="icon2.png">
+        <img class="icon4" src="icon4.png">
+        <img class="icon5" src="icon5.png">
+        <img class="icon6" src="icon6.png">
+        <a href="page5.html">
+        <img class="icon7" src="smallarrow.png" alt="Small Arrow">
+         </a>
+        <!--content-->
+        <img class="block" src="position-b.png">
+        <p class="spot">臺中市</p>
+        <div class="rectangle"></div>
+        <div class="rectangle2"></div>
+        <div class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown()">
+                請選擇主責醫院
+                <span class="dropdown-arrow"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="showContent('content1')">亞洲大學附屬醫院</a></li>
+                <li><a href="#" onclick="showContent('content2')">長安醫院</a></li>
+                <li><a href="#" onclick="showContent('content3')">天乙診所</a></li>
+                <li><a href="#" onclick="showContent('content4')">臺安醫院雙十分院</a></li>
+                <li><a href="#" onclick="showContent('content5')">中山醫學大學附設醫院</a></li>
+                <li><a href="#" onclick="showContent('content6')">宏恩醫院</a></li>
+                <li><a href="#" onclick="showContent('content7')">伸安診所</a></li>
+                <li><a href="#" onclick="showContent('content8')">中國醫藥大學附設醫院</a></li>
+                <li><a href="#" onclick="showContent('content9')">臺中榮民總醫院</a></li>
+                <li><a href="#" onclick="showContent('content10')">澄清綜合醫院中港分院</a></li>
+                <li><a href="#" onclick="showContent('content11')">佳禾診所</a></li>
+                <li><a href="#" onclick="showContent('content12')">聯安醫院</a></li>
+                <li><a href="#" onclick="showContent('content13')">衛生福利部豐原醫院</a></li>
+                <li><a href="#" onclick="showContent('content14')">東勢區農會附設農民醫院</a></li>
+                <li><a href="#" onclick="showContent('content15')">張德旺耳鼻喉科診所</a></li>
+                <li><a href="#" onclick="showContent('content16')">長頸鹿小兒科診所</a></li>
+                <li><a href="#" onclick="showContent('content17')">李綜合醫療社團法人大甲李綜合醫院</a></li>
+                <li><a href="#" onclick="showContent('content18')">光田醫療社團法人光田綜合醫院</a></li>
+                <li><a href="#" onclick="showContent('content19')">童綜合醫療社團法人童綜合醫院</a></li>
+                <li><a href="#" onclick="showContent('content20')">佛教慈濟醫療財團法人台中慈濟醫院</a></li>
+                <li><a href="#" onclick="showContent('content21')">清泉醫院</a></li>
+                <li><a href="#" onclick="showContent('content22')">其安診所</a></li>
+                <li><a href="#" onclick="showContent('content23')">賢德醫院</a></li>
+                <li><a href="#" onclick="showContent('content24')">勤益診所</a></li>
+                <li><a href="#" onclick="showContent('content25')">仁愛醫療財團法人大里仁愛醫院</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="rectangle2">
+        <img class="IDK-image" src="IDK.png">
+        <div id="content1" class="content">
+            <h1>亞洲大學附屬醫院</h1>
+            <h2>照護小組名稱: 亞大附醫福新照護小組</h2>
+            <h3>照護小組成員:</h3>
+               <p>
+                亞洲大學附屬醫院<br/>
+                亞洲大學附屬醫院附設居家護理所<br/>
+                品安居家護理所<br/>
+                慈德居家護理所<br/>
+                大安心居家護理所<br/>
+                大慶居家護理所<br/>
+                樂立居家護理所<br/>
+                心愛居家護理所<br/>
+                蔡佩旻居家護理所<br/>
+                私立晨心居家護理所
+                </p>
+        </div>
+    
+        <div id="content2" class="content">
+            <h1>長安醫院</h1>
+            <h2>照護小組名稱: 長安醫院在宅急症照護</h2>
+            <h3>照護小組成員:</h3>
+                <p>
+                    長安醫院<br/>
+                    長安醫院附設居家護理所
+                </p>
+        </div>
+    
+        <div id="content3" class="content">
+            <h1>天乙診所</h1>
+            <h2>照護小組名稱: 祐健康在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                天乙診所<br/>
+                晨安診所<br/>
+                申永居家呼吸照護所<br/>
+                林彩鳳居家護理所<br/>
+                祐健康居家護理所<br/>
+                心愛居家護理所<br/>
+                恩承居家護理所<br/>
+                金老時居家護理所<br/>
+                白老鳳居家護理所
+            </p>
+        </div>
+        
+        <div id="content4" class="content">
+            <h1>臺安醫院雙十分院</h1>
+            <h2>照護小組名稱: 臺安醫院雙十分院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                臺安醫院雙十分院<br/>
+                慧安居家呼吸照護所<br/>
+                美安居家護理所<br/>
+                育德居家護理所
+
+            </p>
+        </div>
+        <div id="content5" class="content">
+            <h1>中山醫學大學附設醫院</h1>
+            <h2>照護小組名稱: 中彰投在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                衛生福利部臺中醫院<br/>
+                衛生福利部南投醫院<br/>
+                中山醫學大學附設醫院<br/>
+                彰化縣竹塘鄉衛生所<br/>
+                全能家庭醫學科診所<br/>
+                美圖診所<br/>
+                百健診所<br/>
+                宏美德生診所<br/>
+                謝政融診所<br/>
+                辰光診所<br/>
+                弘光診所<br/>
+                東山家庭醫學科診所<br/>
+                維恩耳鼻喉科診所<br/>
+                程耳鼻喉科診所<br/>
+                合濟診所<br/>
+                郁順復健科診所<br/>
+                詹建盛診所<br/>
+                申永居家呼吸照護所<br/>
+                永佳居家呼吸照護所<br/>
+                慧安居家呼吸照護所<br/>
+                美術藥局<br/>
+                心靜藥局<br/>
+                童綜合醫療社團法人附設居家護理所<br/>
+                馨晴居家護理所<br/>
+                臺中市私立良芳居家護理所<br/>
+                好燁居家護理所<br/>
+                銓芯居家護理所<br/>
+                心安居家護理所<br/>
+                長春居家護理所<br/>
+                品安居家護理所<br/>
+                太陽居家護理所<br/>
+                慈德居家護理所<br/>
+                美安居家護理所<br/>
+                大安心居家護理所<br/>
+                大慶居家護理所<br/>
+                樂立居家護理所<br/>
+                心愛居家護理所<br/>
+                中山醫學大學附設醫院附設護理之家<br/>
+                中山醫學大學附設醫院附設居家護理所<br/>
+                暖暖居家護理所<br/>
+                日日福居家護理所<br/>
+                順安心居家護理所<br/>
+                希望邸家居家護理所<br/>
+                源芳居家護理所<br/>
+                豐馥居家護理所<br/>
+                專業居家護理所<br/>
+                劉燕玲居家護理所<br/>
+                光仁居家護理所<br/>
+                特安居家護理所<br/>
+                育德居家護理所<br/>
+                洪幸雪居家護理所<br/>
+                如沐居家護理所<br/>
+                美美居家護理所<br/>
+                蒙恩居家護理所<br/>
+                家歆居家護理所<br/>
+                安域居家護理所<br/>
+                宥恩居家護理所<br/>
+                白老鳳居家護理所<br/>
+                衛生福利部臺中醫院附設居家護理所
+            </p>
+        </div>
+        <div id="content6" class="content">
+            <h1>宏恩醫院</h1>
+            <h2>照護小組名稱: 宏恩醫院在宅急症照護</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                宏恩醫院
+            </p>
+        </div>
+        <div id="content7" class="content">
+            <h1>伸安診所</h1>
+            <h2>照護小組名稱:伸安</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                林新醫療社團法人林新醫院<br/>
+                智欣診所<br/>
+                博智診所<br/>
+                博睿診所<br/>
+                佳杏診所<br/>
+                姜封豪診所<br/>
+                幼恩小兒科診所<br/>
+                智佳診所<br/>
+                曙光小兒科診所<br/>
+                羅倫檭診所<br/>
+                伸安診所<br/>
+                安安診所<br/>
+                永新診所<br/>
+                冠達復健科診所<br/>
+                慧安居家呼吸照護所<br/>
+                美術藥局<br/>
+                林新醫療社團法人附設林新居家護理所<br/>
+                品安居家護理所<br/>
+                慈德居家護理所<br/>
+                瞳馨居家護理所<br/>
+                樂立居家護理所<br/>
+                心愛居家護理所<br/>
+                日日福居家護理所<br/>
+                希望邸家居家護理所<br/>
+                逢甲安康居家護理所<br/>
+                健康居家護理所
+            </p>
+        </div>
+        <div id="content8" class="content">
+            <h1>中國醫藥大學附設醫院</h1>
+            <h2>照護小組名稱: 中國附醫急症在宅照護</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                中國醫藥大學附設醫院<br/>
+                好燁居家護理所<br/>
+                銓芯居家護理所<br/>
+                品安居家護理所<br/>
+                樂立居家護理所<br/>
+                心愛居家護理所<br/>
+                日日福居家護理所<br/>
+                特安居家護理所<br/>
+                欣澄居家護理所<br/>
+                育德居家護理所
+            </p>
+        </div>
+        <div id="content9" class="content">
+            <h1>臺中榮民總醫院</h1>
+            <h2>照護小組名稱: 臺中榮總在宅急症團隊</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                臺中榮民總醫院<br/>
+                臺中榮民總醫院附設居家護理所
+
+            </p>
+        </div>
+        <div id="content10" class="content">
+            <h1>澄清綜合醫院中港分院</h1>
+            <h2>照護小組名稱: 澄清醫院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                澄清綜合醫院<br/>
+                澄清綜合醫院中港分院<br/>
+                慧安居家呼吸照護所<br/>
+                瞳馨居家護理所<br/>
+                祐健康居家護理所<br/>
+                大安心居家護理所<br/>
+                大慶居家護理所<br/>
+                真善美居家護理所<br/>
+                澤天居家護理所<br/>
+                居安居家護理所<br/>
+                澄清綜合醫院中港分院附設居家護理所<br/>
+                逢甲安康居家護理所<br/>
+                豐馥居家護理所<br/>
+                金老時居家護理所<br/>
+                劉燕玲居家護理所<br/>
+                光仁居家護理所<br/>
+                欣澄居家護理所<br/>
+                華穗護理之家<br/>
+                育德居家護理所<br/>
+                芳鄰居家護理所<br/>
+                子恩居家護理所<br/>
+                澄清綜合醫院附設居家護理所
+            </p>
+        </div>
+        <div id="content11" class="content">
+            <h1>佳禾診所</h1>
+            <h2>照護小組名稱: 佳禾在宅急症照護</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                佳禾診所<br/>
+                申永居家呼吸照護所<br/>
+                希望邸家居家護理所<br/>
+                豐馥居家護理所
+            </p>
+        </div>
+        <div id="content12" class="content">
+            <h1>聯安醫院</h1>
+            <h2>照護小組名稱: 聯安醫院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                聯安醫院<br/>             
+                育德居家護理所<br/>
+                
+            </p>
+        </div>
+        <div id="content13" class="content">
+            <h1>衛生福利部豐原醫院</h1>
+            <h2>照護小組名稱: 豐原醫院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                衛生福利部豐原醫院<br/>
+                慧安居家呼吸照護所<br/>
+                衛生福利部豐原醫院附設居家護理所<br/>
+                今日居家護理所<br/>
+                銓芯居家護理所<br/>
+                林燕玲居家護理所<br/>
+                洪幸雪居家護理所
+            </p>
+        </div>
+        <div id="content14" class="content">
+            <h1>東勢區農會附設農民醫院</h1>
+            <h2>照護小組名稱: 東勢農民醫院在宅急症照護團隊</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                東勢區農會附設農民醫院<br/>
+
+            </p>
+        </div>
+        <div id="content15" class="content">
+            <h1>張德旺耳鼻喉科診所</h1>
+            <h2>照護小組名稱: 張德旺耳鼻喉科在宅急症小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                張德旺耳鼻喉科診所<br/>
+                馨晴居家護理所
+            </p>
+        </div>
+        <div id="content16" class="content">
+            <h1>長頸鹿小兒科診所</h1>
+            <h2>照護小組名稱: 天使2.0HAH</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                楊啟坤耳鼻喉科診所<br/>
+                安榮診所<br/>
+                大元診所<br/>
+                清水區向陽耳鼻喉科診所<br/>
+                中華博士診所<br/>
+                優醫五權健康診所<br/>
+                明生診所<br/>
+                甲后莊醫師診所<br/>
+                欣源美診所<br/>
+                淨新診所<br/>
+                慈祐診所<br/>
+                松群診所<br/>
+                禎宏診所<br/>
+                群享診所<br/>
+                佳靖診所<br/>
+                永蘊豐禾診所<br/>
+                康和診所<br/>
+                豊府診所<br/>
+                慶燿診所<br/>
+                恆宇診所<br/>
+                元盛診所<br/>
+                欣悅診所<br/>
+                南平診所<br/>
+                天行健診所<br/>
+                誠心親子耳鼻喉科診所<br/>
+                誠心兒科診所<br/>
+                方德涵診所<br/>
+                光仁骨外科診所<br/>
+                元亨診所<br/>
+                陳成福診所<br/>
+                永福診所<br/>
+                親親診所<br/>
+                長頸鹿小兒科診所<br/>
+                琉璃光診所<br/>
+                陳振昆診所<br/>
+                蔡神經科診所<br/>
+                魏重耀婦產科診所<br/>
+                高銘診所<br/>
+                國泰診所<br/>
+                后里維恩耳鼻喉科診所<br/>
+                晉安診所<br/>
+                林啟忠診所<br/>
+                佳佑診所<br/>
+                陳台祝診所<br/>
+                林釗尚小兒科診所<br/>
+                維弘復健科診所<br/>
+                欣民診所<br/>
+                陳儀崇診所<br/>
+                顧耳鼻喉科診所<br/>
+                顏安耳鼻喉科診所<br/>
+                群和診所<br/>
+                申永居家呼吸照護所<br/>
+                永佳居家呼吸照護所<br/>
+                慧安居家呼吸照護所<br/>
+                馨晴居家護理所<br/>
+                好燁居家護理所<br/>
+                今日居家護理所<br/>
+                宥心居家護理所<br/>
+                銓芯居家護理所<br/>
+                心安居家護理所<br/>
+                長春居家護理所<br/>
+                太陽居家護理所<br/>
+                慈德居家護理所<br/>
+                瞳馨居家護理所<br/>
+                大安心居家護理所<br/>
+                大慶居家護理所<br/>
+                真善美居家護理所<br/>
+                樂立居家護理所<br/>
+                全程安寧居家護理所<br/>
+                暖暖居家護理所<br/>
+                日日福居家護理所<br/>
+                久立居家護理所<br/>
+                居安居家護理所<br/>
+                順安心居家護理所<br/>
+                恩承居家護理所<br/>
+                希望邸家居家護理所<br/>
+                耆老林居家護理所<br/>
+                源芳居家護理所<br/>
+                豐馥居家護理所<br/>
+                專業居家護理所<br/>
+                健康居家護理所<br/>
+                光仁居家護理所<br/>
+                橙萱居家護理所<br/>
+                陳麗珍居家護理所<br/>
+                洪幸雪居家護理所<br/>
+                李宜玲居家護理所<br/>
+                蒙恩居家護理所<br/>
+                蔡佩旻居家護理所<br/>
+                家歆居家護理所
+            </p>
+        </div>
+        <div id="content17" class="content">
+            <h1>李綜合醫療社團法人大甲李綜合醫院</h1>
+            <h2>照護小組名稱: 李綜合醫療社團法人大甲李綜合醫院</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                李綜合醫療社團法人大甲李綜合醫院<br/>
+                申永居家呼吸照護所<br/>
+                李綜合醫療社團法人附設大甲居家護理所<br/>
+                好燁居家護理所
+            </p>
+        </div>
+        <div id="content18" class="content">
+            <h1>光田醫療社團法人光田綜合醫院</h1>
+            <h2>照護小組名稱: 光田醫院</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                光田醫療社團法人光田綜合醫院<br/>
+                光田醫療社團法人附設光田居家護理所
+            </p>
+        </div>
+        <div id="content19" class="content">
+            <h1>童綜合醫療社團法人童綜合醫院</h1>
+            <h2>照護小組名稱: E童宅急站暨綠色走道</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                童綜合醫療社團法人童綜合醫院<br/>
+                慧安居家呼吸照護所<br/>
+                童綜合醫療社團法人附設居家護理所<br/>
+                芳鄰居家護理所<br/>
+                以恩居家護理所                
+            </p>
+        </div>
+        <div id="content20" class="content">
+            <h1>佛教慈濟醫療財團法人台中慈濟醫院</h1>
+            <h2>照護小組名稱:台中慈濟在宅急症共同照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                佛教慈濟醫療財團法人台中慈濟醫院<br/>
+                佛教慈濟醫療財團法人附設台中慈濟居家護理所
+            </p>
+        </div>
+        <div id="content21" class="content">
+            <h1>清泉醫院</h1>
+            <h2>照護小組名稱: 清泉居家天使群</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                清泉醫院<br/>
+                銓芯居家護理所<br/>
+                心安居家護理所
+            </p>
+        </div>
+        <div id="content22" class="content">
+            <h1>其安診所</h1>
+            <h2>照護小組名稱:大肚其安居家</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                鎮安診所<br/>
+                其安診所<br/>
+                明安診所<br/>
+                光田醫療社團法人附設光田居家護理所
+
+            </p>
+        </div>
+        <div id="content23" class="content">
+            <h1>賢德醫院</h1>
+            <h2>照護小組名稱: 國軍臺中總醫院合作居護所急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                國軍臺中總醫院附設民眾診療服務處<br/>
+                國軍臺中總醫院附設居家護理所<br/>
+                臺中市私立良芳居家護理所<br/>
+                祐健康居家護理所<br/>
+                劉燕玲居家護理所
+            </p>
+        </div>
+        <div id="content24" class="content">
+            <h1>勤益診所</h1>
+            <h2>照護小組名稱: 勤益居家醫療團隊</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                勤益診所<br/>
+                美安居家護理所<br/>
+                大慶居家護理所
+            </p>
+        </div>
+        <div id="content25" class="content">
+            <h1>仁愛醫療財團法人大里仁愛醫院</h1>
+            <h2>照護小組名稱: 仁愛醫療財團法人在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                仁愛醫療財團法人大里仁愛醫院<br/>
+                仁愛醫療財團法人附設大里仁愛居家護理所
+            </p>
+        </div>
+    </div>
+    </body>
+</html>

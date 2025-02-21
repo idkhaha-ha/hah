@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charest="utf-8"/>
+    <title>在宅急症資訊網</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="NewTaipei.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButton = document.querySelector(".dropdown-button");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+    
+        // 新增 touch 事件支援
+        function toggleDropdown(event) {
+            event.stopPropagation(); // 防止事件冒泡
+            if (dropdownMenu.style.display === "block") {
+                dropdownMenu.style.display = "none";
+            } else {
+                dropdownMenu.style.display = "block";
+            }
+        }
+    
+        // 綁定事件，確保手機點擊有效
+        dropdownButton.addEventListener("click", toggleDropdown);
+        dropdownButton.addEventListener("touchstart", toggleDropdown);
+    
+        // 點擊外部時關閉選單
+        document.addEventListener("click", function (event) {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    
+        document.addEventListener("touchstart", function (event) {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    
+        // 顯示對應內容
+        function showContent(contentId) {
+            document.querySelectorAll(".content").forEach(content => {
+                content.style.display = "none";
+            });
+    
+            const content = document.getElementById(contentId);
+            if (content) {
+                content.style.display = "block";
+            }
+        }
+    
+        window.showContent = showContent; // 讓 showContent() 在 HTML 中可用
+    });
+    
+    </script> 
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="menu">
+            <li class="menu-item item-1"><a href="page3.html">最新消息</a></li>
+            <li class="menu-item item-2"><a href="page4.html">政策介紹</a></li>
+            <div class="menu-item">
+                <div class="arrow-container">
+                <a href="page2.html">
+                    <img class="arrow" src="arrow.png" alt="Arrow">
+                </a>
+                </div>
+            </div>
+            <li class="menu-item item-4">參考文獻</li>
+            <li class="menu-item item-5">表單調查</li>
+            <li class="menu-item item-6">關於我們</li>
+        </ul>
+        </div>
+        <nav>
+            <div class="menu2-toggle" id="menu2-toggle">
+                ☰
+            </div>
+        <ul class="menu2" id="menu2">
+            <li class="menu2-item item-1"><a href="page2.html">首頁</a></li>
+            <li class="menu2-item item-2"><a href="page3.html">最新資訊</a></li>
+            <li class="menu2-item item-3"><a href="page5.html">服務據點</a></li>
+            <li class="menu2-item item-4"><a href="page6.html">參考文獻</a></li>
+            <li class="menu2-item item-5"><a href="page7.html">表單調查</a></li>
+            <li class="menu2-item item-6"><a href="page8.html">關於我們</a></li>
+        </ul>
+    </nav> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu2-toggle");
+    const menu = document.getElementById("menu2");
+    
+    // 點擊漢堡按鈕時，切換選單顯示/隱藏
+    menuToggle.addEventListener("click", function (event) {
+        menu.classList.toggle("active");
+        event.stopPropagation(); // 阻止事件冒泡，避免點擊漢堡按鈕時馬上關閉
+    });
+    
+    // 點擊選單內部時，不關閉選單
+    menu.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+    
+    // 點擊畫面其他地方時，關閉選單
+    document.addEventListener("click", function () {
+        menu.classList.remove("active");
+    });
+    });
+    </script>
+        <img class="img1" src="y-block.png">
+        <img class="img2" src="p-block.png">
+        <img class="img4" src="y-block.png">
+        <img class="img5" src="p-block.png">
+        <img class="img6" src="b-block.png">
+        <img class="icon1" src="icon1.png">
+        <img class="icon2" src="icon2.png">
+        <img class="icon4" src="icon4.png">
+        <img class="icon5" src="icon5.png">
+        <img class="icon6" src="icon6.png">
+        <a href="page5.html">
+        <img class="icon7" src="smallarrow.png" alt="Small Arrow">
+         </a>
+        <!--content-->
+        <img class="block" src="position-y.png">
+        <p class="spot">新北市</p>
+        <div class="rectangle"></div>
+        <div class="rectangle2"></div>
+        <div class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown()">
+                請選擇主責醫院
+                <span class="dropdown-arrow"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="showContent('content1')">醫療財團法人徐元智先生醫藥基金會亞東紀念醫院</a></li>
+                <li><a href="#" onclick="showContent('content2')">蕭中正醫院</a></li>
+                <li><a href="#" onclick="showContent('content3')">中英醫療社團法人中英醫院</a></li>
+                <li><a href="#" onclick="showContent('content4')">天主教耕莘醫療財團法人永和耕莘醫院</a></li>
+                <li><a href="#" onclick="showContent('content5')">衛生福利部雙和醫院〈委託臺北醫學大學興建經營〉</a></li>
+                <li><a href="#" onclick="showContent('content6')">天主教耕莘醫療財團法人耕莘醫院</a></li>
+                <li><a href="#" onclick="showContent('content7')">佛教慈濟醫療財團法人台北慈濟醫院</a></li>
+                <li><a href="#" onclick="showContent('content8')">豐榮醫院</a></li>
+                <li><a href="#" onclick="showContent('content9')">同仁醫院</a></li>
+                <li><a href="#" onclick="showContent('content10')">新泰綜合醫院</a></li>
+                <li><a href="#" onclick="showContent('content11')">衛生福利部臺北醫院</a></li>
+                <li><a href="#" onclick="showContent('content12')">聯安診所</a></li>
+                <li><a href="#" onclick="showContent('content13')">行天宮醫療志業醫療財團法人恩主公醫院</a></li>
+                <li><a href="#" onclick="showContent('content14')">清福醫院</a></li>
+                <li><a href="#" onclick="showContent('content15')">如原診所</a></li>
+                <li><a href="#" onclick="showContent('content16')">輔仁大學學校財團法人輔仁大學附設醫院</a></li>
+                <li><a href="#" onclick="showContent('content17')">新北市平溪區衛生所</a></li>
+                <li><a href="#" onclick="showContent('content18')">國立臺灣大學醫學院附設醫院金山分院</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="rectangle2">
+        <img class="IDK-image" src="IDK.png">
+        <div id="content1" class="content">
+            <h1>醫療財團法人徐元智先生醫藥基金會亞東紀念醫院</h1>
+            <h2>照護小組名稱: 亞東在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+               <p>
+                醫療財團法人徐元智先生醫藥基金會亞東紀念醫院<br/>
+                板橋中興醫院附設居家護理所<br/>
+                共護家居家護理所<br/>
+                宜寧居家護理所<br/>
+                聯順居家護理所<br/>
+                青禾居家護理所<br/>
+                嘉寧居家護理所<br/>
+                福耕居家護理所<br/>
+                大心居家護理所<br/>
+                和鄰居家護理所<br/>
+                璟馨居家護理所<br/>
+                慈家居家護理所<br/>
+                醫療財團法人徐元智先生醫藥基金會附設亞東居家護理所
+                </p>
+        </div>
+    
+        <div id="content2" class="content">
+            <h1>蕭中正醫院</h1>
+            <h2>照護小組名稱: 蕭中正醫院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+                <p>
+                蕭中正醫院<br/>
+                新福星診所<br/>
+                蕭中正醫院附設居家護理所   
+                </p>
+        </div>
+    
+        <div id="content3" class="content">
+            <h1>中英醫療社團法人中英醫院</h1>
+            <h2>照護小組名稱: 中英醫院</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                中英醫療社團法人中英醫院
+            </p>
+        </div>
+        
+        <div id="content4" class="content">
+            <h1>天主教耕莘醫療財團法人永和耕莘醫院</h1>
+            <h2>照護小組名稱: 永和耕莘醫院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                天主教耕莘醫療財團法人永和耕莘醫院<br/>
+                柏愛藥局<br/>
+                天主教耕莘醫療財團法人附設永和耕莘居家護理所
+            </p>
+        </div>
+
+        <div id="content5" class="content">
+            <h1>衛生福利部雙和醫院〈委託臺北醫學大學興建經營〉</h1>
+            <h2>照護小組名稱: 雙和UNICORN在宅照護團隊</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                衛生福利部雙和醫院〈委託臺北醫學大學興建經營〉<br/>
+                承德居家護理所<br/>
+                聯順居家護理所<br/>
+                嘉寧居家護理所<br/>
+                衛生福利部雙和醫院附設居家護理所(委託臺北醫學大學興建經營)<br/>
+                銳辛居家護理所
+            </p>
+        </div>
+
+        <div id="content6" class="content">
+            <h1>天主教耕莘醫療財團法人耕莘醫院</h1>
+            <h2>照護小組名稱:在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                天主教耕莘醫療財團法人耕莘醫院<br/>
+                天主教耕莘醫療財團法人附設耕莘居家護理所<br/>
+            </p>
+        </div>
+
+        <div id="content7" class="content">
+            <h1>佛教慈濟醫療財團法人台北慈濟醫院</h1>
+            <h2>照護小組名稱: 台北慈濟醫院在宅急症小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                佛教慈濟醫療財團法人台北慈濟醫院<br/>
+                前瞻居家護理所<br/>
+                青禾居家護理所<br/>
+                嘉寧居家護理所<br/>
+                同心居家護理所<br/>
+                和鄰居家護理所<br/>
+                佛教慈濟醫療財團法人附設台北慈濟居家護理所
+            </p>
+        </div>
+
+        <div id="content8" class="content">
+            <h1>豐榮醫院</h1>
+            <h2>照護小組名稱: 豐榮醫院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                豐榮醫院<br/>
+                豐榮醫院附設居家護理所
+
+            </p>
+        </div>
+
+        <div id="content9" class="content">
+            <h1>同仁醫院</h1>
+            <h2>照護小組名稱: 同仁醫院照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                同仁醫院
+            </p>
+        </div>
+
+        <div id="content10" class="content">
+            <h1>新泰綜合醫院</h1>
+            <h2>照護小組名稱: 新泰綜合醫院</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                新泰綜合醫院<br/>
+                承德居家護理所<br/>
+                新泰綜合醫院附設居家護理所
+            </p>
+        </div>
+
+        <div id="content11" class="content">
+            <h1>衛生福利部臺北醫院</h1>
+            <h2>照護小組名稱: 衛生福利部臺北醫院照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                衛生福利部臺北醫院<br/>
+                慈英居家護理所<br/>
+                衛生福利部臺北醫院附設居家護理所
+            </p>
+        </div>
+
+        <div id="content12" class="content">
+            <h1>聯安診所</h1>
+            <h2>照護小組名稱: 好鄰居團隊</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                龍華診所<br/>
+                重新診所<br/>
+                正興診所<br/>
+                聯安診所<br/>
+                晉安診所<br/>
+                寶祥診所<br/>
+                鉅儒診所<br/>
+                王嘉興診所<br/>
+                慈英居家護理所
+            </p>
+        </div>
+
+        <div id="content13" class="content">
+            <h1>行天宮醫療志業醫療財團法人恩主公醫院</h1>
+            <h2>照護小組名稱: 恩主公醫院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                行天宮醫療志業醫療財團法人恩主公醫院<br/>
+                行天宮醫療志業醫療財團法人附設恩主公居家護理所
+            </p>
+        </div>
+
+        <div id="content14" class="content">
+            <h1>清福醫院</h1>
+            <h2>照護小組名稱: 清福醫院在宅急症照護醫療團隊</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                清福醫院<br/>
+                清福診所<br/>
+                清福醫院附設居家護理所
+            </p>
+        </div>
+
+        <div id="content15" class="content">
+            <h1>如原診所</h1>
+            <h2>照護小組名稱: 新北在地-在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                如原診所<br/>
+                顏鴻仁家庭醫學科診所<br/>
+                仁邦診所<br/>
+                瑞之盟居家呼吸照護所<br/>
+                百樂居家呼吸照護所<br/>
+                出雲藥局<br/>
+                如音藥局<br/>
+                聯順居家護理所<br/>
+                大心居家護理所<br/>
+                私立常春藤居家護理所
+            </p>
+        </div>
+
+        <div id="content16" class="content">
+            <h1>輔仁大學學校財團法人輔仁大學附設醫院</h1>
+            <h2>照護小組名稱: 輔大醫院遠健在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                輔仁大學學校財團法人輔仁大學附設醫院<br/>
+                輔仁大學學校財團法人輔仁大學附設醫院附設居家護理所
+            </p>
+        </div>
+
+        <div id="content17" class="content">
+            <h1>新北市平溪區衛生所</h1>
+            <h2>照護小組名稱: 新北市平溪區衛生所照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+               新北市平溪區衛生所
+            </p>
+        </div>
+
+        <div id="content18" class="content">
+            <h1>國立臺灣大學醫學院附設醫院金山分院</h1>
+            <h2>照護小組名稱: 國立臺灣大學醫學院附設醫院金山分院</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                國立臺灣大學醫學院附設醫院金山分院<br/>
+                國立臺灣大學醫學院附設醫院金山分院附設居家護理所
+            </p>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,589 @@
+@media (min-width: 1024px) {
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index:100;
+}
+.menu2{
+    display: none;
+}
+.menu2-toggle {
+    display: none;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-item {
+    width: 150px;
+    height:100px;
+    color: black;
+    padding: 15px;
+    margin: 10px auto;
+    font-size: 35px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s;
+    cursor: pointer;
+    position:relative;
+    line-height: 100px;
+    font-weight: bold;
+    text-align: left;
+
+}
+.arrow-container {
+    width: 10px;  
+    height: 10px; 
+    overflow: visible;  
+    position: fixed; 
+    cursor: pointer;  
+}
+
+
+.menu-item img.arrow {
+    display: block;
+    width: 150px; 
+    height: auto;
+    position: absolute;
+    top: -15px;
+    left: -30px;
+    transition: transform 0.3s ease; 
+}
+
+
+.menu-item:hover img.arrow {
+    transform: scale(1.1); 
+}
+.menu-item:hover {
+    transform: scale(1.1); 
+    opacity:0.8; 
+}
+.menu-item a {
+    text-decoration: none; 
+    color: inherit;        
+    display: block;        
+    width: 100%;           
+    height: 100%;          
+}
+
+.menu-item a:active,
+.menu-item a:focus {
+    color: inherit; 
+    outline: none;   
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img6 {
+    position: fixed;
+    left: 0;
+    top: 100%;
+    width: 1000px;
+    height: 2000px;
+    z-index: 1; /* 確保圖片在側邊欄後面 */
+}
+.img1 { transform: translateX(-33%) translateY(-53.5%); }
+.img2 { transform: translateX(-16%) translateY(-41%); }
+.img3 { transform: translateX(-5%) translateY(-30%); }
+.img4 { transform: translateX(-33%) translateY(-32.5%); }
+.img6 { transform: translateX(-5%) translateY(-9%); }
+
+.icon1{
+    position:fixed;
+    transform: translateX(-5%) translateY(-16.5%); 
+    width: 1000px;
+    height:1500px;
+    z-index:1;
+}
+.icon2{
+    position:fixed;
+    transform: translateX(-7.5%) translateY(-7%); 
+    width: 900px;
+    height:1500px;
+    z-index:3;
+}
+.icon3{
+    position:fixed;
+    transform: translateX(-3.5%) translateY(3.5%); 
+    width: 820px;
+    height:902px;
+    z-index:3;
+}
+.icon4{
+    position:fixed;
+    transform: translateX(-5%) translateY(0%); 
+    width: 1000px;
+    height:1200px;
+    z-index:3;
+}
+.icon6{
+    position:fixed;
+    transform: translateX(-8%) translateY(48.5%);
+    width: 1050px;
+    height:1260px;
+    z-index:3;
+}
+.title {
+    font-size: 50px;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-weight: bold;
+    align-items: center;
+    position: absolute; 
+    transform: translateX(140%) translateY(-25%); 
+}
+.icon7{
+    position:absolute;
+    transform: translateX(370%) translateY(10%);
+    width: 100px;
+    height:100px;
+    z-index:3;
+}
+
+.img7{
+    position:absolute;
+    transform: translateX(175%) translateY(0%); 
+    width: 400px;
+    height:400px;
+    z-index:1;
+}
+.text {
+    position: absolute; /* 固定位置 */
+    top:135px;
+    left:820px;
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 40;
+}
+.img8
+{
+    position: absolute;
+    left: 405px;
+    top: 210px;
+    width: 150px;
+    height: 150px;
+    z-index: 1; 
+}
+.text1{
+    position: absolute; /* 固定位置 */
+    top:230px;
+    left:548px;
+    font-weight: bold;
+    font-size:35px;
+    color: black;
+    z-index: 40;
+}
+.img9
+{
+    position: absolute;
+    left: 1255px;
+    top: 210px;
+    width: 150px;
+    height: 150px;
+    z-index: 1; 
+}
+.img10
+{
+    position:fixed;
+    left:405px;
+    top:325px;
+    width: 120px;
+    height:100px;
+    z-index:1;
+}
+.text2{
+    position: absolute; /* 固定位置 */
+    top:320px;
+    left:505px;
+    font-weight: bold;
+    font-size:35px;
+    color: black;
+    z-index: 40;
+}
+.img11
+{
+    position:fixed;
+    left:1290px;
+    top:325px;
+    width: 120px;
+    height:100px;
+    z-index:1;
+}
+.img12
+{
+    position: fixed;
+    left: 385px;
+    top: 300px;
+    width: 500px;
+    height: 500px;
+}
+.text3{
+    position: absolute; /* 固定位置 */
+    top:480px;
+    left:620px;
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 40;
+}
+.text3 a {
+    color: black; 
+    text-decoration: none;
+}
+.text3:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform:scale(1.2)
+}
+.img13
+{
+    position: fixed;
+    left: 935px;
+    top: 300px;
+    width: 500px;
+    height: 500px;
+}
+.text4{
+    position: absolute; /* 固定位置 */
+    top:480px;
+    left:1180px;
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 40;
+}
+.text4 a {
+    color: black; 
+    text-decoration: none;
+}
+.text4:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform:scale(1.2)
+}
+/* 搜尋欄 */
+.search-container {
+    position:fixed;
+    transform: translateX(230%) translateY(-20%);
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 50px; 
+    z-index: 100;
+}
+
+/* 搜尋框 */
+.search-input {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+/* 按鈕 */
+.search-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #5480bf; 
+    color: white; 
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px; 
+    transition: all 0.3s ease;
+}
+
+/* 按鈕圖 */
+.material-icons {
+    font-size: 24px; 
+    vertical-align: middle; 
+}
+
+/* 按鈕效果 */
+.search-button:hover {
+    background-color: #c2e6f9; 
+}
+}
+@media (max-width: 575px) {
+    body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow-y: auto;
+            
+    }
+        
+    .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5,
+    .img6
+    {
+    display: none;
+    }
+    .icon1,
+    .icon2,
+    .icon3,
+    .icon4,
+    .icon5,
+    .icon6
+    {
+        display: none;
+    }
+    .menu
+    {
+        display: none;
+    }
+    .menu2 {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+        background:#152469;
+        position: absolute;
+        top:0px;
+        left:0px;
+        width: 100%;
+        z-index:999;
+    }
+        
+    .menu2 li {
+        text-align: center;
+        padding: 10px;
+    }
+        
+    .menu2 li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+        
+    .menu2 li:hover {
+        background: #444;
+    }
+        
+    /* 漢堡按鈕 */
+    .menu2-toggle {
+        position:absolute;
+        font-size: 50px;
+        cursor: pointer;
+        padding: 10px;
+        background:transparent;
+        color:#152469 ;
+        text-align: center;
+        top:80px;
+         left:10px;
+        z-index: 100;
+    }
+        
+    /* 顯示選單 */
+    .menu2.active {
+        display: block;
+    }
+    .title {
+        font-size: 40px;
+        font-family: 'Noto Sans HK', sans-serif;
+        font-weight: bold;
+        align-items: center;
+        position:absolute; 
+        top:-10px;
+        left:100px;
+    }
+    .icon7{
+        position:absolute;
+        width: 80px;
+        height:80px;
+        top:15px;
+        left:5px;
+        z-index:3;
+    }
+    
+    /* 搜尋欄 */
+    .search-container {
+        position:absolute;
+        top:50px;
+        left:95px;
+        justify-content: center; 
+        align-items: center; 
+        margin-top: 50px; 
+        z-index: 100;
+    }
+        
+    /* 搜尋框 */
+    .search-input {
+        padding: 10px 10px;
+        font-size: 15px;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        width: 200px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+        
+    /* 按鈕 */
+    .search-button {
+        padding: 12px 13px;
+        font-size: 16px;
+        background-color: #5480bf; 
+        color: white; 
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 10px; 
+        transition: all 0.3s ease;
+    }
+        
+    /* 按鈕圖 */
+    .material-icons {
+        font-size: 20px; 
+        vertical-align: middle; 
+    }
+        
+    /* 按鈕效果 */
+    .search-button:hover {
+        background-color: #c2e6f9; 
+    }
+    #errorMessage {
+        margin-top: 5px; /* 增加與搜尋欄的間距 */
+        font-size: 14px;
+        color: red;
+        display: none;/* 預設隱藏 */
+    }
+    .img7{
+        position: absolute;
+        left: 35px;
+        top: 30px;
+        width: 350px;
+        height: 350px;
+    }
+    .text {
+        position: absolute; /* 固定位置 */
+        left: 130px;
+        top: 135px;
+        font-weight: bold;
+        font-size:40px;
+        color: black;
+        z-index: 40;
+    }
+    .img8
+    {
+        position: absolute;
+        left: -20px;
+        top: 200px;
+        width: 100px;
+        height: 100px;
+        z-index: 1; 
+    }
+    .text1{
+        position: absolute; /* 固定位置 */
+        top:250px;
+        left:35px;
+        font-weight: bold;
+        font-size:25px;
+        color: black;
+        z-index: 40;
+    }
+    .img9
+    {
+        display: none;
+    }
+    .img10
+    {
+        position:absolute;
+        left:-20px;
+        top:330px;
+        width: 120px;
+        height:100px;
+        z-index:1;
+    }
+    .text2{
+        position: absolute; /* 固定位置 */
+        top:380px;
+        left:35px;
+        font-weight: bold;
+        font-size:25px;
+        color: black;
+        z-index: 40;
+    }
+    .img11
+    {
+        display: none;
+    }
+    .img12
+    {
+    position: absolute;
+    left: 10px;
+    top: 430px;
+    width: 400px;
+    height: 350px;
+    }
+    .text3{
+        position: absolute; /* 固定位置 */
+        left: 180px;
+        top: 540px;
+        font-weight: bold;
+        font-size:35px;
+        color: black;
+        z-index: 40;
+    }
+    .text3 a {
+        color: black; 
+        text-decoration: none;
+    }
+    .text3:hover {
+        background-color: transition; 
+        color: white; /* 白色文字 */
+        transform:scale(1.2)
+    }
+    .img13
+    {
+        position: absolute;
+        left: 10px;
+        top: 630px;
+        width: 400px;
+        height: 350px;
+    }
+    .text4{
+        position: absolute; /* 固定位置 */
+        left: 180px;
+        top: 745px;
+        font-weight: bold;
+        font-size:35px;
+        color: black;
+        z-index: 40;
+    }
+    .text4 a {
+        color: black; 
+        text-decoration: none;
+    }
+    .text4:hover {
+        background-color: transition; 
+        color: white; /* 白色文字 */
+        transform:scale(1.2)
+    }
+}

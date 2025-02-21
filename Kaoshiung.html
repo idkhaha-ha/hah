@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charest="utf-8"/>
+    <title>在宅急症資訊網</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="Kaoshiung.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButton = document.querySelector(".dropdown-button");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+    
+        // 新增 touch 事件支援
+        function toggleDropdown(event) {
+            event.stopPropagation(); // 防止事件冒泡
+            if (dropdownMenu.style.display === "block") {
+                dropdownMenu.style.display = "none";
+            } else {
+                dropdownMenu.style.display = "block";
+            }
+        }
+    
+        // 綁定事件，確保手機點擊有效
+        dropdownButton.addEventListener("click", toggleDropdown);
+        dropdownButton.addEventListener("touchstart", toggleDropdown);
+    
+        // 點擊外部時關閉選單
+        document.addEventListener("click", function (event) {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    
+        document.addEventListener("touchstart", function (event) {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    
+        // 顯示對應內容
+        function showContent(contentId) {
+            document.querySelectorAll(".content").forEach(content => {
+                content.style.display = "none";
+            });
+    
+            const content = document.getElementById(contentId);
+            if (content) {
+                content.style.display = "block";
+            }
+        }
+    
+        window.showContent = showContent; // 讓 showContent() 在 HTML 中可用
+    });
+    
+    </script> 
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="menu">
+            <li class="menu-item item-1"><a href="page3.html">最新消息</a></li>
+            <li class="menu-item item-2"><a href="page4.html">政策介紹</a></li>
+            <div class="menu-item">
+                <div class="arrow-container">
+                <a href="page2.html">
+                    <img class="arrow" src="arrow.png" alt="Arrow">
+                </a>
+                </div>
+            </div>
+            <li class="menu-item item-4">參考文獻</li>
+            <li class="menu-item item-5">表單調查</li>
+            <li class="menu-item item-6">關於我們</li>
+        </ul>
+        </div>
+        <nav>
+            <div class="menu2-toggle" id="menu2-toggle">
+                ☰
+            </div>
+        <ul class="menu2" id="menu2">
+            <li class="menu2-item item-1"><a href="page2.html">首頁</a></li>
+            <li class="menu2-item item-2"><a href="page3.html">最新資訊</a></li>
+            <li class="menu2-item item-3"><a href="page5.html">服務據點</a></li>
+            <li class="menu2-item item-4"><a href="page6.html">參考文獻</a></li>
+            <li class="menu2-item item-5"><a href="page7.html">表單調查</a></li>
+            <li class="menu2-item item-6"><a href="page8.html">關於我們</a></li>
+        </ul>
+    </nav> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu2-toggle");
+    const menu = document.getElementById("menu2");
+    
+    // 點擊漢堡按鈕時，切換選單顯示/隱藏
+    menuToggle.addEventListener("click", function (event) {
+        menu.classList.toggle("active");
+        event.stopPropagation(); // 阻止事件冒泡，避免點擊漢堡按鈕時馬上關閉
+    });
+    
+    // 點擊選單內部時，不關閉選單
+    menu.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+    
+    // 點擊畫面其他地方時，關閉選單
+    document.addEventListener("click", function () {
+        menu.classList.remove("active");
+    });
+    });
+    </script>
+        <img class="img1" src="y-block.png">
+        <img class="img2" src="p-block.png">
+        <img class="img4" src="y-block.png">
+        <img class="img5" src="p-block.png">
+        <img class="img6" src="b-block.png">
+        <img class="icon1" src="icon1.png">
+        <img class="icon2" src="icon2.png">
+        <img class="icon4" src="icon4.png">
+        <img class="icon5" src="icon5.png">
+        <img class="icon6" src="icon6.png">
+        <a href="page5.html">
+        <img class="icon7" src="smallarrow.png" alt="Small Arrow">
+         </a>
+        <!--content-->
+        <img class="block" src="position-b.png">
+        <p class="spot">高雄市</p>
+        <div class="rectangle"></div>
+        <div class="rectangle2"></div>
+        <div class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown()">
+                請選擇主責醫院
+                <span class="dropdown-arrow"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="showContent('content1')">正大醫院</a></li>
+                <li><a href="#" onclick="showContent('content2')">高雄榮民總醫院</a></li>
+                <li><a href="#" onclick="showContent('content3')">國軍左營總醫院附設民眾診療服務處</a></li>
+                <li><a href="#" onclick="showContent('content4')">財團法人私立高雄醫學大學附設中和紀念醫院</a></li>
+                <li><a href="#" onclick="showContent('content5')">高雄市立大同醫院（委託長庚醫療財團法人經營）</a></li>
+                <li><a href="#" onclick="showContent('content6')">國軍高雄總醫院附設民眾診療服務處</a></li>
+                <li><a href="#" onclick="showContent('content7')">高雄市立民生醫院</a></li>
+                <li><a href="#" onclick="showContent('content8')">信義醫療財團法人高雄基督教醫院</a></li>
+                <li><a href="#" onclick="showContent('content9')">阮綜合醫療社團法人阮綜合醫院</a></li>
+                <li><a href="#" onclick="showContent('content10')">高雄市立小港醫院（委託財團法人私立高雄醫學大學經營）</a></li>
+                <li><a href="#" onclick="showContent('content11')">天主教聖功醫療財團法人聖功醫院</a></li>
+                <li><a href="#" onclick="showContent('content12')">高雄市立旗津醫院（委託財團法人私立高雄醫學大學經營）</a></li>
+                <li><a href="#" onclick="showContent('content13')">高雄市立鳳山醫院（委託長庚醫療財團法人經營）</a></li>
+                <li><a href="#" onclick="showContent('content14')">高雄市立岡山醫院（委託秀傳醫療社團法人經營）</a></li>
+                <li><a href="#" onclick="showContent('content15')">國軍高雄總醫院岡山分院附設民眾診療服務處</a></li>
+                <li><a href="#" onclick="showContent('content16')">衛生福利部旗山醫院</a></li>
+                <li><a href="#" onclick="showContent('content17')">建佑醫院</a></li>
+                <li><a href="#" onclick="showContent('content18')">長庚醫療財團法人高雄長庚紀念醫院</a></li>
+                <li><a href="#" onclick="showContent('content19')">義大醫療財團法人義大醫院</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="rectangle2">
+        <img class="IDK-image" src="IDK.png">
+        <div id="content1" class="content">
+            <h1>正大醫院</h1>
+            <h2>照護小組名稱: 正大醫院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+               <p>
+                正大醫院
+                </p>
+        </div>
+    
+        <div id="content2" class="content">
+            <h1>高雄榮民總醫院</h1>
+            <h2>照護小組名稱: 高榮在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+                <p>
+                    高雄市立聯合醫院<br/>
+                    高雄榮民總醫院<br/>
+                    日月光半導體製造股份有限公司附設員工醫務室<br/>
+                    展穎診所<br/>
+                    鳳山全民診所<br/>
+                    弘興藥局<br/>
+                    米蘭達居家護理所<br/>
+                    新星渝居家護理所<br/>
+                    宜橙居家護理所<br/>
+                    正安居家護理所<br/>
+                    彼得潘居家護理所<br/>
+                    高雄榮民總醫院附設居家護理所
+                </p>
+        </div>
+    
+        <div id="content3" class="content">
+            <h1>國軍左營總醫院附設民眾診療服務處</h1>
+            <h2>照護小組名稱: 國軍左營總醫院附設民眾診療服務處</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                國軍左營總醫院附設民眾診療服務處<br/>
+                國軍左營總醫院附設民眾診療服務處居家護理所
+
+            </p>
+        </div>
+        
+        <div id="content4" class="content">
+            <h1>財團法人私立高雄醫學大學附設中和紀念醫院</h1>
+            <h2>照護小組名稱: 高醫在宅照護醫聯盟</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                財團法人私立高雄醫學大學附設中和紀念醫院<br/>
+                楊宗憲診所<br/>
+                弘興藥局<br/>
+                誠愛居家護理所<br/>
+                米蘭達居家護理所<br/>
+                新星渝居家護理所<br/>
+                敬安居家護理所<br/>
+                爵嘉居家護理所<br/>
+                青園居家護理所<br/>
+                財團法人私立高雄醫學大學附設中和紀念醫院附設居家護理所
+            </p>
+        </div>
+        <div id="content5" class="content">
+            <h1>高雄市立大同醫院（委託長庚醫療財團法人經營）</h1>
+            <h2>照護小組名稱: 大同在宅e照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                高雄市立大同醫院（委託財團法人私立高雄醫學大學經營) <br/>
+                高雄市立大同醫院（委託財團法人私立高雄醫學大學經營)附設居家護理所
+            </p>
+        </div>
+        <div id="content6" class="content">
+            <h1>國軍高雄總醫院附設民眾診療服務處</h1>
+            <h2>照護小組名稱: 國軍高雄總醫院附設民眾診療服務處</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                國軍高雄總醫院附設民眾診療服務處<br/>
+                國軍高雄總醫院附設民眾診療服務處附設居家護理所
+            </p>
+        </div>
+        <div id="content7" class="content">
+            <h1>高雄市立民生醫院</h1>
+            <h2>照護小組名稱:民生醫院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                高雄市立民生醫院<br/>
+                高雄市立民生醫院居家護理所
+
+            </p>
+        </div>
+        <div id="content8" class="content">
+            <h1>信義醫療財團法人高雄基督教醫院</h1>
+            <h2>照護小組名稱: 高基安心在宅</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                信義醫療財團法人高雄基督教醫院
+            </p>
+        </div>
+        <div id="content9" class="content">
+            <h1>阮綜合醫療社團法人阮綜合醫院</h1>
+            <h2>照護小組名稱: 阮綜合在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                阮綜合醫療社團法人阮綜合醫院<br/>
+                阮綜合醫療社團法人附設居家護理所
+
+            </p>
+        </div>
+        <div id="content10" class="content">
+            <h1>高雄市立小港醫院（委託財團法人私立高雄醫學大學經營）</h1>
+            <h2>照護小組名稱: 港動醫起顧在宅向前走</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                高雄市立小港醫院（委託財團法人私立高雄醫學大學經營）<br/>
+                高雄市大寮區衛生所<br/>
+                臺灣中油股份有限公司煉製事業部大林煉油廠員工診所<br/>
+                台灣國際造船股份有限公司員工診所<br/>
+                祥全診所<br/>
+                昱芯居家護理所<br/>
+                傳莕居家護理所<br/>
+                爵嘉居家護理所<br/>
+                青園居家護理所<br/>
+                祥全居家護理所<br/>
+                瑞慈居家護理所<br/>
+                恆康居家護理所<br/>
+                高雄市立小港醫院附設居家護理所
+            </p>
+        </div>
+        <div id="content11" class="content">
+            <h1>天主教聖功醫療財團法人聖功醫院</h1>
+            <h2>照護小組名稱: 聖功HAH</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                天主教聖功醫療財團法人聖功醫院<br/>
+                天主教聖功醫療財團法人附設聖功居家護理所
+            </p>
+        </div>
+        <div id="content12" class="content">
+            <h1>高雄市立旗津醫院（委託財團法人私立高雄醫學大學經營）</h1>
+            <h2>照護小組名稱: 旗醫HaH照護團隊</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                高雄市立旗津醫院（委託財團法人私立高雄醫學大學經營）<br/>
+                高雄市立旗津醫院(委託財團法人私立高雄醫學大學經營)附設居家護理所                
+            </p>
+        </div>
+        <div id="content13" class="content">
+            <h1>高雄市立鳳山醫院（委託長庚醫療財團法人經營）</h1>
+            <h2>照護小組名稱: 鳳山醫院在宅急症照護</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                高雄市立鳳山醫院（委託長庚醫療財團法人經營）<br/>
+                高雄市立鳳山醫院（委託長庚醫療財團法人經營）附設居家護理所
+
+            </p>
+        </div>
+        <div id="content14" class="content">
+            <h1>高雄市立岡山醫院（委託秀傳醫療社團法人經營）</h1>
+            <h2>照護小組名稱: 高雄市立岡山醫院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                高雄市立岡山醫院（委託秀傳醫療社團法人經營）<br/>
+                高雄市立岡山醫院（委託秀傳醫療社團法人經營）附設居家護理所
+            </p>
+        </div>
+        <div id="content15" class="content">
+            <h1>國軍高雄總醫院岡山分院附設民眾診療服務處</h1>
+            <h2>照護小組名稱: 國軍高雄總醫院岡山分院附設民眾診療服務處</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                國軍高雄總醫院岡山分院附設民眾診療服務處<br/>
+                國軍高雄總醫院岡山分院附設民眾診療服務處附設居家護理所
+
+
+            </p>
+        </div>
+        <div id="content16" class="content">
+            <h1>衛生福利部旗山醫院</h1>
+            <h2>照護小組名稱:旗醫HAH小組</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                衛生福利部旗山醫院<br/>
+                衛生福利部旗山醫院附設居家護理所
+            </p>
+        </div>
+        <div id="content17" class="content">
+            <h1>建佑醫院</h1>
+            <h2>照護小組名稱: 林園HAH照護團隊</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                建佑醫院<br/>
+                建佑醫院附設居家護理所
+            </p>
+        </div>
+        <div id="content18" class="content">
+            <h1>長庚醫療財團法人高雄長庚紀念醫院</h1>
+            <h2>照護小組名稱: 高雄長庚在宅急症照護</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                長庚醫療財團法人高雄長庚紀念醫院<br/>
+                長庚醫療財團法人附設高雄居家護理所
+            </p>
+        </div>
+        <div id="content19" class="content">
+            <h1>義大醫療財團法人義大醫院</h1>
+            <h2>照護小組名稱: 義大醫療財團法人義大醫院</h2>
+            <h3>照護小組成員:</h3>
+            <p>
+                義大醫療財團法人義大醫院<br/>
+                義大醫療財團法人附設義大居家護理所
+            </p>
+        </div>
+    </div>
+    </body>
+</html>

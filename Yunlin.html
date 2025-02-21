@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charest="utf-8"/>
+    <title>在宅急症資訊網</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="Yunlin.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButton = document.querySelector(".dropdown-button");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+    
+        // 新增 touch 事件支援
+        function toggleDropdown(event) {
+            event.stopPropagation(); // 防止事件冒泡
+            if (dropdownMenu.style.display === "block") {
+                dropdownMenu.style.display = "none";
+            } else {
+                dropdownMenu.style.display = "block";
+            }
+        }
+    
+        // 綁定事件，確保手機點擊有效
+        dropdownButton.addEventListener("click", toggleDropdown);
+        dropdownButton.addEventListener("touchstart", toggleDropdown);
+    
+        // 點擊外部時關閉選單
+        document.addEventListener("click", function (event) {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    
+        document.addEventListener("touchstart", function (event) {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    
+        // 顯示對應內容
+        function showContent(contentId) {
+            document.querySelectorAll(".content").forEach(content => {
+                content.style.display = "none";
+            });
+    
+            const content = document.getElementById(contentId);
+            if (content) {
+                content.style.display = "block";
+            }
+        }
+    
+        window.showContent = showContent; // 讓 showContent() 在 HTML 中可用
+    });
+    
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="menu">
+            <li class="menu-item item-1"><a href="page3.html">最新消息</a></li>
+            <li class="menu-item item-2"><a href="page4.html">政策介紹</a></li>
+            <div class="menu-item">
+                <div class="arrow-container">
+                <a href="page2.html">
+                    <img class="arrow" src="arrow.png" alt="Arrow">
+                </a>
+                </div>
+            </div>
+            <li class="menu-item item-4">參考文獻</li>
+            <li class="menu-item item-5">表單調查</li>
+            <li class="menu-item item-6">關於我們</li>
+        </ul>
+        </div>
+        <nav>
+            <div class="menu2-toggle" id="menu2-toggle">
+                ☰
+            </div>
+        <ul class="menu2" id="menu2">
+            <li class="menu2-item item-1"><a href="page2.html">首頁</a></li>
+            <li class="menu2-item item-2"><a href="page3.html">最新資訊</a></li>
+            <li class="menu2-item item-3"><a href="page5.html">服務據點</a></li>
+            <li class="menu2-item item-4"><a href="page6.html">參考文獻</a></li>
+            <li class="menu2-item item-5"><a href="page7.html">表單調查</a></li>
+            <li class="menu2-item item-6"><a href="page8.html">關於我們</a></li>
+        </ul>
+    </nav> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu2-toggle");
+    const menu = document.getElementById("menu2");
+    
+    // 點擊漢堡按鈕時，切換選單顯示/隱藏
+    menuToggle.addEventListener("click", function (event) {
+        menu.classList.toggle("active");
+        event.stopPropagation(); // 阻止事件冒泡，避免點擊漢堡按鈕時馬上關閉
+    });
+    
+    // 點擊選單內部時，不關閉選單
+    menu.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+    
+    // 點擊畫面其他地方時，關閉選單
+    document.addEventListener("click", function () {
+        menu.classList.remove("active");
+    });
+    });
+    </script>
+        <img class="img1" src="y-block.png">
+        <img class="img2" src="p-block.png">
+        <img class="img4" src="y-block.png">
+        <img class="img5" src="p-block.png">
+        <img class="img6" src="b-block.png">
+        <img class="icon1" src="icon1.png">
+        <img class="icon2" src="icon2.png">
+        <img class="icon4" src="icon4.png">
+        <img class="icon5" src="icon5.png">
+        <img class="icon6" src="icon6.png">
+        <a href="page5.html">
+        <img class="icon7" src="smallarrow.png" alt="Small Arrow">
+         </a>
+        <!--content-->
+        <img class="block" src="position-y.png">
+        <p class="spot">雲林縣</p>
+        <div class="rectangle"></div>
+        <div class="rectangle2"></div>
+        <div class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown()">
+                請選擇主責醫院
+                <span class="dropdown-arrow"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="showContent('content1')">國立臺灣大學醫學院附設醫院雲林分院</a></li>
+                <li><a href="#" onclick="showContent('content2')">彰化基督教醫療財團法人雲林基督教醫院</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="rectangle2">
+        <img class="IDK-image" src="IDK.png">
+        <div id="content1" class="content">
+            <h1>國立臺灣大學醫學院附設醫院雲林分院</h1>
+            <h2>照護小組名稱: 台大雲林分院在宅急症照護小組</h2>
+            <h3>照護小組成員:</h3>
+               <p>
+                國立臺灣大學醫學院附設醫院雲林分院<br/>
+                國立成功大學醫學院附設醫院斗六分院<br/>
+                劉泰成診所<br/>
+                太安診所<br/>
+                國立成功大學醫學院附設醫院斗六分院附設居家護理所<br/>
+                國立臺灣大學醫學院附設醫院雲林分院附設居家護理所<br/>
+                慕妍居家護理所<br/>
+                好厝邊居家護理所
+                </p>
+        </div>
+    
+        <div id="content2" class="content">
+            <h1>彰化基督教醫療財團法人雲林基督教醫院</h1>
+            <h2>照護小組名稱: 雲林好照</h2>
+            <h3>照護小組成員:</h3>
+                <p>
+                    天主教中華道明修女會醫療財團法人天主教福安醫院<br/>
+                    天主教若瑟醫療財團法人若瑟醫院<br/>
+                    彰化基督教醫療財團法人雲林基督教醫院<br/>
+                    長庚醫療財團法人雲林長庚紀念醫院<br/>
+                    中國醫藥大學北港附設醫院<br/>
+                    益霖健康診所<br/>
+                    廖寶全診所<br/>
+                    林嘉祈婦產科診所<br/>
+                    宏泰診所<br/>
+                    好所宅診所<br/>
+                    佑仁診所<br/>
+                    德華診所<br/>
+                    元安診所<br/>
+                    白惠文西醫診所<br/>
+                    慧安居家呼吸照護所<br/>
+                    平安藥局<br/>
+                    好所宅藥局<br/>
+                    彰化基督教醫療財團法人附設雲林基督教居家護理所<br/>
+                    中國醫藥大學北港附設醫院附設居家護理所<br/>
+                    家歆居家護理所<br/>
+                    安順居家護理所<br/>
+                    慕妍居家護理所<br/>
+                    台安居家護理所<br/>
+                    厚安居家護理所<br/>
+                    好所宅診所附設居家護理所<br/>
+                    長春居家護理所<br/>
+                    樂臨居家護理所<br/>
+                    甘心居家護理所<br/>
+                    欣齡居家護理所<br/>
+                    欣宏居家護理所<br/>
+                    安昀居家護理所<br/>
+                    天主教若瑟醫療財團法人附設若瑟居家護理所
+                </p>
+        </div>
+    </div>
+    </body>
+</html>

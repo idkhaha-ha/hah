@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charest="utf-8"/>
+    <title>在宅急症資訊網</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="Kinmen.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="menu">
+            <li class="menu-item item-1"><a href="page3.html">最新消息</a></li>
+            <li class="menu-item item-2"><a href="page4.html">政策介紹</a></li>
+            <div class="menu-item">
+                <div class="arrow-container">
+                <a href="page2.html">
+                    <img class="arrow" src="arrow.png" alt="Arrow">
+                </a>
+                </div>
+            </div>
+            <li class="menu-item item-4">參考文獻</li>
+            <li class="menu-item item-5">表單調查</li>
+            <li class="menu-item item-6">關於我們</li>
+        </ul>
+        </div>
+        <nav>
+            <div class="menu2-toggle" id="menu2-toggle">
+                ☰
+            </div>
+        <ul class="menu2" id="menu2">
+            <li class="menu2-item item-1"><a href="page2.html">首頁</a></li>
+            <li class="menu2-item item-2"><a href="page3.html">最新資訊</a></li>
+            <li class="menu2-item item-3"><a href="page5.html">服務據點</a></li>
+            <li class="menu2-item item-4"><a href="page6.html">參考文獻</a></li>
+            <li class="menu2-item item-5"><a href="page7.html">表單調查</a></li>
+            <li class="menu2-item item-6"><a href="page8.html">關於我們</a></li>
+        </ul>
+    </nav> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu2-toggle");
+    const menu = document.getElementById("menu2");
+    
+    // 點擊漢堡按鈕時，切換選單顯示/隱藏
+    menuToggle.addEventListener("click", function (event) {
+        menu.classList.toggle("active");
+        event.stopPropagation(); // 阻止事件冒泡，避免點擊漢堡按鈕時馬上關閉
+    });
+    
+    // 點擊選單內部時，不關閉選單
+    menu.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+    
+    // 點擊畫面其他地方時，關閉選單
+    document.addEventListener("click", function () {
+        menu.classList.remove("active");
+    });
+    });
+    </script>
+        <img class="img1" src="y-block.png">
+        <img class="img2" src="p-block.png">
+        <img class="img4" src="y-block.png">
+        <img class="img5" src="p-block.png">
+        <img class="img6" src="b-block.png">
+        <img class="icon1" src="icon1.png">
+        <img class="icon2" src="icon2.png">
+        <img class="icon4" src="icon4.png">
+        <img class="icon5" src="icon5.png">
+        <img class="icon6" src="icon6.png">
+        <a href="page5.html">
+        <img class="icon7" src="smallarrow.png" alt="Small Arrow">
+         </a>
+        <!--content-->
+        <img class="block" src="position-y.png">
+        <p class="spot">金門縣</p>
+        <div class="rectangle2"></div>
+    </div>
+    <div class="rectangle2">
+        <img class="IDK-image" src="IDK.png">
+        <div id="content1" class="content">
+            <h1>「目前還未有相關單位參與該計畫喔!」</h1>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charest="utf-8"/>
+    <title>在宅急症資訊網</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="page5.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="menu">
+            <li class="menu-item item-1"><a href="page3.html">最新消息</a></li>
+            <li class="menu-item item-2"><a href="page4.html">政策介紹</a></li>
+            <div class="menu-item">
+                <div class="arrow-container">
+                <a href="page2.html">
+                    <img class="arrow" src="arrow.png" alt="Arrow">
+                </a>
+                </div>
+            </div>
+            <li class="menu-item item-4"><a href="page6.html">參考文獻</a></li>
+            <li class="menu-item item-5"><a href="page7.html">表單調查</a></li>
+            <li class="menu-item item-6"><a href="page8.html">關於我們</a></li>
+        </ul>
+    </div>
+    <nav>
+        <div class="menu2-toggle" id="menu2-toggle">
+            ☰
+        </div>
+    <ul class="menu2" id="menu2">
+        <li class="menu2-item item-1"><a href="page2.html">首頁</a></li>
+        <li class="menu2-item item-2"><a href="page3.html">最新資訊</a></li>
+        <li class="menu2-item item-3"><a href="page5.html">服務據點</a></li>
+        <li class="menu2-item item-4"><a href="page6.html">參考文獻</a></li>
+        <li class="menu2-item item-5"><a href="page7.html">表單調查</a></li>
+        <li class="menu2-item item-6"><a href="page8.html">關於我們</a></li>
+    </ul>
+</nav> 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+const menuToggle = document.getElementById("menu2-toggle");
+const menu = document.getElementById("menu2");
+
+// 點擊漢堡按鈕時，切換選單顯示/隱藏
+menuToggle.addEventListener("click", function (event) {
+    menu.classList.toggle("active");
+    event.stopPropagation(); // 阻止事件冒泡，避免點擊漢堡按鈕時馬上關閉
+});
+
+// 點擊選單內部時，不關閉選單
+menu.addEventListener("click", function (event) {
+    event.stopPropagation();
+});
+
+// 點擊畫面其他地方時，關閉選單
+document.addEventListener("click", function () {
+    menu.classList.remove("active");
+});
+});
+
+
+</script>
+        <img class="img1" src="y-block.png">
+        <img class="img2" src="p-block.png">
+        <img class="img4" src="y-block.png">
+        <img class="img5" src="p-block.png">
+        <img class="img6" src="b-block.png">
+        <img class="icon1" src="icon1.png">
+        <img class="icon2" src="icon2.png">
+        <img class="icon4" src="icon4.png">
+        <img class="icon5" src="icon5.png">
+        <img class="icon6" src="icon6.png">
+        <img class="icon7" src="icon-home.png">
+        <p class="title">在宅急症資訊網</p> 
+        <img class="img7" src="light.png">
+        <p class="text">點選以下縣市即可查詢所有服務據點</p>
+    <!--縣市選單-->
+        <img class="block1" src="position-b.png">
+        <img class="block2" src="position-y.png">
+        <img class="block3" src="position-p.png">
+        <p class="spot1">
+            <a href="Taipei.html">臺北市</a>
+        </p>
+        <p class="spot2">
+            <a href="NewTaipei.html">新北市</a>
+        </p>
+        <p class="spot3">
+            <a href="Keelung.html">基隆市</a>
+        </p>
+
+        <img class="block4" src="position-y.png">
+        <img class="block5" src="position-p.png">
+        <img class="block6" src="position-b.png">
+        <p class="spot4">
+            <a href="Taoyuan.html">桃園市</a>
+        </p>
+        <p class="spot5">
+            <a href="Hsinchu.html">新竹縣</a>
+        </p>
+        <p class="spot6">
+            <a href="Hsinchu2.html">新竹市</a>
+        </p>
+        <img class="block7" src="position-p.png">
+        <img class="block8" src="position-b.png">
+        <img class="block9" src="position-y.png">
+        <p class="spot7">
+            <a href="Miaoli.html">苗栗縣</a>
+        </p>
+        <p class="spot8">
+            <a href="Taichung.html">臺中市</a>
+        </p>
+        <p class="spot9">
+            <a href="Chanhhua.html">彰化縣</a>
+        </p>
+        <img class="block10" src="position-b.png">
+        <img class="block11" src="position-y.png">
+        <img class="block12" src="position-p.png">
+        <p class="spot10">
+            <a href="Nantou.html">南投縣</a>
+        </p>
+        <p class="spot11">
+            <a href="Yunlin.html">雲林縣</a>
+        </p>
+        <p class="spot12"> 
+            <a href="Chiayi.html">嘉義縣</a>
+        </p>
+        <img class="block13" src="position-y.png">
+        <img class="block14" src="position-p.png">
+        <img class="block15" src="position-b.png">
+        <p class="spot13">
+            <a href="Chiayi2.html">嘉義市</a>
+        </p>
+        <p class="spot14">
+            <a href="Tainan.html">臺南市</a>
+        </p>
+        <p class="spot15">
+            <a href="Kaoshiung.html">高雄市</a>
+            </p>
+        <img class="block16" src="position-p.png">
+        <img class="block17" src="position-b.png">
+        <img class="block18" src="position-y.png">
+        <p class="spot16">
+            <a href="Pingtung.html">屏東縣</a>
+        </p>
+        <p class="spot17">
+            <a href="Taitung.html">臺東縣</a>
+        </p>
+        <p class="spot18"><a href="Hualien.html">花蓮縣</a>
+        </p>
+        <img class="block19" src="position-b.png">
+        <img class="block20" src="position-y.png">
+        <img class="block21" src="position-p.png">
+        <p class="spot19"><a href="Yilan.html">宜蘭縣</a>
+        </p>
+        <p class="spot20"><a href="Lienchiang.html">連江縣</a>
+        </p>
+        <p class="spot21"><a href="Penghu.html">澎湖縣</a>
+        </p>
+        <img class="block22" src="position-y.png">
+        <p class="spot22"><a href="Kinmen.html">金門縣</a>
+        </p>
+        <div class="rectangle"></div>
+        <li class="text text1"><a href="https://www.nhi.gov.tw/ch/cp-15301-b5ef4-3660-1.html">照護小組及參與院所名單</a></li>
+    <!--搜尋欄-->    
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="輸入搜尋內容..." class="search-input">
+        <button type="button" class="search-button" onclick="handleSearch(event)">
+            <i class="material-icons">search</i>
+        </button>
+        <div id="errorMessage" style="color: red; display: none;"></div>
+    </div>
+    
+    <script>
+        // 直接在 HTML 中定義關鍵字對應的頁面
+        const keywordPages = {
+            "最新資訊": "page3.html",
+            "政策介紹": "page4.html",
+            "參考文獻": "page6.html",
+            "表單調查": "page7.html",
+            "關於我們": "page8.html"
+        };
+
+        function handleSearch(event) {
+            event.preventDefault();
+            const input = document.getElementById("searchInput").value.trim();
+            const errorMessage = document.getElementById("errorMessage");
+
+            if (input in keywordPages) {
+                window.location.href = keywordPages[input];
+            } else {
+                errorMessage.style.display = "block";
+                errorMessage.textContent = `無法找到與 "${input}" 相關的頁面，請輸入有效關鍵字！`;
+            }
+        }
+        document.getElementById("searchInput").addEventListener("keydown", function(event) {
+        const errorMessage = document.getElementById("errorMessage");
+
+        if (event.key === "Enter") { // 檢查是否按下 Enter 鍵
+            event.preventDefault(); // 防止表單預設提交
+            errorMessage.style.display = "none"; // 清除之前的錯誤訊息
+            handleSearch(event);
+        }
+    });
+    </script>
+    <script>
+        // 監聽滾動並存儲滾動位置
+        window.addEventListener("scroll", function () {
+          sessionStorage.setItem("scrollPosition", window.scrollY);
+        });
+      
+        // 使用 pageshow 確保恢復滾動位置
+        window.addEventListener("pageshow", function () {
+          setTimeout(() => {
+            const scrollPosition = sessionStorage.getItem("scrollPosition");
+            if (scrollPosition) {
+              window.scrollTo(0, parseInt(scrollPosition, 10));
+            }
+          }, 100); // 100ms 延遲，確保頁面已渲染
+        });
+      </script>
+      
+      
+      
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>在宅急症資訊網</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="page4.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="menu">
+            
+                <li class="menu-item item-1"><a href="page3.html">最新資訊</a></li>
+                <div class="menu-item">
+                    <div class="arrow-container">
+                        <a href="page2.html">
+                            <img class="arrow" src="arrow.png" alt="Arrow">
+                        </a>
+                    </div>
+                </div>
+                <li class="menu-item item-3"><a href="page5.html">服務據點</a></li>
+                <li class="menu-item item-4"><a href="page6.html">參考文獻</a></li>
+                <li class="menu-item item-5"><a href="page7.html">表單調查</a></li>
+                <li class="menu-item item-6"><a href="page8.html">關於我們</a></li>
+        </ul>
+    </div>
+    <nav>
+        <div class="menu2-toggle" id="menu2-toggle">
+            ☰
+        </div>
+    <ul class="menu2" id="menu2">
+        <li class="menu2-item item-1"><a href="page2.html">首頁</a></li>
+        <li class="menu2-item item-2"><a href="page3.html">最新資訊</a></li>
+        <li class="menu2-item item-3"><a href="page5.html">服務據點</a></li>
+        <li class="menu2-item item-4"><a href="page6.html">參考文獻</a></li>
+        <li class="menu2-item item-5"><a href="page7.html">表單調查</a></li>
+        <li class="menu2-item item-6"><a href="page8.html">關於我們</a></li>
+    </ul>
+</nav> 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+const menuToggle = document.getElementById("menu2-toggle");
+const menu = document.getElementById("menu2");
+
+// 點擊漢堡按鈕時，切換選單顯示/隱藏
+menuToggle.addEventListener("click", function (event) {
+    menu.classList.toggle("active");
+    event.stopPropagation(); // 阻止事件冒泡，避免點擊漢堡按鈕時馬上關閉
+});
+
+// 點擊選單內部時，不關閉選單
+menu.addEventListener("click", function (event) {
+    event.stopPropagation();
+});
+
+// 點擊畫面其他地方時，關閉選單
+document.addEventListener("click", function () {
+    menu.classList.remove("active");
+});
+});
+
+
+</script>
+    <img class="img1" src="y-block.png">
+    <img class="img3" src="b-block.png">
+    <img class="img4" src="y-block.png">
+    <img class="img5" src="p-block.png">
+    <img class="img6" src="b-block.png">
+    <img class="icon1" src="icon1.png">
+    <img class="icon3" src="icon3.png">
+    <img class="icon4" src="icon4.png">
+    <img class="icon5" src="icon5.png">
+    <img class="icon6" src="icon6.png">
+    <img class="icon7" src="icon-home.png">
+    <p class="title">在宅急症資訊網</p> 
+    <a href="lungintro.html">
+    <img class="img7" src="lung.png">
+    </a>
+    <a href="peeintro.html">
+    <img class="img8" src="pee.png">
+    </a>
+    <a href="tissueintro.html">
+    <img class="img9" src="tissue.png">
+    </a>
+    <img class="img10"src="p-bar.png">
+    <img class="img11" src="b-bar.png">
+    <p class="text text1">適用對象</p>
+    <p class="text text2">經主治醫師評估為以下三種症狀且符合B條件之一者為適用對象。</p>
+    <p class="text text3">肺炎</p>
+    <p class="text text4">尿路感染</p>
+    <p class="text text5">軟組織感染</p>
+    <p class="text text6">B條件</p>
+    <p class="text text7">居家照護個案</p>
+    <p class="text text8">照護機構住民</p>
+    <p class="text text9">急診個案</p>
+    <p class="text text10">(巴氏量表小於60)</p>
+    <img class="img12" src="h-care.png">
+    <img class="img13" src="o-care.png">
+    <img class="img14" src="e-care.png">
+    <img class="img15" src="y-bar.png">
+    <p class="text text11">照護內容</p>
+    <p class="text text12">經主治醫師評估並開立在宅急症醫囑，且其他醫事人員提供相應服務。</p>
+    <img class="img16" src="doctor.png">
+    <img class="img17" src="nurse.png">
+    <img class="img18" src="breathe.png">
+    <p class="text text13">醫師訪視</p>
+    <p class="text text14">護理人員訪視</p>
+    <p class="text text15">呼吸治療師訪視</p>
+    <img class="img19" src="pharmacy.png">
+    <img class="img20" src="medicine.png">
+    <p class="text text16">藥事人員訪視</p>
+    <p class="text text17">藥品處方調劑</p>
+    <img class="img21" src="check.png">
+    <img class="img22" src="management.png">
+    <img class="img23" src="emergency.png">
+    <p class="text text18">檢驗(檢查)</p>
+    <p class="text text19">個案健康管理</p>
+    <p class="text text20">24小時電話諮詢/<br/>緊急訪視</p>
+    <img class="img24" src="record.png">
+    <img class="img25" src="bye.png">
+    <p class="text text21">製作訪視病例/紀錄</p>
+    <p class="text text22">協助轉介長照中心</p>
+    <div class="rectangle2"></div>
+    <li class="text text23"><a href="https://www.nhi.gov.tw/ch/cp-15112-18d97-3660-1.html">全民健康保險在宅急症照護試辦計畫</a></li>
+    <li class="text text24"><a href="https://www.nhi.gov.tw/ch/cp-15279-736b9-3660-1.html">全民健康保險在宅急症照護試辦計畫問答集</a></li>
+    
+<!--搜尋欄-->    
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="輸入搜尋內容..." class="search-input">
+    <button type="button" class="search-button" onclick="handleSearch(event)">
+        <i class="material-icons">search</i>
+    </button>
+    <div id="errorMessage" style="color: red; display: none;"></div>
+</div>
+
+<script>
+    // 直接在 HTML 中定義關鍵字對應的頁面
+    const keywordPages = {
+        "最新資訊": "page3.html",
+        "服務據點": "page5.html",
+        "參考文獻": "page6.html",
+        "表單調查": "page7.html",
+        "關於我們": "page8.html"
+    };
+
+    function handleSearch(event) {
+        event.preventDefault();
+        const input = document.getElementById("searchInput").value.trim();
+        const errorMessage = document.getElementById("errorMessage");
+
+        if (input in keywordPages) {
+            window.location.href = keywordPages[input];
+        } else {
+            errorMessage.style.display = "block";
+            errorMessage.textContent = `無法找到與 "${input}" 相關的頁面，請輸入有效關鍵字！`;
+        }
+    }
+    document.getElementById("searchInput").addEventListener("keydown", function(event) {
+    const errorMessage = document.getElementById("errorMessage");
+
+    if (event.key === "Enter") { // 檢查是否按下 Enter 鍵
+        event.preventDefault(); // 防止表單預設提交
+        errorMessage.style.display = "none"; // 清除之前的錯誤訊息
+        handleSearch(event);
+    }
+});
+</script>
+<script>
+    // 儲存滾動位置
+    window.addEventListener("beforeunload", function () {
+      localStorage.setItem("scrollPosition", window.scrollY);
+    });
+  
+    // 恢復滾動位置
+    window.addEventListener("load", function () {
+      const scrollPosition = localStorage.getItem("scrollPosition");
+      if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+      }
+    });
+  </script>
+</body>
+</html>

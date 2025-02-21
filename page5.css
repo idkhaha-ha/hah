@@ -1,0 +1,2564 @@
+@media (min-width: 1024px) {
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 400px;
+    height: 100%;
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index:100;
+}
+.menu2{
+    display: none;
+}
+.menu2-toggle {
+    display: none;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-item {
+    width: auto; 
+    height: auto; 
+    padding: 0; 
+    margin: 0; 
+    font-size: 35px; 
+    position: absolute; 
+    line-height: normal; 
+    text-align: left; 
+    font-weight: bold;
+    cursor: pointer; 
+}
+.arrow-container {
+    width: 10px;  
+    height: 10px; 
+    overflow: visible;  
+    position: fixed; 
+    cursor: pointer;  
+}
+
+
+.menu-item img.arrow {
+    display: block;
+    width: 150px; 
+    height: auto;
+    position: absolute;
+    top: -200px;
+    left: 80px;
+    transition: transform 0.3s ease; 
+}
+
+
+.menu-item:hover img.arrow {
+    transform: scale(1.1); 
+}
+
+
+/*new information*/
+.menu-item:nth-child(1) 
+{
+    top: -28px;
+    left:125px;
+}
+
+/*introduce*/
+.menu-item:nth-child(2) 
+{
+    top: 115px;
+    left:125px;
+}
+
+/*doc*/
+.menu-item:nth-child(4) 
+{
+    top: 395px;
+    left:125px;
+}
+/*form*/
+.menu-item:nth-child(5) 
+{
+    top: 533px;
+    left:125px;
+}
+/*aboutus*/
+.menu-item:nth-child(6) 
+{
+    top: 675px;
+    left:125px;
+}
+
+.menu-item:hover {
+    transform: scale(1.1); 
+    opacity:0.8; 
+}
+.menu-item a {
+    text-decoration: none; 
+    color: inherit;        
+    display: block;        
+    width: 100%;           
+    height: 100%;          
+}
+
+.menu-item a:active,
+.menu-item a:focus {
+    color: inherit; 
+    outline: none;   
+}
+/*選單底*/
+.img1,
+.img2,
+.img4,
+.img5,
+.img6 {
+    position: fixed;
+    left: 0;
+    top: 100%;
+    width: 1000px;
+    height: 2000px;
+    z-index: 1; 
+}
+
+.img1 { transform: translateX(-33%) translateY(-53.5%); }
+.img2 { transform: translateX(-16%) translateY(-41%); }
+.img4 { transform: translateX(-33%) translateY(-32.5%); }
+.img5 { transform: translateX(-16%) translateY(-20%); }
+.img6 { transform: translateX(-5%) translateY(-9%); }
+
+/*選單圖示*/
+.icon1{
+    position:fixed;
+    transform: translateX(-5%) translateY(-16.5%); 
+    width: 1000px;
+    height:1500px;
+    z-index:50;
+}
+.icon2{
+    position:fixed;
+    transform: translateX(-7.5%) translateY(-7%); 
+    width: 900px;
+    height:1500px;
+    z-index:3;
+}
+.icon4{
+    position:fixed;
+    transform: translateX(-5%) translateY(0%); 
+    width: 1000px;
+    height:1200px;
+    z-index:50;
+}
+.icon5{
+    position:fixed;
+    transform: translateX(-5%) translateY(-5.5%); 
+    width: 1100px;
+    height:1500px;
+    z-index:50;
+}
+.icon6{
+    position:fixed;
+    transform: translateX(-8%) translateY(48.5%);
+    width: 1050px;
+    height:1260px;
+    z-index:50;
+}
+.title {
+    font-size: 50px;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-weight: bold;
+    align-items: center;
+    position: absolute; 
+    transform: translateX(140%) translateY(-25%); 
+}
+.icon7{
+    position:absolute;
+    transform: translateX(370%) translateY(10%);
+    width: 100px;
+    height:100px;
+    z-index:3;
+}
+/* 搜尋欄 */
+.search-container {
+    position:absolute;
+    transform: translateX(230%) translateY(-20%);
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 50px; 
+    z-index: 100;
+}
+
+/* 搜尋框 */
+.search-input {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+/* 按鈕 */
+.search-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #5480bf; 
+    color: white; 
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px; 
+    transition: all 0.3s ease;
+}
+
+/* 按鈕圖 */
+.material-icons {
+    font-size: 24px; 
+    vertical-align: middle; 
+}
+
+/* 按鈕效果 */
+.search-button:hover {
+    background-color: #c2e6f9; 
+}
+.img7
+{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 150px;
+    height: 150px;
+    transform:translateX(230%) translateY(-500%);
+    z-index: 1; 
+}
+.text {
+    transform:translateX(100%) translateY(280%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:30px;
+    color: black;
+    z-index: 40;
+}
+/*縣市選單*/
+.block1
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:210px;
+    left:440px;
+    z-index: 1; 
+}
+.block2
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:210px;
+    left:790px;
+    z-index: 1; 
+}
+.block3
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:210px;
+    left:1140px;
+    z-index: 1; 
+}
+.spot1 {
+    transform: translateX(440%) translateY(400%);
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    z-index: 900;
+}
+.spot1 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot1:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(440%) translateY(400%) scale(1.2);
+}
+
+.spot2
+{
+    transform:translateX(730%) translateY(400%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot2 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot2:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(730%) translateY(400%) scale(1.2);
+}
+.spot3
+{
+    transform:translateX(1020%) translateY(400%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot3 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot3:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(1020%) translateY(400%) scale(1.2);
+}
+.block4
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:370px;
+    left:440px;
+    z-index: 1; 
+}
+.block5
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:370px;
+    left:790px;
+    z-index: 1; 
+}
+.block6
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:370px;
+    left:1140px;
+    z-index: 1; 
+}
+.spot4
+{
+    transform:translateX(440%) translateY(700%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot4 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot4:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(440%) translateY(700%) scale(1.2);
+}
+.spot5
+{
+    transform:translateX(730%) translateY(700%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot5 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot5:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(730%) translateY(700%) scale(1.2);
+}
+.spot6
+{
+    transform:translateX(1020%) translateY(700%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot6 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot6:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(1020%) translateY(700%) scale(1.2);
+}
+.block7
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:530px;
+    left:440px;
+}
+.block8
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:530px;
+    left:790px;
+    z-index: 1; 
+}
+.block9
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:530px;
+    left:1140px;
+    z-index: 1; 
+}
+.spot7
+{
+    transform:translateX(440%) translateY(1000%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot7 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot7:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(440%) translateY(1000%) scale(1.2);
+}
+.spot8
+{
+    transform:translateX(730%) translateY(1000%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot8 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot8:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(730%) translateY(1000%) scale(1.2);
+}
+.spot9
+{
+    transform:translateX(1020%) translateY(1000%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot9 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot9:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(1020%) translateY(1000%) scale(1.2);
+}
+.block10
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:690px;
+    left:440px;
+    z-index: 1; 
+}
+.block11
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:690px;
+    left:790px;
+    z-index: 1; 
+}
+.block12
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:690px;
+    left:1140px;
+    z-index: 1; 
+}
+.spot10
+{
+    transform:translateX(440%) translateY(1300%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot10:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(440%) translateY(1300%) scale(1.2);
+}
+.spot10 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot11
+{
+    transform:translateX(730%) translateY(1300%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot11 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot11:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(730%) translateY(1300%) scale(1.2);
+}
+.spot12
+{
+    transform:translateX(1020%) translateY(1300%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot12 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot12:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(1020%) translateY(1300%) scale(1.2);
+}
+.block13
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:850px;
+    left:440px;
+    z-index: 1; 
+}
+.block14
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:850px;
+    left:790px;
+    z-index: 1; 
+}
+.block15
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:850px;
+    left:1140px;
+    z-index: 1; 
+}
+.spot13
+{
+    transform:translateX(440%) translateY(1600%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot13 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot13:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(440%) translateY(1600%) scale(1.2);
+}
+.spot14
+{
+    transform:translateX(730%) translateY(1600%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot14 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot14:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(730%) translateY(1600%) scale(1.2);
+}
+.spot15
+{
+    transform:translateX(1020%) translateY(1600%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot15 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot15:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(1020%) translateY(1600%) scale(1.2);
+}
+.block16
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1010px;
+    left:440px;
+    z-index: 1; 
+}
+.block17
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1010px;
+    left:790px;
+    z-index: 1; 
+}
+.block18
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1010px;
+    left:1140px;
+    z-index: 1; 
+}
+.spot16
+{
+    transform:translateX(440%) translateY(1900%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot16 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot16:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(440%) translateY(1900%) scale(1.2);
+}
+.spot17
+{
+    transform:translateX(730%) translateY(1900%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot17 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot17:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(730%) translateY(1900%) scale(1.2);
+}
+.spot18
+{
+    transform:translateX(1020%) translateY(1900%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot18 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot18:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(1020%) translateY(1900%) scale(1.2);
+}
+.block19
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1170px;
+    left:440px;
+    z-index: 1; 
+}
+.block20
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1170px;
+    left:790px;
+    z-index: 1; 
+}
+.block21
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1170px;
+    left:1140px;
+    z-index: 1; 
+}
+.spot19
+{
+    transform:translateX(440%) translateY(2200%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot19 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot19:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(440%) translateY(2200%) scale(1.2);
+}
+.spot20
+{
+    transform:translateX(730%) translateY(2200%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot20 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot20:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(730%) translateY(2200%) scale(1.2);
+}
+.spot21
+{
+    transform:translateX(1020%) translateY(2200%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot21 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot21:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(1020%) translateY(2200%) scale(1.2);
+}
+.block22
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1330px;
+    left:440px;
+    z-index: 1; 
+}
+.spot22
+{
+    transform:translateX(440%) translateY(2500%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot22 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot22:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(440%) translateY(2500%) scale(1.2);
+}
+.rectangle {
+    width: 900px;         /* 長方形的寬度 */
+    height: 200px;        /* 長方形的高度 */
+    background-color: transparent; /* 背景顏色 */
+    border: 15px solid #004aad;  
+    position:absolute;
+    transform:translateX(50%) translateY(650%);
+    border-radius: 20px;
+}
+.text1
+{
+    transform: translateX(105%) translateY(2950%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 1000;
+}
+.text1 a {
+    color: black; /* 設定為黑色 */
+}
+}
+/*for ipad(橫向)*/
+@media screen and (pointer: coarse) and  (orientation: landscape) and (min-width: 1024px) {
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow-y: scroll;
+        }
+       
+        
+        .menu2{
+            display: none;
+        }
+        .menu2-toggle {
+            display: none;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 405px;
+            height: 100%;
+            background-color:transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index:100;
+        }
+        
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .menu-item {
+            width: auto; 
+            height: auto; 
+            padding: 0; 
+            margin: 0; 
+            font-size: 35px; 
+            position: absolute; 
+            line-height: normal; 
+            text-align: left; 
+            font-weight: bold;
+            cursor: pointer; 
+        }
+        .arrow-container {
+            width: 10px;  
+            height: 10px; 
+            overflow: visible;  
+            position: fixed; 
+            cursor: pointer;  
+        }
+        
+        
+        .menu-item img.arrow {
+            display: block;
+            width: 150px; 
+            height: auto;
+            position: absolute;
+            top: 20px;
+            left: -25px;
+            transition: transform 0.3s ease; 
+        }
+        
+        
+        .menu-item:hover img.arrow {
+            transform: scale(1.1); 
+        }
+        
+      /*newinformation*/
+        .menu-item:nth-child(1) 
+        {
+            top: 45px;
+            left:140px;
+        }
+        
+         /*introduction*/
+        .menu-item:nth-child(2) 
+        {
+            top: 170px;
+            left:120px;
+        }
+        /*arrow*/
+        .menu-item:nth-child(3) 
+        {
+            top: 240px;
+            left:120px;
+        }
+        /*doc*/
+        .menu-item:nth-child(4) 
+        {
+            top: 410px;
+            left:120px;
+        }
+        /*form*/
+        .menu-item:nth-child(5) 
+        {
+            top: 530px;
+            left:120px;
+        }
+        /*aboutus*/
+        .menu-item:nth-child(6) 
+        {
+            top: 646px;
+            left:120px;
+        }
+        
+        .menu-item:hover {
+            transform: scale(1.1); 
+            opacity:0.8; 
+        }
+        .menu-item a {
+            text-decoration: none; 
+            color: inherit;        
+            display: block;        
+            width: 100%;           
+            height: 100%;          
+        }
+        
+        .menu-item a:active,
+        .menu-item a:focus {
+            color: inherit; 
+            outline: none;   
+        }
+        .menu-toggle {
+            display: none;
+        }
+    .img1,
+    .img2,
+    .img4,
+    .img5,
+    .img6 {
+        position: fixed;
+        width: 1000px;
+        height: 1600px;
+        z-index: 1; /* 確保圖片在側邊欄後面 */
+    }
+    .img1 { top:685px;left:0px; }
+    .img2 { top:695px;left:0px; }
+    .img4 { top:710px;left:0px; }
+    .img5 { top:720px;left:0px; }
+    .img6 { top:725px;left:0px; }
+    
+    .icon1{
+        position:fixed;
+        transform: translateX(-5%) translateY(-16.5%); 
+        width: 1000px;
+        height:1500px;
+        z-index:1;
+    }
+    .icon2{
+        position:fixed;
+        transform: translateX(-7.5%) translateY(-7.8%); 
+        width: 900px;
+        height:1500px;
+        z-index:3;
+    }
+    .icon4{
+        position:fixed;
+        transform: translateX(-5%) translateY(-4.5%); 
+        width: 1000px;
+        height:1200px;
+        z-index:3;
+    }
+    .icon5{
+        position:fixed;
+        transform: translateX(-5%) translateY(-10.5%); 
+        width: 1100px;
+        height:1500px;
+        z-index:3;
+    }
+    .icon6{
+        position:fixed;
+        transform: translateX(-8%) translateY(41%);
+        width: 1050px;
+        height:1260px;
+        z-index:3;
+    }
+    .title {
+            font-size: 40px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-weight: bold;
+            align-items: center;
+            position: absolute; 
+            top:0px;
+            left:50px;
+    }
+    .icon7{
+            position:absolute;
+            transform: translateX(450%) translateY(10%);
+            width: 80px;
+            height:80px;
+            z-index:3;
+        }
+     /* 搜尋欄 */
+     .search-container {
+        position:absolute;
+        transform: translateX(180%) translateY(-40%);
+        justify-content: center; 
+        align-items: center; 
+        margin-top: 50px; 
+        z-index: 100;
+    }
+    
+    /* 搜尋框 */
+    .search-input {
+        padding: 12px 20px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+    
+    /* 按鈕 */
+    .search-button {
+        padding: 12px 12px;
+        font-size: 16px;
+        background-color: #5480bf; 
+        color: white; 
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 10px; 
+        transition: all 0.3s ease;
+    }
+    
+    /* 按鈕圖 */
+    .material-icons {
+        font-size: 24px; 
+        vertical-align: middle; 
+    }
+    
+    /* 按鈕效果 */
+    .search-button:hover {
+        background-color: #c2e6f9; 
+    }
+    .img7
+{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 150px;
+    height: 150px;
+    transform:translateX(220%) translateY(-500%);
+    z-index: 1; 
+}
+.text {
+    transform:translateX(95%) translateY(220%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:30px;
+    color: black;
+    z-index: 40;
+}
+    /*縣市選單*/
+.block1
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:210px;
+    left:380px;
+    z-index: 1; 
+}
+.block2
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:210px;
+    left:690px;
+    z-index: 1; 
+}
+.block3
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:210px;
+    left:1000px;
+    z-index: 1; 
+}
+.spot1 {
+    transform: translateX(390%) translateY(370%);
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    z-index: 900;
+}
+.spot1 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot1:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform:  translateX(390%) translateY(370%) scale(1.2);
+}
+
+.spot2
+{
+    transform:translateX(650%) translateY(370%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot2 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot2:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(650%) translateY(370%) scale(1.2);
+}
+.spot3
+{
+    transform:translateX(910%) translateY(370%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot3 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot3:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform:translateX(910%) translateY(370%) scale(1.2);
+}
+.block4
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:370px;
+    left:380px;
+    z-index: 1; 
+}
+.block5
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:370px;
+    left:690px;
+    z-index: 1; 
+}
+.block6
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:370px;
+    left:1000px;
+    z-index: 1; 
+}
+.spot4
+{
+    transform:translateX(390%) translateY(655%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot4 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot4:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(390%) translateY(655%) scale(1.2);
+}
+.spot5
+{
+    transform:translateX(650%) translateY(655%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot5 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot5:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(650%) translateY(655%) scale(1.2);
+}
+.spot6
+{
+    transform:translateX(910%) translateY(655%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot6 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot6:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(910%) translateY(655%) scale(1.2);
+}
+.block7
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:530px;
+    left:380px;
+}
+.block8
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:530px;
+    left:690px;
+    z-index: 1; 
+}
+.block9
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:530px;
+    left:1000px;
+    z-index: 1; 
+}
+.spot7
+{
+    transform:translateX(390%) translateY(930%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot7 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot7:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(390%) translateY(930%) scale(1.2);
+}
+.spot8
+{
+    transform:translateX(650%) translateY(930%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot8 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot8:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(650%) translateY(930%) scale(1.2);
+}
+.spot9
+{
+    transform:translateX(910%) translateY(930%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot9 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot9:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(910%) translateY(930%) scale(1.2);
+}
+.block10
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:690px;
+    left:380px;
+    z-index: 1; 
+}
+.block11
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:690px;
+    left:690px;
+    z-index: 1; 
+}
+.block12
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:690px;
+    left:1000px;
+    z-index: 1; 
+}
+.spot10
+{
+    transform:translateX(390%) translateY(1215%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot10:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(390%) translateY(1215%) scale(1.2);
+}
+.spot10 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot11
+{
+    transform:translateX(650%) translateY(1215%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot11 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot11:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(650%) translateY(1215%) scale(1.2);
+}
+.spot12
+{
+    transform:translateX(910%) translateY(1215%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot12 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot12:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(910%) translateY(1215%) scale(1.2);
+}
+.block13
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:850px;
+    left:380px;
+    z-index: 1; 
+}
+.block14
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:850px;
+    left:690px;
+    z-index: 1; 
+}
+.block15
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:850px;
+    left:1000px;
+    z-index: 1; 
+}
+.spot13
+{
+    transform:translateX(390%) translateY(1490%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot13 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot13:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(390%) translateY(1490%) scale(1.2);
+}
+.spot14
+{
+    transform:translateX(650%) translateY(1490%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot14 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot14:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(650%) translateY(1490%) scale(1.2);
+}
+.spot15
+{
+    transform:translateX(910%) translateY(1490%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot15 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot15:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(910%) translateY(1490%) scale(1.2);
+}
+.block16
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1010px;
+    left:380px;
+    z-index: 1; 
+}
+.block17
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1010px;
+    left:690px;
+    z-index: 1; 
+}
+.block18
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1010px;
+    left:1000px;
+    z-index: 1; 
+}
+.spot16
+{
+    transform:translateX(390%) translateY(1775%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot16 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot16:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(390%) translateY(1775%) scale(1.2);
+}
+.spot17
+{
+    transform:translateX(650%) translateY(1775%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot17 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot17:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(650%) translateY(1775%) scale(1.2);
+}
+.spot18
+{
+    transform:translateX(910%) translateY(1775%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot18 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot18:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(910%) translateY(1775%) scale(1.2);
+}
+.block19
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1170px;
+    left:380px;
+    z-index: 1; 
+}
+.block20
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1170px;
+    left:690px;
+    z-index: 1; 
+}
+.block21
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1170px;
+    left:1000px;
+    z-index: 1; 
+}
+.spot19
+{
+    transform:translateX(390%) translateY(2050%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot19 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot19:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(390%) translateY(2050%) scale(1.2);
+}
+.spot20
+{
+    transform:translateX(650%) translateY(2050%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot20 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot20:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(650%) translateY(2050%) scale(1.2);
+}
+.spot21
+{
+    transform:translateX(910%) translateY(2050%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot21 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot21:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(910%) translateY(2050%) scale(1.2);
+}
+.block22
+{
+    position:absolute;
+    width: 240px;
+    height: 135px;
+    top:1330px;
+    left:380px;
+    z-index: 1; 
+}
+.spot22
+{
+    transform:translateX(390%) translateY(2335%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot22 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot22:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: translateX(440%) translateY(2335%) scale(1.2);
+}
+.rectangle {
+    width: 800px;         /* 長方形的寬度 */
+    height: 100px;        /* 長方形的高度 */
+    background-color: transparent; /* 背景顏色 */
+    border: 15px solid #004aad;  
+    position:absolute;
+    transform:translateX(50%) translateY(1150%);
+    border-radius: 20px;
+}
+.text1
+{
+    transform: translateX(100%) translateY(2700%);
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 1000;
+}
+.text1 a {
+    color: black; /* 設定為黑色 */
+}
+    }
+/*for mobile*/
+@media (max-width: 575px) {
+body {
+height: 100%;
+margin: 0;
+font-family: Arial, sans-serif;
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+justify-content: space-between; /* 讓內容平均分布 */
+align-items: center;
+height: 100vh;
+margin: 0; 
+}
+.menu
+{
+display: none;
+}
+/*選單底*/
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6
+{
+display: none;
+}
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5,
+.icon6
+{
+display: none;
+}
+
+.menu2 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    background:#152469;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index:999;
+}
+
+.menu2 li {
+    text-align: center;
+    padding: 10px;
+}
+
+.menu2 li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.menu2 li:hover {
+    background: #444;
+}
+
+/* 漢堡按鈕 */
+.menu2-toggle {
+    position:absolute;
+    font-size: 60px;
+    cursor: pointer;
+    padding: 10px;
+    background:transparent;
+    color:#152469 ;
+    text-align: center;
+    top:72px;
+    left:10px;
+    z-index: 100;
+}
+
+/* 顯示選單 */
+.menu2.active {
+    display: block;
+}
+.title {
+    font-size: 40px;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-weight: bold;
+    align-items: center;
+    position:absolute; 
+    top:-10px;
+    left:100px;
+}
+.icon7{
+    position:absolute;
+    width: 80px;
+    height:80px;
+    top:15px;
+    left:5px;
+    z-index:3;
+}
+
+/* 搜尋欄 */
+.search-container {
+    position:absolute;
+    top:50px;
+    left:100px;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 50px; 
+    z-index: 100;
+}
+
+/* 搜尋框 */
+.search-input {
+    padding: 10px 10px;
+    font-size: 20px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+/* 按鈕 */
+.search-button {
+    padding: 12px 12px;
+    font-size: 10px;
+    background-color: #5480bf; 
+    color: white; 
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 0px; 
+    transition: all 0.3s ease;
+}
+
+/* 按鈕圖 */
+.material-icons {
+    font-size: 10px; 
+    vertical-align: middle; 
+}
+
+/* 按鈕效果 */
+.search-button:hover {
+    background-color: #c2e6f9; 
+}
+#errorMessage {
+    margin-top: 5px; /* 增加與搜尋欄的間距 */
+    font-size: 14px;
+    color: red;
+    display: none;/* 預設隱藏 */
+}
+
+.img7
+{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 110px;
+    height: 110px;
+    top:140px;
+    left:-10px;
+    z-index: 1; 
+}
+.text {
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:25px;
+    color: black;
+    top:150px;
+    left:80px;
+    z-index: 40;
+}
+/*縣市選單*/
+.block1
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:250px;
+    left:60px;
+    z-index: 1; 
+}
+.block2
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:400px;
+    left:60px;
+    z-index: 1; 
+}
+.block3
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:550px;
+    left:60px;
+    z-index: 1; 
+}
+.spot1 {
+    top:255px;
+    left:195px;
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    z-index: 900;
+}
+.spot1 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot1:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+
+.spot2
+{
+    top:405px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot2 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot2:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot3
+{
+    top:555px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot3 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot3:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.block4
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:700px;
+    left:60px;
+    z-index: 1; 
+}
+.block5
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:850px;
+    left:60px;
+    z-index: 1; 
+}
+.block6
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:1000px;
+    left:60px;
+    z-index: 1; 
+}
+.spot4
+{
+    top:705px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot4 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot4:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot5
+{
+    top:855px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot5 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot5:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform:scale(1.2);
+}
+.spot6
+{
+    top:1005px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot6 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot6:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform:  scale(1.2);
+}
+.block7
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:1150px;
+    left:60px;
+    z-index: 1; 
+}
+.block8
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:1300px;
+    left:60px;
+    z-index: 1; 
+}
+.block9
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:1450px;
+    left:60px;
+    z-index: 1; 
+}
+.spot7
+{
+    top:1155px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot7 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot7:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot8
+{
+    top:1305px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot8 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot8:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot9
+{
+    top:1455px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot9 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot9:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform:scale(1.2);
+}
+.block10
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:1600px;
+    left:60px;
+    z-index: 1; 
+}
+.block11
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:1750px;
+    left:60px;
+    z-index: 1; 
+}
+.block12
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:1900px;
+    left:60px;
+    z-index: 1; 
+}
+.spot10
+{
+    top:1605px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot10:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot10 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot11
+{
+    top:1755px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot11 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot11:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot12
+{
+    top:1905px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot12 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot12:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.block13
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:2050px;
+    left:60px;
+    z-index: 1; 
+}
+.block14
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:2200px;
+    left:60px;
+    z-index: 1; 
+}
+.block15
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:2350px;
+    left:60px;
+    z-index: 1; 
+}
+.spot13
+{
+    top:2055px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot13 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot13:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot14
+{
+    top:2205px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot14 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot14:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot15
+{
+    top:2355px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot15 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot15:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.block16
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:2500px;
+    left:60px;
+    z-index: 1; 
+}
+.block17
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:2650px;
+    left:60px;
+    z-index: 1; 
+}
+.block18
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:2800px;
+    left:60px;
+    z-index: 1; 
+}
+.spot16
+{
+    top:2505px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot16 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot16:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot17
+{
+    top:2655px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot17 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot17:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform:scale(1.2);
+}
+.spot18
+{
+    top:2805px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot18 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot18:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.block19
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:2950px;
+    left:60px;
+    z-index: 1; 
+}
+.block20
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:3100px;
+    left:60px;
+    z-index: 1; 
+}
+.block21
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:3250px;
+    left:60px;
+    z-index: 1; 
+}
+.spot19
+{
+    top:2955px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot19 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot19:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot20
+{
+    top:3105px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot20 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot20:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.spot21
+{
+    top:3255px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot21 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot21:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.block22
+{
+    position:absolute;
+    width: 300px;
+    height: 135px;
+    top:3400px;
+    left:60px;
+    z-index: 1; 
+}
+.spot22
+{
+    top:3405px;
+    left:195px;
+    position: absolute; /* 固定位置 */
+    font-weight: bold;
+    font-size:40px;
+    color: black;
+    z-index: 900; 
+}
+.spot22 a {
+    color: black; 
+    text-decoration: none;
+}
+.spot22:hover {
+    background-color: transition; 
+    color: white; /* 白色文字 */
+    transform: scale(1.2);
+}
+.rectangle {
+width: 300px;         /* 長方形的寬度 */
+height: 80px;        /* 長方形的高度 */
+background-color: transparent; /* 背景顏色 */
+border: 15px solid #004aad;  
+position:absolute;
+top:3540px;
+left:40px;
+border-radius: 20px;
+}
+.text1
+{
+top:3575px;
+left:65px;
+position: absolute; /* 固定位置 */
+font-weight: bold;
+font-size:23px;
+color: black;
+z-index: 1000;
+}
+.text1 a {
+    color: black; /* 設定為黑色 */
+}
+}
