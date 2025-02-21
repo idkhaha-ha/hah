@@ -46,10 +46,10 @@
         font-size: 50px;
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
-        margin-top: 120%;
         display: inline-flex;
         align-items: center;
         position: relative;
+        top:80%;
         left: 95%; 
         text-align: center; /* 副標題居中 */
     }
