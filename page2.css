@@ -1,7 +1,12 @@
 @media (min-width: 1024px) {
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    overflow-y: scroll;
 }
 .menu2{
     display: none;
@@ -11,8 +16,9 @@ body {
 }
 .sidebar {
     position: fixed;
-    left: 0;
-    top: 0;
+    left: 0%;
+    top: 0%;
+    transform: translateX(0%) translateY(0%);
     width: 400px;
     height: 100%;
     background-color:transparent;
@@ -35,7 +41,7 @@ body {
     width: 150px;
     height:100px;
     color: black;
-    padding: 15px;
+    padding: 10px;
     margin: 10px auto;
     font-size: 35px;
     background-size: cover;
@@ -78,55 +84,67 @@ body {
     position: fixed;
     left: 0;
     top: 100%;
-    width: 1000px;
-    height: 2000px;
+    width:1000px;
+    height: 1800px;
     z-index: 1; /* 確保圖片在側邊欄後面 */
 }
-.img1 { transform: translateX(-33%) translateY(-53.5%); }
-.img2 { transform: translateX(-16%) translateY(-41%); }
-.img3 { transform: translateX(-5%) translateY(-30%); }
-.img4 { transform: translateX(-33%) translateY(-32.5%); }
-.img5 { transform: translateX(-16%) translateY(-20%); }
-.img6 { transform: translateX(-5%) translateY(-9%); }
+.img1 {top:-26.5%; left:-21%; transform: translateX(0%) translateY(0%);}
+.img2 {top:2.5%; left:-10.25%;transform: translateX(0%) translateY(0%);}
+.img3 {top:28%; left:-3%;transform: translateX(0%) translateY(0%);}
+.img4 { top:23%; left:-21%;transform: translateX(0%) translateY(0%); }
+.img5 { top:52%; left:-10.25%; transform: translateX(0%) translateY(0%);}
+.img6 { top:77.5%; left:-3%;transform: translateX(0%) translateY(0%); }
 
 .icon1{
     position:fixed;
-    transform: translateX(-5%) translateY(-16.5%); 
+    top:-32%;
+    left:-3%;
+    transform: translateX(0%) translateY(0%);
     width: 1000px;
     height:1500px;
     z-index:1;
 }
 .icon2{
     position:fixed;
-    transform: translateX(-7.5%) translateY(-7%); 
+    top:-15%;
+    left:-4%;
+    transform: translateX(0%) translateY(0%);
     width: 900px;
     height:1500px;
     z-index:3;
 }
 .icon3{
     position:fixed;
-    transform: translateX(-3.5%) translateY(3.5%); 
+    top:0%;
+    left:-1.5%;
+    transform: translateX(0%) translateY(0%);
     width: 820px;
     height:902px;
     z-index:3;
 }
 .icon4{
     position:fixed;
-    transform: translateX(-5%) translateY(0%); 
+    top:-4%;
+    left:-3%;
+    transform: translateX(0%) translateY(0%);
     width: 1000px;
     height:1200px;
     z-index:3;
 }
 .icon5{
     position:fixed;
-    transform: translateX(-5%) translateY(-5.5%); 
+    top:-16%;
+    left:-3.5%;
+    transform: translateX(0%) translateY(0%);
     width: 1100px;
     height:1500px;
     z-index:3;
 }
 .icon6{
     position:fixed;
-    transform: translateX(-8%) translateY(48.5%);
+    top:71%;
+    left:-5%;
+    transform: translateX(0%) translateY(0%);
     width: 1050px;
     height:1260px;
     z-index:3;
@@ -137,11 +155,15 @@ body {
     font-weight: bold;
     align-items: center;
     position: fixed; 
-    transform: translateX(140%) translateY(-25%); 
+    top:-5%;
+    left:33%;
+    transform: translateX(0%) translateY(0%); 
 }
 .icon7{
     position:fixed;
-    transform: translateX(370%) translateY(10%);
+    top:-1%;
+    left:27%;
+    transform: translateX(0%) translateY(0%); 
     width: 100px;
     height:100px;
     z-index:3;
@@ -168,7 +190,9 @@ body {
     padding: 10px;
     position: fixed;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    transform: translateX(147%) translateY(84%); 
+    top:45%;
+    left:28%;
+    transform:translateX(0%) translateY(0%);
 }
 .board-header {
         text-align: center;
@@ -219,7 +243,9 @@ body {
     padding: 10px;
     position: fixed;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    transform: translateX(260%) translateY(84%); 
+    top:45%;
+    left:51.5%;
+    transform:translateX(0%) translateY(0%);
 }
 .board-header {
         text-align: center;
@@ -272,7 +298,9 @@ body {
     width: 1000px;
     height: 250px;
     border-radius: 15px;
-    transform:translateX(40%) translateY(35%);
+    top:12%;
+    left:28%;
+    transform:translateX(0%) translateY(0%);
     opacity: 0;
     transition: opacity 1s ease-in-out;
     object-fit: cover;
@@ -293,7 +321,9 @@ body {
     padding: 10px;
     position: fixed;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    transform: translateX(373%) translateY(84%); 
+    top:45%;
+    left:75%;
+    transform:translateX(0%) translateY(0%);
 }
 .board-header {
         text-align: center;
@@ -335,7 +365,9 @@ body {
 /* 搜尋欄 */
 .search-container {
     position:fixed;
-    transform: translateX(230%) translateY(-20%);
+    top:-4%;
+    left:67%;
+    transform:translateX(0%) translateY(0%);
     justify-content: center; 
     align-items: center; 
     margin-top: 50px; 
@@ -356,7 +388,7 @@ body {
 
 /* 按鈕 */
 .search-button {
-    padding: 12px 20px;
+    padding: 12px 12px;
     font-size: 16px;
     background-color: #5480bf; 
     color: white; 
