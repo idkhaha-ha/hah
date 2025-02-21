@@ -1,43 +1,60 @@
 @media (min-width: 1024px) {
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 70px;
-    width: 400px;
-    height: 100%;
-    background-color:transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index:100;
-}
+body {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 水平居中 */
+        justify-content: center; /* 垂直居中 */
+        height: 100vh;
+        margin: 0;
+        overflow-y: scroll;
+    }
 .menu2{
-    display: none;
-}
+        display: none;
+    }
 .menu2-toggle {
-    display: none;
+        display: none;
+    }
+.sidebar {
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        transform: translateX(0%) translateY(0%);
+        width: 400px;
+        height: 100%;
+        background-color:transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index:100;
 }
+    
 .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
 }
-
+    
 .menu-item {
-    width: auto; 
-    height: auto; 
-    padding: 0; 
-    margin: 0; 
-    font-size: 35px; 
-    position: absolute; 
-    line-height: normal; 
-    text-align: left; 
-    font-weight: bold;
-    cursor: pointer; 
-}
+        width: 150px;
+        height:100px;
+        color: black;
+        padding: 10px;
+        margin: 10px auto;
+        font-size: 35px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+        transition: transform 0.3s ease, opacity 0.3s;
+        cursor: pointer;
+        position:relative;
+        line-height: 100px;
+        font-weight: bold;
+        text-align: left;
+    
+    }
 .arrow-container {
     width: 10px;  
     height: 10px; 
@@ -52,8 +69,6 @@
     width: 150px; 
     height: auto;
     position: absolute;
-    top: -25px;
-    left: -25px;
     transition: transform 0.3s ease; 
 }
 
@@ -66,39 +81,45 @@
 /*arrow*/
 .menu-item:nth-child(1) 
 {
-    top: -25px;
-    left:140px;
+    top: -15px;
+    left:10px;
+    transform: translateX(0%) translateY(0%); 
 }
 
 /*policy introduce*/
 .menu-item:nth-child(2) 
 {
-    top: 115px;
-    left:120px;
+    top: 0px;
+    left:10px;
+    transform: translateX(0%) translateY(0%); 
 }
 /*spot*/
 .menu-item:nth-child(3) 
 {
-    top: 255px;
-    left:120px;
+    top: 0px;
+    left:10px;
+    transform: translateX(0%) translateY(0%); 
 }
 /*doc*/
 .menu-item:nth-child(4) 
 {
-    top: 395px;
-    left:120px;
+    top: 0px;
+    left:10px;
+    transform: translateX(0%) translateY(0%); 
 }
 /*form*/
 .menu-item:nth-child(5) 
 {
-    top: 535px;
-    left:120px;
+    top: 0px;
+    left:10px;
+    transform: translateX(0%) translateY(0%); 
 }
 /*aboutus*/
 .menu-item:nth-child(6) 
 {
-    top: 675px;
-    left:120px;
+    top: 0px;
+    left:10px;
+    transform: translateX(0%) translateY(0%); 
 }
 
 .menu-item:hover {
@@ -127,49 +148,57 @@
     position: fixed;
     left: 0;
     top: 100%;
-    width: 1000px;
-    height: 2000px;
-    z-index: 1; 
+    width:1000px;
+    height: 1800px;
+    z-index: 1; /* 確保圖片在側邊欄後面 */
 }
-
-.img2 { transform: translateX(-16%) translateY(-41%); }
-.img3 { transform: translateX(-5%) translateY(-30%); }
-.img4 { transform: translateX(-33%) translateY(-32.5%); }
-.img5 { transform: translateX(-16%) translateY(-20%); }
-.img6 { transform: translateX(-5%) translateY(-9%); }
-
+.img2 {top:2.5%; left:-10.25%;transform: translateX(0%) translateY(0%);}
+.img3 {top:28%; left:-3%;transform: translateX(0%) translateY(0%);}
+.img4 { top:23%; left:-21%;transform: translateX(0%) translateY(0%); }
+.img5 { top:52%; left:-10.25%; transform: translateX(0%) translateY(0%);}
+.img6 { top:77.5%; left:-3%;transform: translateX(0%) translateY(0%); }
 /*選單圖示*/
 .icon2{
     position:fixed;
-    transform: translateX(-8.4%) translateY(-7.5%); 
+    top:-15%;
+    left:-4%;
+    transform: translateX(0%) translateY(0%);
     width: 900px;
     height:1500px;
     z-index:3;
 }
 .icon3{
     position:fixed;
-    transform: translateX(-4.5%) translateY(2.6%); 
+    top:0%;
+    left:-1.5%;
+    transform: translateX(0%) translateY(0%);
     width: 820px;
     height:902px;
     z-index:3;
 }
 .icon4{
     position:fixed;
-    transform: translateX(-5.9%) translateY(-0.58%); 
+    top:-4%;
+    left:-3%;
+    transform: translateX(0%) translateY(0%);
     width: 1000px;
     height:1200px;
     z-index:3;
 }
 .icon5{
     position:fixed;
-    transform: translateX(-5.75%) translateY(-6%); 
+    top:-16%;
+    left:-3.5%;
+    transform: translateX(0%) translateY(0%);
     width: 1100px;
     height:1500px;
     z-index:3;
 }
 .icon6{
     position:fixed;
-    transform: translateX(-8.71%) translateY(47.9%);
+    top:71%;
+    left:-5%;
+    transform: translateX(0%) translateY(0%);
     width: 1050px;
     height:1260px;
     z-index:3;
@@ -180,28 +209,44 @@
     font-weight: bold;
     align-items: center;
     position: fixed; 
-    transform: translateX(140%) translateY(-25%); 
+    top:-5%;
+    left:33%;
+    transform: translateX(0%) translateY(0%); 
 }
 .icon7{
     position:fixed;
-    transform: translateX(370%) translateY(10%);
+    top:-1%;
+    left:27%;
+    transform: translateX(0%) translateY(0%); 
     width: 100px;
     height:100px;
     z-index:3;
 }
 
+.img7{
+    position: fixed;
+    left: 0;
+    top: 100%;
+    width: 1000px;
+    height: 250px;
+    transform: translateX(40%) translateY(-285%);
+    border-radius: 15px;
+    border: 3px solid #000;
+}
 /*最新資訊*/
 .bulletin-board {
     background-color: #fff;
     width: 1000px;
-    height:650px;
+    height:600px;
     margin: 0 auto;
     border: 10px solid #152469; 
     border-radius: 10px; 
     padding: 10px;
     position: fixed;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    transform: translateX(38%) translateY(20%); 
+    top:15%;
+    left:23%;
+    transform: translateX(8%) translateY(0%); 
 }
 .board-header {
         text-align: center;
@@ -242,51 +287,52 @@
         color: #555;
     }
 
-/* 搜尋欄 */
-.search-container {
-    position:fixed;
-    transform: translateX(240%) translateY(-20%);
-    justify-content: center; 
-    align-items: center; 
-    margin-top: 50px; 
-    z-index: 100;
-}
-
-/* 搜尋框 */
-.search-input {
-    padding: 12px 20px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 30px;
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: black;
-}
-
-/* 按鈕 */
-.search-button {
-    padding: 12px 20px;
-    font-size: 16px;
-    background-color: #5480bf; 
-    color: white; 
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-left: 10px; 
-    transition: all 0.3s ease;
-}
-
-/* 按鈕圖 */
-.material-icons {
-    font-size: 24px; 
-    vertical-align: middle; 
-}
-
-/* 按鈕效果 */
-.search-button:hover {
-    background-color: #c2e6f9; 
-}
+    .search-container {
+        position:fixed;
+        top:-4%;
+        left:67%;
+        transform:translateX(0%) translateY(0%);
+        justify-content: center; 
+        align-items: center; 
+        margin-top: 50px; 
+        z-index: 100;
+    }
+    
+    /* 搜尋框 */
+    .search-input {
+        padding: 12px 20px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+    
+    /* 按鈕 */
+    .search-button {
+        padding: 12px 12px;
+        font-size: 16px;
+        background-color: #5480bf; 
+        color: white; 
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 10px; 
+        transition: all 0.3s ease;
+    }
+    
+    /* 按鈕圖 */
+    .material-icons {
+        font-size: 24px; 
+        vertical-align: middle; 
+    }
+    
+    /* 按鈕效果 */
+    .search-button:hover {
+        background-color: #c2e6f9; 
+    }
 
 }
 /*for ipad(橫向)*/
