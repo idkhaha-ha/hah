@@ -237,9 +237,9 @@ img{
     img{
         position: fixed;
         left:5%; 
-        top: 0%; 
-        width: 550px;
-        height: 500px;
+        top: 10%; 
+        width: 130vw;
+        height: 55vh;
     }
     .img1 {
         position: fixed;
@@ -255,9 +255,11 @@ img{
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
         top: 65%;
-        right: 12%; 
+        left:50%; 
         align-items: center;
         position: fixed; 
+        transform: translateX(-50%); 
+        white-space: nowrap;
     }
        
         
