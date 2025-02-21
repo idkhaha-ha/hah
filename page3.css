@@ -81,44 +81,44 @@ body {
 /*arrow*/
 .menu-item:nth-child(1) 
 {
-    top: -15px;
-    left:10px;
+    top: -2%;
+    left:0%;
     transform: translateX(0%) translateY(0%); 
 }
 
 /*policy introduce*/
 .menu-item:nth-child(2) 
 {
-    top: 0px;
-    left:10px;
+    top: 0%;
+    left:0%;
     transform: translateX(0%) translateY(0%); 
 }
 /*spot*/
 .menu-item:nth-child(3) 
 {
-    top: 0px;
-    left:10px;
+    top: 0%;
+    left:0%;
     transform: translateX(0%) translateY(0%); 
 }
 /*doc*/
 .menu-item:nth-child(4) 
 {
-    top: 0px;
-    left:10px;
+    top: 0%;
+    left:0%;
     transform: translateX(0%) translateY(0%); 
 }
 /*form*/
 .menu-item:nth-child(5) 
 {
-    top: 0px;
-    left:10px;
+    top: 0%;
+    left:0%;
     transform: translateX(0%) translateY(0%); 
 }
 /*aboutus*/
 .menu-item:nth-child(6) 
 {
-    top: 0px;
-    left:10px;
+    top: 0%;
+    left:0%;
     transform: translateX(0%) translateY(0%); 
 }
 
@@ -286,7 +286,7 @@ body {
         font-size: 15px;
         color: #555;
     }
-
+/* 搜尋攔 */
     .search-container {
         position:fixed;
         top:-4%;
