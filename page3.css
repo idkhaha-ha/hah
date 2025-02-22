@@ -152,10 +152,10 @@ body {
     height: 1800px;
     z-index: 1; /* 確保圖片在側邊欄後面 */
 }
-.img2 {top:2.5%; left:-10.25%;transform: translateX(0%) translateY(0%);}
+.img2 {top:2.5%; left:-11%;transform: translateX(0%) translateY(0%);}
 .img3 {top:28%; left:-3%;transform: translateX(0%) translateY(0%);}
-.img4 { top:23%; left:-21%;transform: translateX(0%) translateY(0%); }
-.img5 { top:52%; left:-10.25%; transform: translateX(0%) translateY(0%);}
+.img4 { top:23%; left:-22%;transform: translateX(0%) translateY(0%); }
+.img5 { top:52%; left:-11%; transform: translateX(0%) translateY(0%);}
 .img6 { top:77.5%; left:-3%;transform: translateX(0%) translateY(0%); }
 /*選單圖示*/
 .icon2{

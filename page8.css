@@ -1,77 +1,126 @@
 @media (min-width: 1024px) {
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            height: 100vh;
+            margin: 0;
+            overflow-y: scroll;
+        }
+    .menu2{
+            display: none;
+        }
+    .menu2-toggle {
+            display: none;
+        }
+    .sidebar {
+            position: fixed;
+            left: 0%;
+            top: 0%;
+            transform: translateX(0%) translateY(0%);
+            width: 400px;
+            height: 100%;
+            background-color:transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index:100;
+    }
+        
+    .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+    }
+        
+    .menu-item {
+            width: 150px;
+            height:100px;
+            color: black;
+            padding: 10px;
+            margin: 10px auto;
+            font-size: 35px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            transition: transform 0.3s ease, opacity 0.3s;
+            cursor: pointer;
+            position:relative;
+            line-height: 100px;
+            font-weight: bold;
+            text-align: left;
+        
+        }
+    .arrow-container {
+        width: 10px;  
+        height: 10px; 
+        overflow: visible;  
+        position: fixed; 
+        cursor: pointer;  
+    }
+    
+    
+    .menu-item img.arrow {
+        display: block;
+        width: 150px; 
+        height: auto;
+        position: absolute;
+        transition: transform 0.3s ease; 
+    }
+    
+    
+    .menu-item:hover img.arrow {
+        transform: scale(1.1); 
+    }
+
+/*new information*/
+.menu-item:nth-child(1) 
+{
+    top: 0%;
+    left:0%;
+    transform: translateX(0%) translateY(0%); 
 }
 
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 400px;
-    height: 100%;
-    background-color:transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index:100;
+/*introduce*/
+.menu-item:nth-child(2) 
+{
+    top: 0%;
+    left:0%;
+    transform: translateX(0%) translateY(0%); 
 }
-.menu2{
-    display: none;
+/*spot*/
+.menu-item:nth-child(3) 
+{
+    top: 0%;
+    left:0%;
+    transform: translateX(0%) translateY(0%);
 }
-.menu2-toggle {
-    display: none;
+/*doc*/
+.menu-item:nth-child(4) 
+{
+    top: 0%;
+    left:0%;
+    transform: translateX(0%) translateY(0%); 
 }
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
+/*form*/
+.menu-item:nth-child(5) 
+{
+    top: 0%;
+    left:0%;
+    transform: translateX(0%) translateY(0%); 
 }
-
-.menu-item {
-    width: 150px;
-    height:100px;
-    color: black;
-    padding: 15px;
-    margin: 10px auto;
-    font-size: 35px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-    transition: transform 0.3s ease, opacity 0.3s;
-    cursor: pointer;
-    position:relative;
-    line-height: 100px;
-    font-weight: bold;
-    text-align: left;
-
-}
-.arrow-container {
-    width: 10px;  
-    height: 10px; 
-    overflow: visible;  
-    position: fixed; 
-    cursor: pointer;  
+/*arrow*/
+.menu-item:nth-child(6) 
+{
+    top: 0%;
+    left:0%;
+    transform: translateX(0%) translateY(0%); 
 }
 
-
-.menu-item img.arrow {
-    display: block;
-    width: 150px; 
-    height: auto;
-    position: absolute;
-    top: -15px;
-    left: -30px;
-    transition: transform 0.3s ease; 
-}
-
-
-.menu-item:hover img.arrow {
-    transform: scale(1.1); 
-}
 .menu-item:hover {
     transform: scale(1.1); 
     opacity:0.8; 
@@ -89,7 +138,7 @@ body {
     color: inherit; 
     outline: none;   
 }
-
+/*選單底*/
 .img1,
 .img2,
 .img3,
@@ -98,119 +147,87 @@ body {
     position: fixed;
     left: 0;
     top: 100%;
-    width: 1000px;
-    height: 2000px;
+    width:1000px;
+    height: 1800px;
     z-index: 1; /* 確保圖片在側邊欄後面 */
 }
-.img1 { transform: translateX(-33%) translateY(-53.5%); }
-.img2 { transform: translateX(-16%) translateY(-41%); }
-.img3 { transform: translateX(-5%) translateY(-30%); }
-.img4 { transform: translateX(-33%) translateY(-32.5%); }
-.img5 { transform: translateX(-16%) translateY(-20%); }
+.img1 {top:-26.5%; left:-21%; transform: translateX(0%) translateY(0%);}
+.img2 {top:2.5%; left:-10.25%;transform: translateX(0%) translateY(0%);}
+.img3 {top:28%; left:-3%;transform: translateX(0%) translateY(0%);}
+.img4 { top:23%; left:-22%;transform: translateX(0%) translateY(0%); }
+.img5 { top:52%; left:-10.25%; transform: translateX(0%) translateY(0%);}
 
+/*選單圖示*/
 .icon1{
     position:fixed;
-    transform: translateX(-5%) translateY(-16.5%); 
+    top:-32%;
+    left:-3%;
+    transform: translateX(0%) translateY(0%);
     width: 1000px;
     height:1500px;
     z-index:1;
 }
 .icon2{
     position:fixed;
-    transform: translateX(-7.5%) translateY(-7%); 
+    top:-15%;
+    left:-4%;
+    transform: translateX(0%) translateY(0%);
     width: 900px;
     height:1500px;
     z-index:3;
 }
 .icon3{
     position:fixed;
-    transform: translateX(-3.5%) translateY(3.5%); 
+    top:0%;
+    left:-1.5%;
+    transform: translateX(0%) translateY(0%);
     width: 820px;
     height:902px;
     z-index:3;
 }
 .icon4{
     position:fixed;
-    transform: translateX(-5%) translateY(0%); 
+    top:-4%;
+    left:-3%;
+    transform: translateX(0%) translateY(0%);
     width: 1000px;
     height:1200px;
     z-index:3;
 }
 .icon5{
     position:fixed;
-    transform: translateX(-5%) translateY(-5.5%); 
+    top:-16%;
+    left:-3.5%;
+    transform: translateX(0%) translateY(0%);
     width: 1100px;
     height:1500px;
     z-index:3;
 }
-
 .title {
     font-size: 50px;
     font-family: 'Noto Sans HK', sans-serif;
     font-weight: bold;
     align-items: center;
     position: absolute; 
-    transform: translateX(140%) translateY(-25%); 
+    top:-5%;
+    left:33%;
+    transform: translateX(0%) translateY(0%); 
 }
 .icon7{
     position:absolute;
-    transform: translateX(370%) translateY(10%);
+    top:-1%;
+    left:27%;
+    transform: translateX(0%) translateY(0%); 
     width: 100px;
     height:100px;
     z-index:3;
 }
-
-.img7{
-    position: fixed;
-    left: 0;
-    top: 100%;
-    width: 1000px;
-    height: 250px;
-    transform: translateX(40%) translateY(-285%);
-    border-radius: 15px;
-    border: 3px solid #000;
-}
-.img6
-{
-    position: fixed;
-    left: 350px;
-    top: 150px;
-    width: 500px;
-    height: 500px;
-}
-.text{
-position: fixed; /* 固定位置 */
-top:250px;
-left:800px;
-font-weight: bold;
-font-size:35px;
-color: black;
-z-index: 40;
-}
-.img8
-{
-position:fixed;
-left:740px;
-top:380px;
-width: 170px;
-height:150px;
-z-index:1;
-}
-.text1{
-position: fixed; /* 固定位置 */
-top:390px;
-left:880px;
-font-weight: bold;
-font-size:40px;
-color: black;
-z-index: 40;
-}
-
-
 /* 搜尋欄 */
 .search-container {
-    position:fixed;
-    transform: translateX(230%) translateY(-20%);
+    position:absolute;
+    top:-4%;
+    left:67%;
+    transform:translateX(0%) translateY(0%);
     justify-content: center; 
     align-items: center; 
     margin-top: 50px; 
@@ -231,7 +248,7 @@ z-index: 40;
 
 /* 按鈕 */
 .search-button {
-    padding: 12px 20px;
+    padding: 12px 12px;
     font-size: 16px;
     background-color: #5480bf; 
     color: white; 
@@ -252,6 +269,46 @@ z-index: 40;
 .search-button:hover {
     background-color: #c2e6f9; 
 }
+.img6
+{
+    position: fixed;
+    top:17%;
+    left:24%;
+    transform: translateX(0%) translateY(0%); 
+    width: 500px;
+    height: 500px;
+}
+.text{
+position: fixed; /* 固定位置 */
+top:33%;
+left:54%;
+transform: translateX(0%) translateY(0%); 
+font-weight: bold;
+font-size:35px;
+color: black;
+z-index: 40;
+}
+.img8
+{
+position:fixed;
+top:48%;
+left:49%;
+transform: translateX(0%) translateY(0%); 
+width: 170px;
+height:150px;
+z-index:1;
+}
+.text1{
+position: fixed; /* 固定位置 */
+top:50%;
+left:58%;
+transform: translateX(0%) translateY(0%); 
+font-weight: bold;
+font-size:40px;
+color: black;
+z-index: 40;
+}
+
 }
 @media (max-width: 575px) {
     body {
