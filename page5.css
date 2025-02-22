@@ -339,7 +339,7 @@
 .spot1:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform:translateX(0%) translateY(0%); scale(1.2);
+    transform:translateX(0%) translateY(0%) scale(1.2);
 }
 
 .spot2
