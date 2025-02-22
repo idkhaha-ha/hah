@@ -821,7 +821,7 @@ display: none;
     display: none;
     background:#152469;
     position: absolute;
-    top:0px;
+    top:0%;
     left:0%;
     width: 100%;
     z-index:999;
@@ -845,14 +845,15 @@ display: none;
 /* 漢堡按鈕 */
 .menu2-toggle {
     position:absolute;
-    font-size: 60px;
+    font-size: clamp(45px, 4vw, 60px);
     cursor: pointer;
     padding: 10px;
     background:transparent;
     color:#152469 ;
     text-align: center;
-    top:72px;
-    left:10px;
+    top:8%;
+    left:7%;
+    transform: translateX(0%) translateY(0%);
     z-index: 100;
 }
 
@@ -861,20 +862,22 @@ display: none;
     display: block;
 }
 .title {
-    font-size: 40px;
+    font-size:clamp(35px, 4vw, 50px);
     font-family: 'Noto Sans HK', sans-serif;
     font-weight: bold;
     align-items: center;
-    position:absolute; 
-    top:-10px;
-    left:100px;
+    position: fixed; 
+    top:0%;
+    left:33%;
+    transform: translateX(-15%) translateY(0%); 
 }
 .icon7{
-    position:absolute;
-    width: 80px;
-    height:80px;
-    top:15px;
-    left:5px;
+    position:fixed;
+    top:2%;
+    left:27%;
+    transform: translateX(-110%) translateY(0%); 
+    width: clamp(70px, 8vw, 100px);
+    height: clamp(70px, 8vh, 100px);
     z-index:3;
 }
 .carousel {
@@ -1058,31 +1061,32 @@ display: none;
 }
 /* 搜尋欄 */
 .search-container {
-    position:absolute;
-    top:50px;
-    left:95px;
+    position:fixed;
+    top:0%;
+    left:67%;
+    transform:translateX(-75%) translateY(60%);
     justify-content: center; 
     align-items: center; 
     margin-top: 50px; 
     z-index: 100;
 }
-    
+
 /* 搜尋框 */
 .search-input {
-    padding: 10px 10px;
-    font-size: 15px;
+    padding: 12px 20px;
+    font-size: 12px;
     border: 2px solid #ddd;
     border-radius: 30px;
-    width: 200px;
+    width:50vw;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: black;
 }
-    
+
 /* 按鈕 */
 .search-button {
-    padding: 12px 13px;
-    font-size: 16px;
+    padding: 12px 12px;
+    font-size: 10px;
     background-color: #5480bf; 
     color: white; 
     border: none;
@@ -1091,13 +1095,13 @@ display: none;
     margin-left: 10px; 
     transition: all 0.3s ease;
 }
-    
+
 /* 按鈕圖 */
 .material-icons {
-    font-size: 20px; 
+    font-size: 12px; 
     vertical-align: middle; 
 }
-    
+
 /* 按鈕效果 */
 .search-button:hover {
     background-color: #c2e6f9; 

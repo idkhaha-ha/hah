@@ -241,6 +241,7 @@ img{
         top: 10%; 
         width: 130vw;
         height: 55vh;
+        object-fit: cover;
     }
     .img1 {
         position: fixed;
@@ -274,7 +275,7 @@ img{
         align-items: center;
         position: fixed;
         top:85.5%;
-        left:33%; 
+        left:33%;  
     }
     .subtitle a{
         text-decoration:none;
