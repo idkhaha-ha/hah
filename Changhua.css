@@ -282,7 +282,7 @@
     align-items: center;
     justify-content: space-between; /* 左文字右箭頭 */
     top:1vh;
-    left:73vw;
+    left:clamp(70vw, 73.5vw, 80vw);
     position:fixed;
     z-index: 100;
     white-space: nowrap;
