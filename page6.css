@@ -41,14 +41,14 @@
     .menu-item {
         color: black;
         padding: 10px;
-        margin: 15px auto;
-        font-size: 1.8em;
+        margin: 5vh auto;
+        font-size: 2vw;
         background-size: cover;
         background-position: center;
         border-radius: 5px;
         transition: transform 0.3s ease, opacity 0.3s;
         cursor: pointer;
-        position:relative;
+        position:absolute;
         line-height: 100px;
         font-weight: bold;
         text-align: left;
@@ -56,45 +56,51 @@
     }
     .menu-item:nth-child(1) 
     {
-        top: -1vh;
+        top: -5vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     
     /*policy introduce*/
     .menu-item:nth-child(2) 
     {
-        top: 15vh;
+        top: 11.5vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*spot*/
     .menu-item:nth-child(3) 
     {
-        top: 30.5vh;
+        top: 27.5vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*doc*/
     .menu-item:nth-child(4) 
     {
-        top: 47vh;
+        top: 43.5vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*form*/
     .menu-item:nth-child(5) 
     {
-        top: 64vh;
+        top: 61vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*aboutus*/
     .menu-item:nth-child(6) 
     {
-        top: 81vh;
+        top: 78vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     .menu-item:hover {
         transform:translateX(0%) translateY(0%) scale(1.1); 
@@ -281,7 +287,7 @@
     top: 34vh;
     transform: translateX(-50%) translateY(-50%); 
     width: 30vw;
-    height: auto;
+    height: 30vh;
 }
 .img9
 {
@@ -290,14 +296,14 @@
     top: 35vh;
     transform: translateX(-50%) translateY(-50%); 
     width: 13vw;
-    height: auto;
+    height: 20vh;
 }
 .text
 {
     position: fixed;
     left: 37vw;
-    top: 24vh;
-    font-size: 3.3em;
+    top: calc(33vh - 9%);
+    font-size: 6.3vh;
     font-weight:bold;
 }
 .img10
@@ -307,7 +313,7 @@
     top: 74vh;
     transform: translateX(-50%) translateY(-50%); 
     width: 30vw;
-    height: auto;
+    height: 30vh;
 }
 .img11
 {
@@ -316,14 +322,14 @@
     top: 75vh;
     transform: translateX(-50%) translateY(-50%); 
     width: 13vw;
-    height: auto;
+    height: 22vh;
 }
 .text1
 {
     position: fixed;
     left: 37vw;
-    top: 64vh;
-    font-size: 3.3em;
+    top: calc(74vh - 10%);
+    font-size: 6.3vh;
     font-weight:bold;
 }
 .img12

@@ -61,61 +61,66 @@
     .menu-item {
         color: black;
         padding: 10px;
-        margin: 15px auto;
-        font-size: 1.8em;
+        margin: 5vh auto;
+        font-size: 2vw;
         background-size: cover;
         background-position: center;
         border-radius: 5px;
         transition: transform 0.3s ease, opacity 0.3s;
         cursor: pointer;
-        position:relative;
+        position:absolute;
         line-height: 100px;
         font-weight: bold;
         text-align: left;
     
     }
-    /*newinformation*/
     .menu-item:nth-child(1) 
     {
-        top: -1vh;
+        top: -5vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     
-    /*arrow*/
+    /*policy introduce*/
     .menu-item:nth-child(2) 
     {
-        top: 14vh;
-        left:7vw;
-        position:fixed;
+        top: 10.5vh;
+        left:8vw;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*spot*/
     .menu-item:nth-child(3) 
     {
-        top: 30.5vh;
-        left:7vw;
-        position:fixed;
+        top: 27.5vh;
+        left:8vw;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*doc*/
     .menu-item:nth-child(4) 
     {
-        top: 48vh;
-        left:7vw;
-        position:fixed;
+        top: 44.5vh;
+        left:8vw;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*form*/
     .menu-item:nth-child(5) 
     {
-        top: 64vh;
-        left:7vw;
-        position:fixed;
+        top: 61vh;
+        left:8vw;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*aboutus*/
     .menu-item:nth-child(6) 
     {
-        top: 81vh;
-        left:7vw;
-        position:fixed;
+        top: 78vh;
+        left:8vw;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     .menu-item:hover {
         transform:translateX(0%) translateY(0%) scale(1.1); 
@@ -293,16 +298,17 @@ a .icon8:hover {
 .img7
 {
     position:absolute;
-    top:42vh;
-    left:33vw; 
-    width: 38vh;
-    transform: translate(-50%, -50%);
+    top:45vh;
+    left:32vw; 
+    width: 35vh;
     height:auto;
-    z-index:1;
+    z-index:100;
+    transform: translate(-50%, -50%); 
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .text{
-    top:52vh;
-    left:27vw;
+    top:53vh;
+    left:26.5vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:2.2em;
@@ -310,11 +316,11 @@ a .icon8:hover {
     z-index: 40;
 }
 .text2{
-    top:15vh;
+    top:calc(60vh - 45%);
     left:46vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:1.8em;
+    font-size:1.8vw;
     color: black;
     z-index: 40;
 }
@@ -323,10 +329,10 @@ a .icon8:hover {
 }
 .text3{
     top:95vh;
-    left:49vw;
+    left:50vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:2em;
+    font-size:2vw;
     color: black;
     z-index: 40;
 }
@@ -336,9 +342,9 @@ a .icon8:hover {
 .img8
 {
     position:absolute;
-    top:56vh;
-    left:69vw; 
-    width: 115vh;
+    top:55vh;
+    left:68vw; 
+    width: 60%;
     height:155vh;
     z-index:1;
     transform: translate(-50%, -50%); 
@@ -358,7 +364,7 @@ a .icon8:hover {
 {
     position:absolute;
     top:100vh;
-    left:93vw; 
+    left:95%; 
     width: 15vh;
     height:auto;
     z-index:1;
