@@ -230,6 +230,42 @@
         height:11vh;
         z-index:3;
     }
+    /* 搜尋框 */
+.search-input {
+    padding: 12px 20px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    width: 15vw;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+/* 按鈕 */
+.search-button {
+    padding: 12px 12px;
+    font-size: 1em;
+    background-color: #5480bf; 
+    color: white; 
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px; 
+    transition: all 0.3s ease;
+}
+
+/* 按鈕圖 */
+.material-icons {
+    font-size: 12em; 
+    vertical-align: middle; 
+}
+
+/* 按鈕效果 */
+.search-button:hover {
+    background-color: #c2e6f9; 
+}
+
 /*最新資訊*/
 .bulletin-board {
     background-color: #fff;
@@ -300,41 +336,6 @@
     z-index: 100;
 }
 
-/* 搜尋框 */
-.search-input {
-    padding: 12px 20px;
-    font-size: 1em;
-    border: 2px solid #ddd;
-    border-radius: 30px;
-    width: 15vw;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: black;
-}
-
-/* 按鈕 */
-.search-button {
-    padding: 12px 12px;
-    font-size: 1em;
-    background-color: #5480bf; 
-    color: white; 
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-left: 10px; 
-    transition: all 0.3s ease;
-}
-
-/* 按鈕圖 */
-.material-icons {
-    font-size: 12em; 
-    vertical-align: middle; 
-}
-
-/* 按鈕效果 */
-.search-button:hover {
-    background-color: #c2e6f9; 
-}
 
 }
 /*for ipad(橫向)*/

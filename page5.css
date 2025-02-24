@@ -1,293 +1,295 @@
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
     body {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* 水平居中 */
-            justify-content: center; /* 垂直居中 */
-            height: 100vh;
-            margin: 0;
-            overflow-y: scroll;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 水平居中 */
+        justify-content: center; /* 垂直居中 */
+        min-height: 100vh;
+        margin: 0;
+        overflow-y: scroll;
+        font-size: 1em;
+    }
     .menu2{
-            display: none;
-        }
+        display: none;
+    }
     .menu2-toggle {
-            display: none;
-        }
+        display: none;
+    }
     .sidebar {
-            position: fixed;
-            left: 0%;
-            top: 0%;
-            transform: translateX(0%) translateY(0%);
-            width: 400px;
-            height: 100%;
-            background-color:transparent;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index:100;
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        transform: translateX(0%) translateY(0%);
+        width: 20vw;
+        height: 100%;
+        background-color:transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index:100;
     }
-        
+    
     .menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
     }
-        
+    
     .menu-item {
-            width: 150px;
-            height:100px;
-            color: black;
-            padding: 10px;
-            margin: 10px auto;
-            font-size: 35px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 5px;
-            transition: transform 0.3s ease, opacity 0.3s;
-            cursor: pointer;
-            position:relative;
-            line-height: 100px;
-            font-weight: bold;
-            text-align: left;
-        
+        color: black;
+        padding: 10px;
+        margin: 15px auto;
+        font-size: 1.8em;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+        transition: transform 0.3s ease, opacity 0.3s;
+        cursor: pointer;
+        position:relative;
+        line-height: 100px;
+        font-weight: bold;
+        text-align: left;
+    
+        .arrow-container {
+            width: 10vw;  
+            height: 10vh; 
+            overflow: visible;  
+            position: fixed; 
+            cursor: pointer;  
         }
-    .arrow-container {
-        width: 10px;  
-        height: 10px; 
-        overflow: visible;  
-        position: fixed; 
-        cursor: pointer;  
+        
+        
+        .menu-item img.arrow {
+            display: block;
+            width: 10vw; 
+            height: auto;
+            position: absolute;
+            transition: transform 0.3s ease; 
+        }
+        
+        
+        .menu-item:hover img.arrow {
+            transform: scale(1.1); 
+        }
+    }
+    .menu-item:nth-child(1) 
+    {
+        top: -1vh;
+        left:8vw;
+        position:fixed;
     }
     
+    /*policy introduce*/
+    .menu-item:nth-child(2) 
+    {
+        top: 15vh;
+        left:8vw;
+        position:fixed;
+    }
+    /*arrow*/
+    .menu-item:nth-child(3) 
+    {
+        top: 29vh;
+        left:7vw;
+        position:fixed;
+    }
+    /*doc*/
+    .menu-item:nth-child(4) 
+    {
+        top: 48vh;
+        left:7vw;
+        position:fixed;
+    }
+    /*form*/
+    .menu-item:nth-child(5) 
+    {
+        top: 64vh;
+        left:7vw;
+        position:fixed;
+    }
+    /*aboutus*/
+    .menu-item:nth-child(6) 
+    {
+        top: 81vh;
+        left:7vw;
+        position:fixed;
+    }
+    .menu-item:hover {
+        transform:translateX(0%) translateY(0%) scale(1.1); 
+        opacity:0.8; 
+    }
+    .menu-item a {
+        text-decoration: none; 
+        color: inherit;        
+        display: block;        
+        width: 100%;           
+        height: 100%;          
+    }
     
-    .menu-item img.arrow {
-        display: block;
-        width: 150px; 
+    .menu-item a:active,
+    .menu-item a:focus {
+        color: inherit; 
+        outline: none;   
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 讓圖片在不同螢幕寬度下自動對齊 */
+        justify-content: space-evenly; /* 讓它們均勻分布 */
+        height: 100vh;
+        position: relative;
+    }
+    
+    .img {
+        max-width: 100%; /* 讓圖片不會超出螢幕 */
         height: auto;
-        position: absolute;
-        transition: transform 0.3s ease; 
     }
     
-    
-    .menu-item:hover img.arrow {
-        transform: scale(1.1); 
+    .img1,
+    .img2,
+    .img4,
+    .img5,
+    .img6 {
+        position: fixed;
+        left: 0;
+        top: 100%;
+        width:70vw;
+        height: 210vh;
+        z-index: 1; /* 確保圖片在側邊欄後面 */
     }
-
-/*new information*/
-.menu-item:nth-child(1) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-
-/*introduce*/
-.menu-item:nth-child(2) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-/*arrow*/
-.menu-item:nth-child(3) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-/*doc*/
-.menu-item:nth-child(4) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-/*form*/
-.menu-item:nth-child(5) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-/*aboutus*/
-.menu-item:nth-child(6) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-
-.menu-item:hover {
-    transform: scale(1.1); 
-    opacity:0.8; 
-}
-.menu-item a {
-    text-decoration: none; 
-    color: inherit;        
-    display: block;        
-    width: 100%;           
-    height: 100%;          
-}
-
-.menu-item a:active,
-.menu-item a:focus {
-    color: inherit; 
-    outline: none;   
-}
-/*選單底*/
-.img1,
-.img2,
-.img4,
-.img5,
-.img6 {
-    position: fixed;
-    left: 0;
-    top: 100%;
-    width:1000px;
-    height: 1800px;
-    z-index: 1; /* 確保圖片在側邊欄後面 */
-}
-.img1 {top:-26.5%; left:-21%; transform: translateX(0%) translateY(0%);}
-.img2 {top:2.5%; left:-10.25%;transform: translateX(0%) translateY(0%);}
-.img4 { top:23%; left:-22%;transform: translateX(0%) translateY(0%); }
-.img5 { top:52%; left:-10.25%; transform: translateX(0%) translateY(0%);}
-.img6 { top:77.5%; left:-3%;transform: translateX(0%) translateY(0%); }
-
-/*選單圖示*/
-.icon1{
-    position:fixed;
-    top:-32%;
-    left:-3%;
-    transform: translateX(0%) translateY(0%);
-    width: 1000px;
-    height:1500px;
-    z-index:1;
-}
-.icon2{
-    position:fixed;
-    top:-15%;
-    left:-4%;
-    transform: translateX(0%) translateY(0%);
-    width: 900px;
-    height:1500px;
-    z-index:3;
-}
-.icon4{
-    position:fixed;
-    top:-4%;
-    left:-3%;
-    transform: translateX(0%) translateY(0%);
-    width: 1000px;
-    height:1200px;
-    z-index:3;
-}
-.icon5{
-    position:fixed;
-    top:-16%;
-    left:-3.5%;
-    transform: translateX(0%) translateY(0%);
-    width: 1100px;
-    height:1500px;
-    z-index:3;
-}
-.icon6{
-    position:fixed;
-    top:71%;
-    left:-5%;
-    transform: translateX(0%) translateY(0%);
-    width: 1050px;
-    height:1260px;
-    z-index:3;
-}
-.title {
-    font-size: 50px;
-    font-family: 'Noto Sans HK', sans-serif;
-    font-weight: bold;
-    align-items: center;
-    position: absolute; 
-    top:-5%;
-    left:33%;
-    transform: translateX(0%) translateY(0%); 
-}
-.icon7{
-    position:absolute;
-    top:-1%;
-    left:27%;
-    transform: translateX(0%) translateY(0%); 
-    width: 100px;
-    height:100px;
-    z-index:3;
-}
-/* 搜尋欄 */
-.search-container {
-    position:absolute;
-    top:-4%;
-    left:67%;
-    transform:translateX(0%) translateY(0%);
-    justify-content: center; 
-    align-items: center; 
-    margin-top: 50px; 
-    z-index: 100;
-}
-
-/* 搜尋框 */
-.search-input {
-    padding: 12px 20px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 30px;
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: black;
-}
-
-/* 按鈕 */
-.search-button {
-    padding: 12px 12px;
-    font-size: 16px;
-    background-color: #5480bf; 
-    color: white; 
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-left: 10px; 
-    transition: all 0.3s ease;
-}
-
-/* 按鈕圖 */
-.material-icons {
-    font-size: 24px; 
-    vertical-align: middle; 
-}
-
-/* 按鈕效果 */
-.search-button:hover {
-    background-color: #c2e6f9; 
-}
+    .img1 {top:-24vh; left:-26vw;}
+    .img2 {top:3.5vh; left:-14vw;}
+    .img4 { top:25vh; left:-26vw; }
+    .img5 { top:53vh; left:-14vw; }
+    .img6 { top:78vh; left:-6vw }
+    
+    .icon1{
+        position:fixed;
+        top:-32vh;
+        left:-3vw;
+        width: 70vw;
+        height:190vh;
+        z-index:1;
+    }
+    .icon2{
+        position:fixed;
+        top:-15.5vh;
+        left:-5.5vw;
+        width: 70vw;
+        height:190vh;
+        z-index:3;
+    }
+    .icon4{
+        position:fixed;
+        top:-3.2vh;
+        left:-3vw;
+        width: 65vw;
+        height:150vh;
+        z-index:3;
+    }
+    .icon5{
+        position:fixed;
+        top:-0.5vh;
+        left:-3vw;
+        width: 65vw;
+        height:155vh;
+        z-index:3;
+    }
+    .icon6{
+        position:fixed;
+        top:67vh;
+        left:-6vw;
+        width: 70vw;
+        height:185vh;
+        z-index:3;
+    }
+    .title {
+        font-size: 3em;
+        font-family: 'Noto Sans HK', sans-serif;
+        font-weight: bold;
+        align-items: center;
+        position: absolute; 
+        top:-5vh;
+        left:33vw;
+       
+    }
+    .icon7{
+        position:absolute;
+        top:0vh;
+        left:26vw;
+        width: 7vw;
+        height:11vh;
+        z-index:3;
+    }
+    /* 搜尋欄 */
+    .search-container {
+        position:absolute;
+        top:-4vh;
+        left:70vw;
+        justify-content: center; 
+        align-items: center; 
+        margin-top: 50px; 
+        z-index: 100;
+    }
+    
+    /* 搜尋框 */
+    .search-input {
+        padding: 12px 20px;
+        font-size: 1em;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        width: 15vw;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+    
+    /* 按鈕 */
+    .search-button {
+        padding: 12px 12px;
+        font-size: 1em;
+        background-color: #5480bf; 
+        color: white; 
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 10px; 
+        transition: all 0.3s ease;
+    }
+    
+    /* 按鈕圖 */
+    .material-icons {
+        font-size: 12em; 
+        vertical-align: middle; 
+    }
+    
+    /* 按鈕效果 */
+    .search-button:hover {
+        background-color: #c2e6f9; 
+    }
 .img7
 {
     position: absolute;
-    left: 0;
-    top: 100%;
-    width: 150px;
-    height: 150px;
-    top:10%;
-    left:25%;
-    transform:translateX(0%) translateY(0%);
+    left: 30vw;
+    top: 10vw;
+    width: 10vw;
+    height: auto;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .text {
-    top:14%;
-    left:33%;
-    transform:translateX(0%) translateY(0%);
+    left: 50vw;
+    top: 8vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
@@ -295,40 +297,40 @@
 .block1
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:28%;
-    left:29%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 36.5vw;
+    top: 19vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .block2
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:28%;
-    left:52%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 59.5vw;
+    top: 19vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .block3
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:28%;
-    left:75%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 82.5vw;
+    top: 19vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .spot1 {
-    top:28%;
-    left:35%;
-    transform:translateX(0%) translateY(0%);
+    left: 38.5vw;
+    top: 16.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 2.5em;
     color: black;
     z-index: 900;
 }
@@ -339,19 +341,19 @@
 .spot1:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform:translateX(0%) translateY(0%) scale(1.2);
+    transform:translateX(-50%) translateY(-50%) scale(1.2);
 }
 
 .spot2
 {
-    top:28%;
-    left:58%;
-    transform:translateX(0%) translateY(0%);
-    position: absolute; /* 固定位置 */
+    left: 61.5vw;
+    top: 16.5vw;
+    transform:translateX(-50%) translateY(-50%);
+    position: absolute;
     font-weight: bold;
-    font-size:40px;
+    font-size: 2.5em;
     color: black;
-    z-index: 900; 
+    z-index: 900;
 }
 .spot2 a {
     color: black; 
@@ -360,18 +362,18 @@
 .spot2:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot3
 {
-    top:28%;
-    left:81%;
-    transform:translateX(0%) translateY(0%);
-    position: absolute; /* 固定位置 */
+    left: 84.5vw;
+    top: 16.5vw;
+    transform:translateX(-50%) translateY(-50%);
+    position: absolute;
     font-weight: bold;
-    font-size:40px;
+    font-size: 2.5em;
     color: black;
-    z-index: 900; 
+    z-index: 900;
 }
 .spot3 a {
     color: black; 
@@ -380,43 +382,43 @@
 .spot3:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .block4
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:48%;
-    left:29%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 36.5vw;
+    top: 29vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .block5
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:48%;
-    left:52%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 59.5vw;
+    top: 29vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .block6
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:48%;
-    left:75%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 82.5vw;
+    top: 29vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .spot4
 {
-    top:48%;
-    left:35%;
-    transform:translateX(0%) translateY(0%);
+    left: 38.5vw;
+    top: 26.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -430,13 +432,13 @@
 .spot4:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot5
 {
-    top:48%;
-    left:58%;
-    transform:translateX(0%) translateY(0%);
+    left: 61.5vw;
+    top: 26.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -450,13 +452,13 @@
 .spot5:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot6
 {
-    top:48%;
-    left:81%;
-    transform:translateX(0%) translateY(0%);
+    left: 84.5vw;
+    top: 26.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -470,42 +472,43 @@
 .spot6:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .block7
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:68%;
-    left:29%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 36.5vw;
+    top: 39vw;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1; 
 }
 .block8
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:68%;
-    left:52%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 59.5vw;
+    top: 39vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .block9
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:68%;
-    left:75%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 82.5vw;
+    top: 39vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .spot7
 {
-    top:68%;
-    left:35%;
-    transform:translateX(0%) translateY(0%);
+    left: 38.5vw;
+    top: 36.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -519,13 +522,13 @@
 .spot7:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot8
 {
-    top:68%;
-    left:58%;
-    transform:translateX(0%) translateY(0%);
+    left: 61.5vw;
+    top: 36.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -539,13 +542,13 @@
 .spot8:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot9
 {
-    top:68%;
-    left:81%;
-    transform:translateX(0%) translateY(0%);
+    left: 84.5vw;
+    top: 36.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -559,43 +562,43 @@
 .spot9:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .block10
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:88%;
-    left:29%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 36.5vw;
+    top:49vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .block11
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:88%;
-    left:52%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 59.5vw;
+    top:49vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .block12
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:88%;
-    left:75%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 82.5vw;
+    top:49vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .spot10
 {
-    top:88%;
-    left:35%;
-    transform:translateX(0%) translateY(0%);
+    left: 38.5vw;
+    top: 46.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -605,7 +608,7 @@
 .spot10:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot10 a {
     color: black; 
@@ -613,9 +616,9 @@
 }
 .spot11
 {
-    top:88%;
-    left:58%;
-    transform:translateX(0%) translateY(0%);
+    left: 61.5vw;
+    top: 46.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -629,13 +632,13 @@
 .spot11:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot12
 {
-    top:88%;
-    left:81%;
-    transform:translateX(0%) translateY(0%);
+    left: 84.5vw;
+    top: 46.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -649,43 +652,43 @@
 .spot12:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .block13
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:108%;
-    left:29%;
-    transform:translateX(0%) translateY(0%);
-    z-index: 1; 
+    width: 31vh;
+    height: auto;
+    left: 36.5vw;
+    top:59vw;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1;  
 }
 .block14
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:108%;
-    left:52%;
-    transform:translateX(0%) translateY(0%);
-    z-index: 1; 
+    width: 31vh;
+    height: auto;
+    left: 59.5vw;
+    top:59vw;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1;  
 }
 .block15
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:108%;
-    left:75%;
-    transform:translateX(0%) translateY(0%);
-    z-index: 1; 
+    width: 31vh;
+    height: auto;
+    left: 82.5vw;
+    top:59vw;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1;  
 }
 .spot13
 {
-    top:108%;
-    left:35%;
-    transform:translateX(0%) translateY(0%);
+    left: 38.5vw;
+    top: 56.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -699,13 +702,13 @@
 .spot13:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot14
 {
-    top:108%;
-    left:58%;
-    transform:translateX(0%) translateY(0%);
+    left: 61.5vw;
+    top: 56.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -719,13 +722,13 @@
 .spot14:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot15
 {
-    top:108%;
-    left:81%;
-    transform:translateX(0%) translateY(0%);
+    left: 84.5vw;
+    top: 56.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -739,43 +742,43 @@
 .spot15:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .block16
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:128%;
-    left:29%;
-    transform:translateX(0%) translateY(0%);
-    z-index: 1; 
+    width: 31vh;
+    height: auto;
+    left: 36.5vw;
+    top:69vw;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1;  
 }
 .block17
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:128%;
-    left:52%;
-    transform:translateX(0%) translateY(0%);
-    z-index: 1; 
+    width: 31vh;
+    height: auto;
+    left: 59.5vw;
+    top:69vw;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1;  
 }
 .block18
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:128%;
-    left:75%;
-    transform:translateX(0%) translateY(0%);
-    z-index: 1; 
+    width: 31vh;
+    height: auto;
+    left: 82.5vw;
+    top:69vw;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1;  
 }
 .spot16
 {
-    top:128%;
-    left:35%;
-    transform:translateX(0%) translateY(0%);
+    left: 38.5vw;
+    top: 66.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -789,13 +792,13 @@
 .spot16:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot17
 {
-    top:128%;
-    left:58%;
-    transform:translateX(0%) translateY(0%);
+    left: 61.5vw;
+    top: 66.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -809,13 +812,13 @@
 .spot17:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot18
 {
-    top:128%;
-    left:81%;
-    transform:translateX(0%) translateY(0%);
+    left: 84.5vw;
+    top: 66.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -829,43 +832,43 @@
 .spot18:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .block19
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:148%;
-    left:29%;
-    transform:translateX(0%) translateY(0%);
-    z-index: 1; 
+    width: 31vh;
+    height: auto;
+    left: 36.5vw;
+    top:79vw;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1;  
 }
 .block20
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:148%;
-    left:52%;
-    transform:translateX(0%) translateY(0%);
-    z-index: 1; 
+    width: 31vh;
+    height: auto;
+    left: 59.5vw;
+    top:79vw;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1;  
 }
 .block21
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:148%;
-    left:75%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left: 82.5vw;
+    top:79vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .spot19
 {
-    top:148%;
-    left:35%;
-    transform:translateX(0%) translateY(0%);
+    left: 38.5vw;
+    top: 76.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -879,13 +882,13 @@
 .spot19:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot20
 {
-    top:148%;
-    left:58%;
-    transform:translateX(0%) translateY(0%);
+    left: 61.5vw;
+    top: 76.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -899,13 +902,13 @@
 .spot20:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .spot21
 {
-    top:148%;
-    left:81%;
-    transform:translateX(0%) translateY(0%);
+    left: 84.5vw;
+    top: 76.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -919,23 +922,23 @@
 .spot21:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .block22
 {
     position:absolute;
-    width: 240px;
-    height: 135px;
-    top:168%;
-    left:29%;
-    transform:translateX(0%) translateY(0%);
+    width: 31vh;
+    height: auto;
+    left:36.5vw;
+    top:89vw;
+    transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
 }
 .spot22
 {
-    top:168%;
-    left:35%;
-    transform:translateX(0%) translateY(0%);
+    left: 38.5vw;
+    top: 86.5vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:40px;
@@ -949,27 +952,27 @@
 .spot22:hover {
     background-color: transition; 
     color: white; /* 白色文字 */
-    transform: translateX(0%) translateY(0%) scale(1.2);
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 }
 .rectangle {
-    width: 900px;         /* 長方形的寬度 */
-    height: 100px;        /* 長方形的高度 */
+    width: 50vw;         /* 長方形的寬度 */
+    height: 8vw;        /* 長方形的高度 */
     background-color: transparent; /* 背景顏色 */
     border: 15px solid #004aad;  
     position:absolute;
-    top:185%;
-    left:30%;
-    transform:translateX(0%) translateY(0%);
+    top:100vw;
+    left:60vw;
+    transform:translateX(-50%) translateY(-50%);
     border-radius: 20px;
 }
 .text1
 {
-    top:190%;
-    left:45%;
-    transform:translateX(0%) translateY(0%);
+    top:100vw;
+    left:60vw;
+    transform:translateX(-50%) translateY(-50%);
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:40px;
+    font-size:2.5em;
     color: black;
     z-index: 1000;
 }

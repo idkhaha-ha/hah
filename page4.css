@@ -1,63 +1,45 @@
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
     body {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* 水平居中 */
-            justify-content: center; /* 垂直居中 */
-            height: 100vh;
-            margin: 0;
-            overflow-y: scroll;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 水平居中 */
+        justify-content: center; /* 垂直居中 */
+        min-height: 100vh;
+        margin: 0;
+        overflow-y: scroll;
+        font-size: 1em;
+    }
     .menu2{
-            display: none;
-        }
+        display: none;
+    }
     .menu2-toggle {
-            display: none;
-        }
+        display: none;
+    }
     .sidebar {
-            position: fixed;
-            left: 0%;
-            top: 0%;
-            transform: translateX(0%) translateY(0%);
-            width: 400px;
-            height: 100%;
-            background-color:transparent;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index:100;
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        transform: translateX(0%) translateY(0%);
+        width: 20vw;
+        height: 100%;
+        background-color:transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index:100;
     }
-        
+    
     .menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
     }
-        
-    .menu-item {
-            width: 150px;
-            height:100px;
-            color: black;
-            padding: 10px;
-            margin: 10px auto;
-            font-size: 35px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 5px;
-            transition: transform 0.3s ease, opacity 0.3s;
-            cursor: pointer;
-            position:relative;
-            line-height: 100px;
-            font-weight: bold;
-            text-align: left;
-        
-        }
     .arrow-container {
-        width: 10px;  
-        height: 10px; 
+        width: 10vw;  
+        height: 10vh; 
         overflow: visible;  
         position: fixed; 
         cursor: pointer;  
@@ -66,7 +48,7 @@
     
     .menu-item img.arrow {
         display: block;
-        width: 150px; 
+        width: 10vw; 
         height: auto;
         position: absolute;
         transition: transform 0.3s ease; 
@@ -76,258 +58,277 @@
     .menu-item:hover img.arrow {
         transform: scale(1.1); 
     }
+    .menu-item {
+        color: black;
+        padding: 10px;
+        margin: 15px auto;
+        font-size: 1.8em;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+        transition: transform 0.3s ease, opacity 0.3s;
+        cursor: pointer;
+        position:relative;
+        line-height: 100px;
+        font-weight: bold;
+        text-align: left;
+    
+    }
+    /*newinformation*/
+    .menu-item:nth-child(1) 
+    {
+        top: -1vh;
+        left:8vw;
+        position:fixed;
+    }
+    
+    /*arrow*/
+    .menu-item:nth-child(2) 
+    {
+        top: 14vh;
+        left:7vw;
+        position:fixed;
+    }
+    /*spot*/
+    .menu-item:nth-child(3) 
+    {
+        top: 30.5vh;
+        left:7vw;
+        position:fixed;
+    }
+    /*doc*/
+    .menu-item:nth-child(4) 
+    {
+        top: 48vh;
+        left:7vw;
+        position:fixed;
+    }
+    /*form*/
+    .menu-item:nth-child(5) 
+    {
+        top: 64vh;
+        left:7vw;
+        position:fixed;
+    }
+    /*aboutus*/
+    .menu-item:nth-child(6) 
+    {
+        top: 81vh;
+        left:7vw;
+        position:fixed;
+    }
+    .menu-item:hover {
+        transform:translateX(0%) translateY(0%) scale(1.1); 
+        opacity:0.8; 
+    }
+    .menu-item a {
+        text-decoration: none; 
+        color: inherit;        
+        display: block;        
+        width: 100%;           
+        height: 100%;          
+    }
+    
+    .menu-item a:active,
+    .menu-item a:focus {
+        color: inherit; 
+        outline: none;   
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 讓圖片在不同螢幕寬度下自動對齊 */
+        justify-content: space-evenly; /* 讓它們均勻分布 */
+        height: 100vh;
+        position: relative;
+    }
+    
+    .img {
+        max-width: 100%; /* 讓圖片不會超出螢幕 */
+        height: auto;
+    }
+    
+    .img1,
+    .img3,
+    .img4,
+    .img5,
+    .img6 {
+        position: fixed;
+        left: 0;
+        top: 100%;
+        width:70vw;
+        height: 210vh;
+        z-index: 1; /* 確保圖片在側邊欄後面 */
+    }
+    .img1 {top:-24vh; left:-26vw;}
+    .img3 {top:28vh; left:-6vw;}
+    .img4 { top:25vh; left:-26vw; }
+    .img5 { top:53vh; left:-14vw; }
+    .img6 { top:78vh; left:-6vw }
+    
+    .icon1{
+        position:fixed;
+        top:-32vh;
+        left:-3vw;
+        width: 70vw;
+        height:190vh;
+        z-index:1;
+    }
 
-
-/*new information*/
-.menu-item:nth-child(1) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-
-/*arrow*/
-.menu-item:nth-child(2) 
-{
-    top: -2%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-/*spot*/
-.menu-item:nth-child(3) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%);
-}
-/*doc*/
-.menu-item:nth-child(4) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-/*form*/
-.menu-item:nth-child(5) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-/*aboutus*/
-.menu-item:nth-child(6) 
-{
-    top: 0%;
-    left:0%;
-    transform: translateX(0%) translateY(0%); 
-}
-
-.menu-item:hover {
-    transform: scale(1.1); 
-    opacity:0.8; 
-}
-.menu-item a {
-    text-decoration: none; 
-    color: inherit;        
-    display: block;        
-    width: 100%;           
-    height: 100%;          
-}
-
-.menu-item a:active,
-.menu-item a:focus {
-    color: inherit; 
-    outline: none;   
-}
-/*選單底*/
-.img1,
-.img3,
-.img4,
-.img5,
-.img6 {
-    position: fixed;
-    left: 0;
-    top: 100%;
-    width:1000px;
-    height: 1800px;
-    z-index: 1; /* 確保圖片在側邊欄後面 */
-}
-.img1 {top:-26.5%; left:-22%; transform: translateX(0%) translateY(0%);}
-.img3 {top:28%; left:-3%;transform: translateX(0%) translateY(0%);}
-.img4 { top:23%; left:-22%;transform: translateX(0%) translateY(0%); }
-.img5 { top:52%; left:-11%; transform: translateX(0%) translateY(0%);}
-.img6 { top:77.5%; left:-3%;transform: translateX(0%) translateY(0%); }
-
-.icon1{
-    position:fixed;
-    top:-32%;
-    left:-3%;
-    transform: translateX(0%) translateY(0%);
-    width: 1000px;
-    height:1500px;
-    z-index:1;
-}
-
-.icon3{
-    position:fixed;
-    top:0%;
-    left:-1.5%;
-    transform: translateX(0%) translateY(0%);
-    width: 820px;
-    height:902px;
-    z-index:3;
-}
-.icon4{
-    position:fixed;
-    top:-4%;
-    left:-3%;
-    transform: translateX(0%) translateY(0%);
-    width: 1000px;
-    height:1200px;
-    z-index:3;
-}
-.icon5{
-    position:fixed;
-    top:-16%;
-    left:-3.5%;
-    transform: translateX(0%) translateY(0%);
-    width: 1100px;
-    height:1500px;
-    z-index:3;
-}
-.icon6{
-    position:fixed;
-    top:71%;
-    left:-5%;
-    transform: translateX(0%) translateY(0%);
-    width: 1050px;
-    height:1260px;
-    z-index:3;
-}
-.title {
-    font-size: 50px;
-    font-family: 'Noto Sans HK', sans-serif;
-    font-weight: bold;
-    align-items: center;
-    position: absolute; 
-    top:-5%;
-    left:33%;
-    transform: translateX(0%) translateY(0%); 
-}
-.icon7{
-    position:absolute;
-    top:-1%;
-    left:27%;
-    transform: translateX(0%) translateY(0%); 
-    width: 100px;
-    height:100px;
-    z-index:3;
-}
-
-/* 搜尋欄 */
-.search-container {
-    position:absolute;
-    top:-4%;
-    left:67%;
-    transform:translateX(0%) translateY(0%);
-    justify-content: center; 
-    align-items: center; 
-    margin-top: 50px; 
-    z-index: 100;
-}
-
-/* 搜尋框 */
-.search-input {
-    padding: 12px 20px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 30px;
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: black;
-}
-
-/* 按鈕 */
-.search-button {
-    padding: 12px 12px;
-    font-size: 16px;
-    background-color: #5480bf; 
-    color: white; 
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-left: 10px; 
-    transition: all 0.3s ease;
-}
-
-/* 按鈕圖 */
-.material-icons {
-    font-size: 24px; 
-    vertical-align: middle; 
-}
-
-/* 按鈕效果 */
-.search-button:hover {
-    background-color: #c2e6f9; 
-}
+    .icon3{
+        position:fixed;
+        top:0.5vh;
+        left:-1.5vw;
+        width: 55vw;
+        height:110vh;
+        z-index:3;
+    }
+    .icon4{
+        position:fixed;
+        top:-3.2vh;
+        left:-3vw;
+        width: 65vw;
+        height:150vh;
+        z-index:3;
+    }
+    .icon5{
+        position:fixed;
+        top:-0.5vh;
+        left:-3vw;
+        width: 65vw;
+        height:155vh;
+        z-index:3;
+    }
+    .icon6{
+        position:fixed;
+        top:67vh;
+        left:-6vw;
+        width: 70vw;
+        height:185vh;
+        z-index:3;
+    }
+    .title {
+        font-size: 3em;
+        font-family: 'Noto Sans HK', sans-serif;
+        font-weight: bold;
+        align-items: center;
+        position: absolute; 
+        top:-5vh;
+        left:33vw;
+       
+    }
+    .icon7{
+        position:absolute;
+        top:0vh;
+        left:26vw;
+        width: 7vw;
+        height:11vh;
+        z-index:3;
+    }
+    /* 搜尋欄 */
+    .search-container {
+        position:absolute;
+        top:-4vh;
+        left:70vw;
+        justify-content: center; 
+        align-items: center; 
+        margin-top: 50px; 
+        z-index: 100;
+    }
+    
+    /* 搜尋框 */
+    .search-input {
+        padding: 12px 20px;
+        font-size: 1em;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        width: 15vw;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+    
+    /* 按鈕 */
+    .search-button {
+        padding: 12px 12px;
+        font-size: 1em;
+        background-color: #5480bf; 
+        color: white; 
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 10px; 
+        transition: all 0.3s ease;
+    }
+    
+    /* 按鈕圖 */
+    .material-icons {
+        font-size: 12em; 
+        vertical-align: middle; 
+    }
+    
+    /* 按鈕效果 */
+    .search-button:hover {
+        background-color: #c2e6f9; 
+    }
 /*內容*/
 /*p-bar*/
 .img10
 {
     position:absolute;
-    top:-5%;
-    left:45%;
-    transform: translateX(0%) translateY(0%);  
-    width: 400px;
-    height:400px;
+    top:19vh;
+    left:58vw; 
+    width: 45vh;
+    height:auto;
+    transform: translate(-50%, -50%); 
     z-index:1;
 }
 .text1
 {
-    top:12%;
-    left:53%;
-    transform: translateX(0%) translateY(0%);  
+    top:12vh;
+    left:58vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:40px;
+    font-size:2.2em;
     color: black;
     z-index: 40;
+    transform: translateX(-50%);
 }
 .text2
 {
-    top:25%;
-    left:32%;
-    transform: translateX(0%) translateY(0%);  
+    top:21vh;
+    left:30vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .img7
 {
     position:absolute;
-    top:35%;
-    left:28%;
-    transform: translateX(0%) translateY(0%); 
-    width: 250px;
-    height:250px;
+    top:51vh;
+    left:36vw; 
+    width: 31vh;
+    height:auto;
     z-index:100;
+    transform: translate(-50%, -50%); 
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 a .img7:hover {
-    transform: translateX(0%) translateY(0%) scale(1.2); /* 保持原位縮放 */
+    transform: translateX(-50%) translateY(-50%) scale(1.2); /* 保持原位縮放 */
     opacity: 0.8;
 }
 .text3
 {
-    top:65%;
-    left:34%;
-    transform: translateX(0%) translateY(0%); 
+    top:65vh;
+    left:33.5vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:35px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
@@ -336,52 +337,50 @@ a .img7:hover {
 .img8
 {
     position:absolute;
-    top:35%;
-    left:48%;
-    transform: translateX(0%) translateY(0%); 
-    width: 300px;
-    height:280px;
+    top:51vh;
+    left:58vw; 
+    width: 20vw;
+    height:32vh;
+    transform: translate(-50%, -50%);
     z-index:100;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 a .img8:hover {
-    transform: translateX(0%) translateY(0%) scale(1.2); /* 保持原位縮放 */
+    transform: translateX(-50%) translateY(-50%) scale(1.2); /* 保持原位縮放 */
     opacity: 0.8;
 }
 .text4
 {
-    top:65%;
-    left:53.5%;
-    transform: translateX(0%) translateY(0%); 
+    top:65vh;
+    left:54vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:35px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .img9
 {
     position:absolute;
-    top:32%;
-    left:71%;
-    transform: translateX(0%) translateY(0%); 
-    width: 350px;
-    height:350px;
+    top:52vh;
+    left:81vw; 
+    width: 38vh;
+    transform: translate(-50%, -50%);
+    height:auto;
     z-index:1;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 a .img9:hover {
-    transform: translateX(0%) translateY(0%) scale(1.2); /* 保持原位縮放 */
+    transform: translateX(-50%) translateY(-50%) scale(1.2); /* 保持原位縮放 */
     opacity: 0.8;
 }
 .text5
 {
-    top:65%;
-    left:77%;
-    transform: translateX(0%) translateY(0%); 
+    top:65vh;
+    left:76vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:35px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
@@ -389,96 +388,92 @@ a .img9:hover {
 .img11
 {
     position:absolute;
-    top:60%;
-    left:45%;
-    transform: translateX(0%) translateY(0%);  
-    width: 400px;
-    height:400px;
+    top:86vh;
+    left:58vw; 
+    width: 45vh;
+    height:auto;
+    transform: translate(-50%, -50%); 
     z-index:1;
 }
 /*B條件*/
 .text6
 {
-    top:77%;
-    left:55%;
-    transform: translateX(0%) translateY(0%);  
+    top:78.5vh;
+    left:58vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:40px;
+    font-size:2.2em;
     color: black;
     z-index: 40;
+    transform: translateX(-50%);
 }
 .img12
 {
     position:absolute;
-    top:85%;
-    left:23%;
-    transform: translateX(0%) translateY(0%); 
-    width: 380px;
-    height:380px;
-    z-index:1;
+    top:110vh;
+    left:36vw; 
+    width: 45vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .text7
 {
-    top:125%;
-    left:29%;
-    transform: translateX(0%) translateY(0%); 
+    top:125vh;
+    left:29vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:35px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .img13
 {
     position:absolute;
-    top:85%;
-    left:47%;
-    transform: translateX(0%) translateY(0%); 
-    width: 350px;
-    height:350px;
-    z-index:1;
+    top:110vh;
+    left:58vw; 
+    width: 45vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .text8
 {
-    top:125%;
-    left:51.5%;
-    transform: translateX(0%) translateY(0%); 
+    top:125vh;
+    left:51.5vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:35px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .img14
 {
     position:absolute;
-    width: 350px;
-    height:380px;
-    top:85%;
-    left:72%;
-    transform: translateX(0%) translateY(0%); 
-    z-index:1;
+    top:110vh;
+    left:81vw; 
+    width: 38vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .text9
 {
-    top:125%;
-    left:79.5%;
-    transform: translateX(0%) translateY(0%); 
+    top:125vh;
+    left:77vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:35px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .text10
 {
-    top:133%;
-    left:79.5%;
-    transform: translateX(0%) translateY(0%); 
+    top:132vh;
+    left:76.5vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:20px;
+    font-size:1.3em;
     color: black;
     z-index: 40;
 }
@@ -486,248 +481,237 @@ a .img9:hover {
 .img15
 {
     position:absolute;
-    top:117%;
-    left:45%;
-    transform: translateX(0%) translateY(0%);  
-    width: 400px;
-    height:400px;
+    top:145vh;
+    left:58vw; 
+    width: 45vh;
+    height:auto;
+    transform: translate(-50%, -50%); 
     z-index:1;
 }
 .text11
 {
-    top:134%;
-    left:53%;
-    transform: translateX(0%) translateY(0%); 
+    top:137.5vh;
+    left:58vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:40px;
+    font-size:2.2em;
     color: black;
     z-index: 40;
+    transform: translateX(-50%);
 }
 .text12
 {
-    top:145%;
-    left:30%;
-    transform: translateX(0%) translateY(0%); 
+    top:148vh;
+    left:28vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .img16
 {
     position:absolute;
-    top:155%;
-    left:23%;
-    transform: translateX(0%) translateY(0%); 
-    width: 350px;
-    height:350px;
-    z-index:1;
+    top:177vh;
+    left:36vw; 
+    width: 45vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .img17
 {
     position:absolute;
-    top:156%;
-    left:47%;
-    transform: translateX(0%) translateY(0%); 
-    width: 300px;
-    height:300px;
-    z-index:1;
+    top:177vh;
+    left:58vw; 
+    width: 38vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .img18
 {
     position:absolute;
-    top:155%;
-    left:72%;
-    transform: translateX(0%) translateY(0%); 
-    width: 270px;
-    height:360px;
-    z-index:1;
+    top:177vh;
+    left:81vw; 
+    width: 35vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .text13
 {
-    top:193%;
-    left:29.5%;
-    transform: translateX(0%) translateY(0%); 
+    top:192vh;
+    left:31vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .text14
 {
-    top:193%;
-    left:52%;
-    transform: translateX(0%) translateY(0%); 
+    top:192vh;
+    left:53vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .text15
 {
-    top:193%;
-    left:76%;
-    transform: translateX(0%) translateY(0%); 
+    top:192vh;
+    left:77vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .img19
 {
     position:absolute;
-    top:200%;
-    left:32%;
-    transform: translateX(0%) translateY(0%); 
-    width: 400px;
-    height:400px;
-    z-index:1;
+    top:227vh;
+    left:46vw; 
+    width: 48vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .img20
 {
     position:absolute;
-    top:198%;
-    left:52%;
-    transform: translateX(0%) translateY(0%); 
-    width: 450px;
-    height:450px;
-    z-index:1;
+    top:227vh;
+    left:70vw; 
+    width: 51vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .text16
 {
-    top:242%;
-    left:40%;
-    transform: translateX(0%) translateY(0%); 
+    top:241vh;
+    left:41vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .text17
 {
-    top:242%;
-    left:65%;
-    transform: translateX(0%) translateY(0%); 
+    top:241vh;
+    left:67vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .img21
 {
     position:absolute;
-    top:250%;
-    left:23%;
-    transform: translateX(0%) translateY(0%); 
-    width: 400px;
-    height:400px;
-    z-index:1;
+    top:277vh;
+    left:36vw; 
+    width: 45vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .img22
 {
     position:absolute;
-    top:250%;
-    left:47%;
-    transform: translateX(0%) translateY(0%); 
-    width: 400px;
-    height:400px;
-    z-index:1;
+    top:277vh;
+    left:58vw; 
+    width: 45vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .img23
 {
     position:absolute;
-    top:250%;
-    left:72%;
-    transform: translateX(0%) translateY(0%);  
-    width: 300px;
-    height:400px;
-    z-index:1;
+    top:277vh;
+    left:81vw; 
+    width: 38vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .text18
 {
-    top:290%;
-    left:32%;
-    transform: translateX(0%) translateY(0%); 
+    top:290vh;
+    left:31vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .text19
 {
-    top:290%;
-    left:52%;
-    transform: translateX(0%) translateY(0%); 
+    top:290vh;
+    left:51vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .text20
 {
-    top:290%;
-    left:72%;
-    transform: translateX(0%) translateY(0%); 
+    top:290vh;
+    left:72vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .img24
 {
     position:absolute;
-    top:300%;
-    left:32%;
-    transform: translateX(0%) translateY(0%); 
-    width: 400px;
-    height:400px;
-    z-index:1;
+    top:327vh;
+    left:46vw; 
+    width: 48vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .img25
 {
     position:absolute;
-    top:300%;
-    left:58%;
-    transform: translateX(0%) translateY(0%); 
-    width: 400px;
-    height:400px;
-    z-index:1;
+    top:327vh;
+    left:70vw; 
+    width: 51vh;
+    height:auto;
+    z-index:100;
+    transform: translate(-50%, -50%); 
 }
 .text21
-{   top:345%;
-    left:40%;
-    transform: translateX(0%) translateY(0%); 
+{   top:345vh;
+    left:39vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .text22
 {
-    top:345%;
-    left:65%;
-    transform: translateX(0%) translateY(0%); 
+    top:345vh;
+    left:63vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:30px;
+    font-size:2em;
     color: black;
     z-index: 40;
 }
 .bulletin-board {
     background-color: #fff;
-    width: 1000px;
-    height:350px;
+    width: 10vw;
+    height:5vh;
     margin: 0 auto;
     border: 10px solid #152469; 
     border-radius: 10px; 
@@ -736,27 +720,27 @@ a .img9:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     top:360%;
     left:30%;
-    transform: translateX(0%) translateY(0%); 
+    transform: translateX(-50%) translateY(-50%); 
 }
 .rectangle2 {
-    width: 900px;         /* 長方形的寬度 */
-    height: 200px;        /* 長方形的高度 */
+    width: 50vw;         /* 長方形的寬度 */
+    height: 20vh;        /* 長方形的高度 */
     background-color: transparent; /* 背景顏色 */
     border: 15px solid #004aad;  
     position:absolute;
-    top:360%;
-    left:30%;
-    transform: translateX(0%) translateY(0%); 
+    top:370vh;
+    left:60vw;
+    transform: translateX(-50%) translateY(-50%); 
     border-radius: 20px;
 }
 .text23
 {
-    top:365%;
-    left:35%;
-    transform: translateX(0%) translateY(0%); 
+    top:366vh;
+    left:58vw;
+    transform: translateX(-50%) translateY(-50%); 
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:40px;
+    font-size:1.8em;
     color: black;
     z-index: 1000;
 }
@@ -765,12 +749,12 @@ a .img9:hover {
 }
 .text24
 {
-    top:375%;
-    left:35%;
-    transform: translateX(0%) translateY(0%);
+    top:375vh;
+    left:58vw;
+    transform: translateX(-50%) translateY(-50%); 
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:40px;
+    font-size:1.8em;
     color: black;
     z-index: 1000;
 }
