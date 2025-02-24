@@ -52,7 +52,7 @@
         line-height: 100px;
         font-weight: bold;
         text-align: left;
-    
+    }
         .arrow-container {
             width: 10vw;  
             height: 10vh; 
@@ -74,7 +74,7 @@
         .menu-item:hover img.arrow {
             transform: scale(1.1); 
         }
-    }
+    
     .menu-item:nth-child(1) 
     {
         top: -1vh;
