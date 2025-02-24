@@ -226,7 +226,7 @@
         z-index:3;
     }
     .title {
-        font-size: 3em;
+        font-size: clamp(16px, 15vw, 6vh);;
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
         align-items: center;
@@ -237,11 +237,12 @@
     }
     .icon7{
         position:fixed;
-        top:0vh;
-        left:26vw;
-        width: 7vw;
-        height:11vh;
+        top:-2vh;
+        left:27vw;
+        width: clamp(50px, 12vw, 12vh);
+        height:auto;
         z-index:3;
+        transform-origin: top left;
     }
     /* 搜尋欄 */
     .search-container {
@@ -313,8 +314,8 @@
 {
     position: absolute;
     left: 34vw;
-    top: 17vw;
-    width: 10vw;
+    top: 33vh;
+    width: clamp(100px, 20vw, 20vh);
     height: auto;
     transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
@@ -333,9 +334,9 @@
 .img9
 {
     position: absolute;
-    left: 82vw;
-    top: 17vw;
-    width: 10vw;
+    left: 80vw;
+    top: 33vh;
+    width: clamp(100px, 20vw, 20vh);
     height: auto;
     transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
@@ -344,8 +345,8 @@
 {
     position: absolute;
     left: 32vw;
-    top: 25vw;
-    width: 10vw;
+    top: 50vh;
+    width: clamp(100px, 20vw, 20vh);
     height: auto;
     transform:translateX(-50%) translateY(-50%);
     z-index: 1; 
@@ -355,7 +356,7 @@
     left:59vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:calc(1.4vh + 1.4vw);
+    font-size:4vh;
     color: black;
     z-index: 40;
     transform:translateX(-50%);
@@ -366,8 +367,8 @@
 {
     position: absolute;
     left: 86vw;
-    top: 25vw;
-    width: 10vw;
+    top: 50vh;
+    width:clamp(100px, 20vw, 20vh);
     height: auto;
     transform:translateX(-50%) translateY(-50%);
     z-index: 1;
@@ -377,7 +378,7 @@
     position: absolute;
     left: 43vw;
     top: 68vh;
-    width: 30vw;
+    width: clamp(100px, 60vw, 60vh);
     height: auto;
     transform:translateX(-50%) translateY(-50%);
     z-index: 1;
@@ -406,7 +407,7 @@
     position: absolute;
     left: 77vw;
     top: 68vh;
-    width: 29vw;
+    width:clamp(100px, 58vw, 58vh);
     height: auto;
     transform:translateX(-50%) translateY(-50%);
     z-index: 1;

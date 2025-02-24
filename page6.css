@@ -217,7 +217,7 @@
         z-index:3;
     }
     .title {
-        font-size: 3em;
+        font-size: clamp(16px, 15vw, 6vh);;
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
         align-items: center;
@@ -228,11 +228,12 @@
     }
     .icon7{
         position:fixed;
-        top:0vh;
-        left:26vw;
-        width: 7vw;
-        height:11vh;
+        top:-2vh;
+        left:27vw;
+        width: clamp(50px, 12vw, 12vh);
+        height:auto;
         z-index:3;
+        transform-origin: top left;
     }
     /* 搜尋欄 */
     .search-container {

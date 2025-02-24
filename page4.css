@@ -216,7 +216,7 @@
         z-index:3;
     }
     .title {
-        font-size: 3em;
+        font-size: clamp(16px, 15vw, 6vh);;
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
         align-items: center;
@@ -227,11 +227,12 @@
     }
     .icon7{
         position:absolute;
-        top:0vh;
-        left:26vw;
-        width: 7vw;
-        height:11vh;
+        top:-2vh;
+        left:27vw;
+        width: clamp(50px, 12vw, 12vh);
+        height:auto;
         z-index:3;
+        transform-origin: top left;
     }
     /* 搜尋欄 */
     .search-container {
@@ -284,9 +285,9 @@
 .img10
 {
     position:absolute;
-    top:19vh;
+    top:calc(10px + 17.5vh);
     left:58vw; 
-    width: 25%;
+    width: 24vw;
     height:auto;
     transform: translate(-50%,-50%); 
     z-index:1;
@@ -297,7 +298,7 @@
     left:58.5vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:2.2em;
+    font-size:calc(1.5vh + 1.5vw);
     color: black;
     z-index: 40;
     transform: translateX(-50%) translateY(0);
@@ -393,21 +394,22 @@ a .img9:hover {
 .img11
 {
     position:absolute;
-    top:86vh;
+    top:calc(85vh + 10px);
     left:58vw; 
-    width: 25%;
+    width: 24vw;
     height:auto;
     transform: translate(-50%,-50%); 
     z-index:1;
 }
+
 /*B條件*/
 .text6
 {
-    top:calc(86vh - 7.5%);
+    top:calc(85vh + 10px - 7.5%);
     left:58vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:2.2em;
+    font-size:calc(1.5vh + 1.5vw);
     color: black;
     z-index: 40;
     transform: translateX(-50%) translateY(0);
@@ -428,7 +430,7 @@ a .img9:hover {
     left:29vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:2em;
+    font-size:2.22em;
     color: black;
     z-index: 40;
 }
@@ -486,20 +488,20 @@ a .img9:hover {
 .img15
 {
     position:absolute;
-    top:145vh;
+    top:calc(144vh + 10px);
     left:58vw; 
-    width: 25%;
+    width: 24vw;
     height:auto;
     transform: translate(-50%,-50%); 
     z-index:1;
 }
 .text11
 {
-    top:calc(145vh - 7.5%);
+    top:calc(144vh + 10px - 7.5%);
     left:58vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
-    font-size:2.2em;
+    font-size:calc(1.5vh + 1.5vw);
     color: black;
     z-index: 40;
     transform: translateX(-50%) translateY(0);
