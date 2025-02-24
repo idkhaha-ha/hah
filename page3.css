@@ -73,28 +73,28 @@
     .menu-item:nth-child(3) 
     {
         top: 30.5vh;
-        left:7vw;
+        left:8vw;
         position:fixed;
     }
     /*doc*/
     .menu-item:nth-child(4) 
     {
         top: 48vh;
-        left:7vw;
+        left:8vw;
         position:fixed;
     }
     /*form*/
     .menu-item:nth-child(5) 
     {
         top: 64vh;
-        left:7vw;
+        left:8vw;
         position:fixed;
     }
     /*aboutus*/
     .menu-item:nth-child(6) 
     {
         top: 81vh;
-        left:7vw;
+        left:8vw;
         position:fixed;
     }
     .menu-item:hover {
