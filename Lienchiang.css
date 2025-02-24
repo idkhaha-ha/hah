@@ -38,21 +38,6 @@
         text-align: center;
     }
     
-    .menu-item {
-        color: black;
-        padding: 10px;
-        margin: 15px auto;
-        font-size: 1.8em;
-        background-size: cover;
-        background-position: center;
-        border-radius: 5px;
-        transition: transform 0.3s ease, opacity 0.3s;
-        cursor: pointer;
-        position:relative;
-        line-height: 100px;
-        font-weight: bold;
-        text-align: left;
-    
         .arrow-container {
             width: 10vw;  
             height: 10vh; 
@@ -74,49 +59,71 @@
         .menu-item:hover img.arrow {
             transform: scale(1.1); 
         }
-    }
-    .menu-item:nth-child(1) 
-    {
-        top: -1vh;
-        left:8vw;
-        position:fixed;
-    }
     
-    /*policy introduce*/
-    .menu-item:nth-child(2) 
-    {
-        top: 15vh;
-        left:8vw;
-        position:fixed;
-    }
-    /*arrow*/
-    .menu-item:nth-child(3) 
-    {
-        top: 29vh;
-        left:7vw;
-        position:fixed;
-    }
-    /*doc*/
-    .menu-item:nth-child(4) 
-    {
-        top: 48vh;
-        left:7vw;
-        position:fixed;
-    }
-    /*form*/
-    .menu-item:nth-child(5) 
-    {
-        top: 64vh;
-        left:7vw;
-        position:fixed;
-    }
-    /*aboutus*/
-    .menu-item:nth-child(6) 
-    {
-        top: 81vh;
-        left:7vw;
-        position:fixed;
-    }
+        .menu-item {
+            color: black;
+            padding: 10px;
+            margin: 5vh auto;
+            font-size: 2vw;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            transition: transform 0.3s ease, opacity 0.3s;
+            cursor: pointer;
+            position:absolute;
+            line-height: 100px;
+            font-weight: bold;
+            text-align: left;
+        
+        }
+        .menu-item:nth-child(1) 
+        {
+            top: -5vh;
+            left:8vw;
+            transform: translateY(calc(10vh - 5vw));
+            position:absolute;
+        }
+        
+        /*policy introduce*/
+        .menu-item:nth-child(2) 
+        {
+            top: 11.5vh;
+            left:8vw;
+            transform: translateY(calc(10vh - 5vw));
+            position:absolute;
+        }
+        /*spot*/
+        .menu-item:nth-child(3) 
+        {
+            top: 27.5vh;
+            left:8vw;
+            transform: translateY(calc(10vh - 5vw));
+            position:absolute;
+        }
+        /*doc*/
+        .menu-item:nth-child(4) 
+        {
+            top: 44.5vh;
+            left:8vw;
+            transform: translateY(calc(10vh - 5vw));
+            position:absolute;
+        }
+        /*form*/
+        .menu-item:nth-child(5) 
+        {
+            top: 61vh;
+            left:8vw;
+            transform: translateY(calc(10vh - 5vw));
+            position:absolute;
+        }
+        /*aboutus*/
+        .menu-item:nth-child(6) 
+        {
+            top: 78vh;
+            left:8vw;
+            transform: translateY(calc(10vh - 5vw));
+            position:absolute;
+        }
     .menu-item:hover {
         transform:translateX(0%) translateY(0%) scale(1.1); 
         opacity:0.8; 

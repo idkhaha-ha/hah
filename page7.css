@@ -226,7 +226,7 @@
         z-index:3;
     }
     .title {
-        font-size: clamp(16px, 15vw, 6vh);;
+        font-size: clamp(16px, 15vw, 6vh);
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
         align-items: center;
