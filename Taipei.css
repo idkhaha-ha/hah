@@ -281,8 +281,9 @@
     display: flex; /* 使文字和三角形排列 */
     align-items: center;
     justify-content: space-between; /* 左文字右箭頭 */
-    margin-top:-49vh;
-    left:clamp(70vw, 73.5vw, 80vw);
+    top:1vh;
+    left:86%;
+    transform: translateX(-50%);
     position:fixed;
     z-index: 100;
     white-space: nowrap;
