@@ -13,46 +13,43 @@
     /* 圖片的固定定位和尺寸調整 */
     img {
         position: fixed;
-        left:5%;
-        top: 50%; /* 將圖片垂直居中 */
+        left:5vw;
+        top: 45vh; /* 將圖片垂直居中 */
         transform: translateY(-50%); /* 精準居中圖片 */
-        width: 900px;
-        height: 800px;
+        width: 60vw;
+        height: auto;
     }
 
     /* .img1 的位置和大小調整 */
     .img1 {
         position: fixed;
-        width:350px;
-        height: 350px;
-        left: 55%;
-        top: 65%; /* 精準調整位置 */
-        transform: translateY(-50%); 
-        z-index: -1; 
+        left:56vw;
+        top: 65vh; /* 將圖片垂直居中 */
+        transform: translateY(-50%); /* 精準居中圖片 */
+        width: 25vw;
+        height: auto;
     }
 
     /* 標題樣式 */
     .title {
-        font-size: 100px;
+        font-size: 6em;
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
         position: fixed; 
-        top: 28%; /* 可以根據需要調整 */
-        left: 45%; 
-        text-align: center; /* 讓標題居中 */
+        top:28vh;
+        left:42vw;
+        transform: translateX(10%);
     }
 
     /* 副標題樣式 */
     .subtitle {
-        font-size: 50px;
+        font-size: 3em;
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
-        display: inline-flex;
         align-items: center;
-        position: relative;
-        top:80%;
-        left: 95%; 
-        text-align: center; /* 副標題居中 */
+        position: fixed; 
+        top:57vh;
+        left:60vw;
     }
 
     /* 副標題連結樣式 */
@@ -75,8 +72,9 @@
         'wght' 100000,
         'GRAD' 0,
         'opsz' 1000;
-        margin-left: 15px;
-        font-size: 60px;
+        margin-left: 10px;
+        font-size: 1.2em;
+        vertical-align: middle; 
     }
 
     /* 確保 container 寬度適應屏幕 */
