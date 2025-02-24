@@ -268,7 +268,7 @@
     padding: 50px 60px;
     border: none;
     cursor: pointer;
-    font-size: 2.3em;
+    font-size:calc(1.5vh + 1.5vw);
     font-weight: bold;
     display: flex; /* 使文字和三角形排列 */
     align-items: center;
@@ -277,6 +277,7 @@
     left:72vw;
     position:fixed;
     z-index: 100;
+    white-space: nowrap;
 }
 
 .dropdown-button:focus {
@@ -745,3 +746,4 @@
         position: absolute;
     }
     }
+}
