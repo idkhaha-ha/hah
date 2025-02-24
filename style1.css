@@ -22,9 +22,9 @@
 
     /* .img1 的位置和大小調整 */
     .img1 {
-        position: fixed;
-        left:56vw;
-        top: 65vh; /* 將圖片垂直居中 */
+        position: absolute;
+        left:6vw;
+        top: 7.5vw; /* 將圖片垂直居中 */
         transform: translateY(-50%); /* 精準居中圖片 */
         width: 25vw;
         height: auto;
@@ -32,7 +32,7 @@
 
     /* 標題樣式 */
     .title {
-        font-size: 6vw;
+        font-size: 6em;
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
         position: fixed; 
@@ -46,10 +46,10 @@
         font-size: 3vw;
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
-        align-items: center;
-        position: fixed; 
-        top:57.5vh;
-        left:62vw;
+        position: absolute; 
+        white-space: nowrap;
+        top:56px;
+        left:11vw;
     }
 
     /* 副標題連結樣式 */
