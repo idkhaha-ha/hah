@@ -32,24 +32,24 @@
 
     /* 標題樣式 */
     .title {
-        font-size: 6em;
+        font-size: 6vw;
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
         position: fixed; 
         top:28vh;
-        left:42vw;
+        left:44vw;
         transform: translateX(10%);
     }
 
     /* 副標題樣式 */
     .subtitle {
-        font-size: 3em;
+        font-size: 3vw;
         font-family: 'Noto Sans HK', sans-serif;
         font-weight: bold;
         align-items: center;
         position: fixed; 
-        top:57vh;
-        left:60vw;
+        top:57.5vh;
+        left:62vw;
     }
 
     /* 副標題連結樣式 */
