@@ -41,14 +41,14 @@ body {
 .menu-item {
     color: black;
     padding: 10px;
-    margin: 15px auto;
-    font-size: 1.8em;
+    margin: 5vh auto;
+    font-size: 2vw;
     background-size: cover;
     background-position: center;
     border-radius: 5px;
     transition: transform 0.3s ease, opacity 0.3s;
     cursor: pointer;
-    position:relative;
+    position:absolute;
     line-height: 100px;
     font-weight: bold;
     text-align: left;
@@ -56,45 +56,51 @@ body {
 }
 .menu-item:nth-child(1) 
 {
-    top: -1vh;
+    top: -5vh;
     left:8vw;
-    position:fixed;
+    transform: translateY(calc(10vh - 5vw));
+    position:absolute;
 }
 
 /*policy introduce*/
 .menu-item:nth-child(2) 
 {
-    top: 15vh;
+    top: 11.5vh;
     left:8vw;
-    position:fixed;
+    transform: translateY(calc(10vh - 5vw));
+    position:absolute;
 }
 /*spot*/
 .menu-item:nth-child(3) 
 {
-    top: 30.5vh;
+    top: 27.5vh;
     left:8vw;
-    position:fixed;
+    transform: translateY(calc(10vh - 5vw));
+    position:absolute;
 }
 /*doc*/
 .menu-item:nth-child(4) 
 {
-    top: 48vh;
+    top: 44.5vh;
     left:8vw;
-    position:fixed;
+    transform: translateY(calc(10vh - 5vw));
+    position:absolute;
 }
 /*form*/
 .menu-item:nth-child(5) 
 {
-    top: 64vh;
+    top: 61vh;
     left:8vw;
-    position:fixed;
+    transform: translateY(calc(10vh - 5vw));
+    position:absolute;
 }
 /*aboutus*/
 .menu-item:nth-child(6) 
 {
-    top: 81vh;
+    top: 78vh;
     left:8vw;
-    position:fixed;
+    transform: translateY(calc(10vh - 5vw));
+    position:absolute;
 }
 .menu-item:hover {
     transform:translateX(0%) translateY(0%) scale(1.1); 
@@ -136,9 +142,7 @@ body {
 .img4,
 .img5,
 .img6 {
-    position: fixed;
-    left: 0;
-    top: 100%;
+    position: absolute;
     width:70vw;
     height: 210vh;
     z-index: 1; /* 確保圖片在側邊欄後面 */
@@ -151,7 +155,7 @@ body {
 .img6 { top:78vh; left:-6vw }
 
 .icon1{
-    position:fixed;
+    position:absolute;
     top:-32vh;
     left:-3vw;
     width: 70vw;
@@ -159,7 +163,7 @@ body {
     z-index:1;
 }
 .icon2{
-    position:fixed;
+    position:absolute;
     top:-15.5vh;
     left:-5.5vw;
     width: 70vw;
@@ -167,7 +171,7 @@ body {
     z-index:3;
 }
 .icon3{
-    position:fixed;
+    position:absolute;
     top:0.5vh;
     left:-1.5vw;
     width: 55vw;
@@ -175,7 +179,7 @@ body {
     z-index:3;
 }
 .icon4{
-    position:fixed;
+    position:absolute;
     top:-3.2vh;
     left:-3vw;
     width: 65vw;
@@ -183,7 +187,7 @@ body {
     z-index:3;
 }
 .icon5{
-    position:fixed;
+    position:absolute;
     top:-0.5vh;
     left:-3vw;
     width: 65vw;
@@ -191,7 +195,7 @@ body {
     z-index:3;
 }
 .icon6{
-    position:fixed;
+    position:absolute;
     top:67vh;
     left:-6vw;
     width: 70vw;

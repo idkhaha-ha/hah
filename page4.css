@@ -61,61 +61,66 @@
     .menu-item {
         color: black;
         padding: 10px;
-        margin: 15px auto;
-        font-size: 1.8em;
+        margin: 5vh auto;
+        font-size: 2vw;
         background-size: cover;
         background-position: center;
         border-radius: 5px;
         transition: transform 0.3s ease, opacity 0.3s;
         cursor: pointer;
-        position:relative;
+        position:absolute;
         line-height: 100px;
         font-weight: bold;
         text-align: left;
     
     }
-    /*newinformation*/
     .menu-item:nth-child(1) 
     {
-        top: -1vh;
+        top: -5vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     
-    /*arrow*/
-    .menu-item:nth-child(2)
+    /*policy introduce*/
+    .menu-item:nth-child(2) 
     {
-        top: 14vh;
+        top: 10.5vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*spot*/
     .menu-item:nth-child(3) 
     {
-        top: 30.5vh;
+        top: 27.5vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*doc*/
     .menu-item:nth-child(4) 
     {
-        top: 48vh;
+        top: 44.5vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*form*/
     .menu-item:nth-child(5) 
     {
-        top: 64vh;
+        top: 61vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     /*aboutus*/
     .menu-item:nth-child(6) 
     {
-        top: 81vh;
+        top: 78vh;
         left:8vw;
-        position:fixed;
+        transform: translateY(calc(10vh - 5vw));
+        position:absolute;
     }
     .menu-item:hover {
         transform:translateX(0%) translateY(0%) scale(1.1); 
@@ -281,21 +286,21 @@
     position:absolute;
     top:19vh;
     left:58vw; 
-    width: 45vh;
+    width: 25%;
     height:auto;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%,-50%); 
     z-index:1;
 }
 .text1
 {
-    top:12vh;
-    left:58vw;
+    top:calc(19vh - 7.5%);
+    left:58.5vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:2.2em;
     color: black;
     z-index: 40;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(0);
 }
 .text2
 {
@@ -390,22 +395,22 @@ a .img9:hover {
     position:absolute;
     top:86vh;
     left:58vw; 
-    width: 45vh;
+    width: 25%;
     height:auto;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%,-50%); 
     z-index:1;
 }
 /*B條件*/
 .text6
 {
-    top:78.5vh;
+    top:calc(86vh - 7.5%);
     left:58vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:2.2em;
     color: black;
     z-index: 40;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(0);
 }
 .img12
 {
@@ -483,21 +488,21 @@ a .img9:hover {
     position:absolute;
     top:145vh;
     left:58vw; 
-    width: 45vh;
+    width: 25%;
     height:auto;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%,-50%); 
     z-index:1;
 }
 .text11
 {
-    top:137.5vh;
+    top:calc(145vh - 7.5%);
     left:58vw;
     position: absolute; /* 固定位置 */
     font-weight: bold;
     font-size:2.2em;
     color: black;
     z-index: 40;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(0);
 }
 .text12
 {
