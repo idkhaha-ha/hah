@@ -225,18 +225,19 @@ img{
 @media (max-width: 575px)
 {
     body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    overflow:hidden;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 水平居中 */
+        justify-content: center; /* 垂直居中 */
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+
     img{
         position: fixed;
-        left:5%; 
-        top: 10%; 
+        left:5vw; 
+        top: 7vh; 
         width: 130vw;
         height: 55vh;
         object-fit: cover;

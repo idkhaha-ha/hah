@@ -385,32 +385,7 @@ body {
         margin: 0; /* 清除預設 margin */
         position: relative;
     }
-    /* 圖片輪播樣式 */
-.carousel {
-    position: fixed;
-    width: 20vw;
-    height: 40vh;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.slide {
-    position: fixed;
-    width:65vw;
-    height: 30vh;
-    border-radius: 15px;
-    top:12%;
-    left:28%;
-    transform:translateX(0%) translateY(0%);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    object-fit: cover;
-}
-
-.slide.active {
-    opacity: 1;
-}
+   
 /*相關影片布告欄*/
 .bulletin-board-3{
     background-color: #fff;
@@ -462,7 +437,32 @@ body {
         font-size: 10px;
         color: #555;
     }
+ /* 圖片輪播樣式 */
+ .carousel {
+    position: fixed;
+    width: 20vw;
+    height: 40vh;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
 
+.slide {
+    position: fixed;
+    width:65vw;
+    height: 30vh;
+    border-radius: 15px;
+    top:12%;
+    left:28%;
+    transform:translateX(0%) translateY(0%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
 
 }
 /*for ipad(橫向)*/
@@ -839,14 +839,16 @@ body {
 
 /*for mobile*/
 @media (max-width: 575px) {
-body {
-    height: 100%;
+body{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 1em;
 }
-
 .img1,
 .img2,
 .img3,
@@ -876,15 +878,15 @@ display: none;
     display: none;
     background:#152469;
     position: absolute;
-    top:0%;
-    left:0%;
+    top:0vh;
+    left:0vw;
     width: 100%;
     z-index:999;
 }
 
 .menu2 li {
     text-align: center;
-    padding: 10px;
+    padding: 2.5vw;
 }
 
 .menu2 li a {
@@ -900,15 +902,14 @@ display: none;
 /* 漢堡按鈕 */
 .menu2-toggle {
     position:absolute;
-    font-size:clamp(35px,6vw,55px);
+    font-size:clamp(55px,7vw,7vh);
     cursor: pointer;
     padding: 10px;
     background:transparent;
     color:#152469 ;
     text-align: center;
-    top:8%;
-    left:0%;
-    transform: translateX(0%) translateY(0%);
+    top:8vh;
+    left:4vw;
     z-index: 100;
 }
 
@@ -917,23 +918,22 @@ display: none;
     display: block;
 }
 .title {
-    font-size:clamp(35px, 6vw, 50px);
+    font-size: clamp(38px, 5vw, 5vh);
     font-family: 'Noto Sans HK', sans-serif;
     font-weight: bold;
     align-items: center;
-    position: fixed; 
-    top:0%;
-    left:33%;
-    transform: translateX(-15%) translateY(0%); 
+    position: absolute; 
+    top:-2vh;
+    left:22vw;
 }
 .icon7{
-    position:fixed;
-    top:2%;
-    left:18%;
-    transform: translateX(-110%) translateY(0%); 
-    width: clamp(70px, 12vw, 100px);
-    height: clamp(70px, 5vh, 100px);
+    position:absolute;
+    top:0vh;
+    left:2vw;
+    width: clamp(50px, 20vw, 20vh);
+    height:auto;
     z-index:3;
+    transform-origin: top left;
 }
 .carousel {
     display: none;
@@ -943,183 +943,11 @@ display: none;
     display: none;
 }
 
-/*最新資訊*/
-.bulletin-board {
-    background-color: #fff;
-    width: 260px;
-    height:416px;
-    margin: 0 auto;
-    border: 5px solid #5480bf; 
-    border-radius: 10px; 
-    padding: 10px;
-    position:absolute;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    top:25%;
-    left:14%;
-    
-}
-.board-header {
-        text-align: center;
-        margin-bottom: 10px;
-        border-bottom: 2px solid #4A90E2;
-    }
-
-.board-header h2 { 
-        font-size: 25px;
-        color: #4A90E2;
-    }
-.board-content {
-        padding: 10px 0;
-    }
-.announcement {
-        background-color: #f9f9f9;
-        padding: 10px;
-        margin-bottom: 15px;
-        border-left: 5px solid #4A90E2;
-        border-radius: 10px;
-        width:200px;
-        height:50px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-    }
-.announcement h3 {
-        transform: translateX(5%) translateY(-85%);
-        position:absolute;
-        font-size: 15px;
-        color: #333;
-    }
-
-.announcement p {
-        transform: translateX(2%) translateY(160%);
-        position:absolute;
-        font-size: 10px;
-        color: #555;
-    }
-
-/*相關新聞布告欄*/
-.bulletin-board-2{
-    background-color: #fff;
-    width: 20%;
-    width: 260px;
-    height:416px;
-    margin: 0 auto;
-    border: 5px solid #004aad; 
-    border-radius: 10px; 
-    padding: 10px;
-    position:absolute;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    top:95%;
-    left:14%;
-}
-.board-header {
-        text-align: center;
-        margin-bottom: 10px;
-        border-bottom: 2px solid #004aad;
-    }
-
-.board-header h2 { 
-        font-size: 25px;
-        color: #004aad;
-    }
-.board-content {
-        padding: 10px 0;
-    }
-.announcement {
-        background-color: #f9f9f9;
-        padding: 10px;
-        margin-bottom: 15px;
-        border-left: 5px solid #4A90E2;
-        border-radius: 10px;
-        width:200px;
-        height:50px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-    }
-.announcement h3 {
-        transform: translateX(5%) translateY(-85%);
-        position:absolute;
-        font-size: 15px;
-        color: #333;
-    }
-
-.announcement p {
-        transform: translateX(2%) translateY(160%);
-        position:absolute;
-        font-size: 10px;
-        color: #555;
-    }
-    /* 圖片輪播樣式 */
-.carousel {
-    display:none;
-}
-
-.slide {
-    display:none;
-}
-
-.slide.active {
-    opacity: 1;
-}
-/*相關影片布告欄*/
-.bulletin-board-3{
-    background-color: #fff;
-    width: 20%;
-    width: 260px;
-    height:416px;
-    margin: 0 auto;
-    border: 5px solid #5480bf; 
-    border-radius: 10px; 
-    padding: 10px;
-    position:absolute;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    top:165%;
-    left:14%;
-}
-.board-header {
-        text-align: center;
-        margin-bottom: 10px;
-        border-bottom: 2px solid #004aad;
-    }
-
-.board-header h2 { 
-        font-size: 25px;
-        color: #4A90E2;
-    }
-.board-content {
-        padding: 10px 0;
-    }
-.announcement {
-        background-color: #f9f9f9;
-        padding: 10px;
-        margin-bottom: 15px;
-        border-left: 5px solid #4A90E2;
-        border-radius: 10px;
-        width:200px;
-        height:50px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-    }
-.announcement h3 {
-        transform: translateX(5%) translateY(-85%);
-        position:absolute;
-        font-size: 15px;
-        color: #333;
-    }
-
-.announcement p {
-        transform: translateX(2%) translateY(160%);
-        position:absolute;
-        font-size: 10px;
-        color: #555;
-    }
-.bulletin-board,
-.bulletin-board-2,
-.bulletin-board-3 {
-    z-index: 1; 
-}
 /* 搜尋欄 */
 .search-container {
-    position:fixed;
-    top:0%;
-    left:67%;
-    transform:translateX(-75%) translateY(60%);
+    position:absolute;
+    top:5vh;
+    left:20vw;
     justify-content: center; 
     align-items: center; 
     margin-top: 50px; 
@@ -1129,10 +957,10 @@ display: none;
 /* 搜尋框 */
 .search-input {
     padding: 12px 20px;
-    font-size: 12px;
+    font-size: 5vw;
     border: 2px solid #ddd;
     border-radius: 30px;
-    width:50vw;
+    width: 45vw;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: black;
@@ -1141,19 +969,19 @@ display: none;
 /* 按鈕 */
 .search-button {
     padding: 12px 12px;
-    font-size: 10px;
+    font-size: 1em;
     background-color: #5480bf; 
     color: white; 
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    margin-left: 10px; 
+    margin-left: 12px; 
     transition: all 0.3s ease;
 }
 
 /* 按鈕圖 */
 .material-icons {
-    font-size: 12px; 
+    font-size: 12em; 
     vertical-align: middle; 
 }
 
@@ -1161,6 +989,189 @@ display: none;
 .search-button:hover {
     background-color: #c2e6f9; 
 }
+/*最新資訊*/
+/* Bulletin Board */
+.bulletin-board {
+    background-color: #fff;
+    width: 70vw;
+    height: 50vh;
+    margin: 0 auto;
+    border: 5px solid #5480bf;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    top: 25vh;
+    left: 12vw;
+}
+
+.board-header {
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4A90E2;
+}
+.bulletin-board .board-header h2 {
+    font-size: 25px;
+    color: #4A90E2;
+}
+.board-content {
+    padding: 0px 0;
+}
+
+.announcement {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin:25px 0;
+    border-left: 5px solid #4A90E2;
+    border-radius: 10px;
+    width: 90%;
+    height: 6vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 讓內容垂直置中 */
+    align-items: flex-start; /* 讓標題和內文靠左對齊 */
+    position: relative;
+}
+
+.announcement h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin: 0;
+    padding-bottom: 0px; /* 增加標題與內文的距離 */
+    position: relative;
+}
+
+.announcement p {
+    font-size: 2.8vw;
+    color: #555;
+    margin: 0;
+    position: relative;
+}
+
+/* 相關新聞布告欄 */
+.bulletin-board-2 {
+    background-color: #fff;
+    width: 70vw;
+    height: 50vh;
+    margin: 0 auto;
+    border: 5px solid #004aad;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    top: 85vh;
+    left: 12vw;
+}
+
+.bulletin-board-2 .board-header {
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #004aad;
+}
+
+.bulletin-board-2 .board-header h2 {
+    font-size: 25px;
+    color: #004aad;
+}
+
+.bulletin-board-2 .board-content {
+    padding: 0px 0;
+}
+
+.bulletin-board-2 .announcement {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin:25px 0;
+    border-left: 5px solid #004aad;
+    border-radius: 10px;
+    width: 90%;
+    height: 6vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 讓內容垂直置中 */
+    align-items: flex-start; /* 讓標題和內文靠左對齊 */
+    position: relative;
+}
+
+.bulletin-board-2 .announcement h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin: 0;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.bulletin-board-2 .announcement p {
+    font-size: 2.8vw;
+    color: #555;
+    margin: 0;
+    position: relative;
+}
+
+/* 相關影片布告欄 */
+.bulletin-board-3 {
+    background-color: #fff;
+    width: 70vw;
+    height: 50vh;
+    margin: 0 auto;
+    border: 5px solid #5480bf;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    top: 145vh;
+    left: 12vw;
+}
+
+.bulletin-board-3 .board-header {
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4A90E2;
+}
+
+.bulletin-board-3 .board-header h2 {
+    font-size: 25px;
+    color: #4A90E2;
+}
+
+.bulletin-board-3 .board-content {
+    padding: 0px 0;
+}
+
+.bulletin-board-3 .announcement {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin:25px 0;
+    border-left: 5px solid #4A90E2;
+    border-radius: 10px;
+    width: 90%;
+    height: 6vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 讓內容垂直置中 */
+    align-items: flex-start; /* 讓標題和內文靠左對齊 */
+    position: relative;
+}
+
+.bulletin-board-3 .announcement h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin: 0;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.bulletin-board-3 .announcement p {
+    font-size: 2.8vw;
+    color: #555;
+    margin: 0;
+    position: relative;
+}
+
+
 #errorMessage {
     margin-top: 5px; /* 增加與搜尋欄的間距 */
     font-size: 14px;
